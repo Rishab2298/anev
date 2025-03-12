@@ -1,0 +1,53 @@
+.slidera{
+    width: 100%;
+    height: var(--height);
+    overflow: hidden;
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        #000 10% 95%,
+        transparent
+    );
+}
+.slidera .list{
+    display: flex;
+    width: 100%;
+    min-width: calc(var(--width) * var(--quantity));
+    position: relative;
+}
+.slidera .list .item{
+    width: var(--width);
+    height: var(--height);
+    position: absolute;
+    right: 100%;
+    animation: autoRuna 30s linear infinite;
+    transition: filter 0.5s;
+    animation-delay: calc( (30s / var(--quantity)) * (var(--position) - 1) - 25s)!important;
+}
+.slidera .list .item img, .slidera .list .item video{
+    width: 100%;
+}
+@keyframes autoRuna{
+    from{
+        right: 95%;
+    }to{
+        right: calc(var(--width) * -1);
+    }
+}
+.slidera:hover .item{
+    animation-play-state: paused!important;
+    filter: grayscale(1);
+}
+.slidera .item:hover{
+    filter: grayscale(0);
+}
+.slidera[reverse="true"] .item{
+    animation: reversePlaya 30s linear infinite;
+}
+@keyframes reversePlaya{
+    from{
+        right: calc(var(--width) * -1);
+    }to{
+        right: 95%;
+    }
+}
