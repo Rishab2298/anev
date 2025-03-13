@@ -1,4 +1,8 @@
 import React from "react";
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
@@ -39,9 +43,16 @@ import logo17 from "../assets/logo17.png";
 import logo18 from "../assets/logo18.webp";
 import logo19 from "../assets/logo19.png";
 import logo20 from "../assets/logo20.png";
+
+import asset1 from "../assets/asset1.png";
 import AnimatedList from "../components/animatedList";
 import InfiniteCarouselRight from "../components/infiniteCarousleRight";
 
+
+
+
+
+import star from "../assets/star.svg";
 const logos = [
   logo1,
   logo2,
@@ -66,8 +77,32 @@ const logos2 = [
   logo19,
   logo7,
 ];
-
+gsap.registerPlugin(ScrollTrigger);
 const LandingPage = () => {
+
+  const sectionRef = useRef(null);
+  const elementsRef = useRef([]);
+
+  useEffect(() => {
+    const elements = elementsRef.current;
+
+    gsap.fromTo(
+      elements,
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        stagger: 0.3, // Delay between animations
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top 75%", // Animation starts when top of section is 75% into view
+          toggleActions: "play none none none",
+        },
+      }
+    );
+  }, []);
   const carouselData = [
     {
       type: "image",
@@ -102,14 +137,19 @@ const LandingPage = () => {
       </div>
 
       {/* Middle Section */}
-      <div className="w-full h-fit">
-        <img
-          id="banner"
-          src={bgImage}
-          alt="bgImage"
-          className="w-full h-fit hero-banner"
-        />
-      </div>
+      <div className="relative w-full h-fit flex flex-col justify-center items-center bg-black">
+  <img
+    id="banner"
+    src={bgImage}
+    alt="bgImage"
+    className="w-full h-auto"
+  />
+  <div className="absolute flex flex-col justify-center items-center gap-5">
+   <span className="text-white poppins-medium text-[32px] text-center"> The next generation media pipeline.</span> 
+    <button className="buttonra px-1 py-1  rounded-full poppins-light w-[65px] bg-black"><img src={asset1}/></button>
+  </div>
+ 
+</div>
 
       {/* What is Anev */}
       <div className="w-full h-fit relative">
@@ -294,6 +334,32 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
+
+      {/* Pipeline */}
+      <div ref={sectionRef} className="w-full h-fit flex flex-col justify-center items-center bg-black p-20 gap-10">
+      <h2 className="text-[90px] w-full text-transparent bg-clip-text font-medium p-2 hatch-background">
+        The Pipeline
+      </h2>
+      <div className="w-full flex justify-center items-center gap-12">
+        {[
+          { title: "1. Briefing", text: "Your brand's vision is our launchpad. We meticulously understand your goals, values, and target audience to kickstart the journey." },
+          { title: "2. Ideation", text: "Our creative minds spin concepts that align with your brand’s essence, ensuring every idea is groundbreaking and strategic." },
+          { title: "3. Execution", text: "From design to development, every step is marked by precision. Your project moves swiftly through each stage without compromising quality." },
+          { title: "4. Delivery & Beyond", text: "This partnership doesn't end at delivery. We analyze outcomes, gather insights, and iterate strategies for continuous growth." }
+        ].map((item, index) => (
+          <div
+            key={index}
+            ref={(el) => (elementsRef.current[index] = el)}
+            className="w-1/4 flex flex-col gap-4 opacity-0"
+          >
+            <img className="w-10 h-10 object-contain rounded-full" src={star} alt="icon" />
+            <span className="uppercase font-thin text-[30px] text-white">{item.title}</span>
+            <span className="text-white font-thin">{item.text}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+
       {/* Call To Action */}
 
       <div className="relative w-full h-fit flex flex-col justify-center items-center bg-black">

@@ -326,3 +326,46 @@ border: none;
     color: white;
     /* Text turns white on hover */
 }
+
+/* Middle Section */
+
+.buttonra {
+  position: relative;
+  display: inline-block;
+
+
+
+  color: black;
+  /* Text is black by default */
+  background:black;
+border: none;
+  overflow: hidden;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+  z-index: 1;
+
+}
+
+.buttonra::before {
+  border-radius: 10px;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0;
+  background:#FF7B1C;
+  transition: height 0.3s ease-in-out;
+  z-index: 0;
+  /* Keeps the background below text */
+}
+
+.buttonra:hover::before {
+  height: 100%;
+  z-index: -1;
+}
+
+.buttonra:hover {
+  color: white;
+  /* Text turns white on hover */
+}

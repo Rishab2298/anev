@@ -1,10 +1,10 @@
-import { MoveUp } from 'lucide-react'
+import { ArrowUp, MoveUp } from 'lucide-react'
 import React from 'react'
 
 const Footer = () => {
   return (
     <>
-    <div className='w-full justify-between px-[100px] py-[50px] '>
+    <div className='w-full flex  justify-between px-[100px] py-[50px] '>
 <div className='w-fit flex gap-[75px]'>
     <span className='text-white poppins-medium hover:underline hover:text-orange-300'>
         Instagram
@@ -16,9 +16,9 @@ const Footer = () => {
         Linktree
     </span>
 </div>
-<div className='w-fit'>
-
-<MoveUp color='white' strokeWidth={2} /> SCROLL TO TOP
+<div className='w-fit flex text-white font-semibold gap-4'>
+SCROLL TO TOP
+<ArrowUp color='white' strokeWidth={2} /> 
 </div>
     </div>
     

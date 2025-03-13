@@ -13,24 +13,61 @@ import image007 from "../assets/image007.avif";
 import image008 from "../assets/image008.avif";
 import image009 from "../assets/image009.avif";
 import image010 from "../assets/image010.avif";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Work = () => {
+    const text1Ref = useRef(null);
+    const text2Ref = useRef(null);
+  
+    useEffect(() => {
+      const elements = [text1Ref.current, text2Ref.current];
+  
+      elements.forEach((el) => {
+        gsap.fromTo(
+          el,
+          { y: 100, opacity: 0 }, // Start 100px below & invisible
+          {
+            y: 0, // Move to normal position
+            opacity: 1, // Fade in
+            duration: 1,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: el,
+              start: "top 85%", // Triggers when element is 85% in viewport
+              toggleActions: "play none none reverse",
+            },
+          }
+        );
+      });
+    }, []);
   return (
     <>
       {/* Hero Text */}
       <div className="w-full min-h-screen bg-black flex flex-col justify-center items-center gap-[4px]">
-        <span className="text-white text-[150px] poppins-normal uppercase">
+        {/* Title - "Explore Our" */}
+      <div className="w-fit overflow-hidden h-fit">
+        <span ref={text1Ref} className="text-white text-[150px] poppins-normal uppercase block">
           Explore Our
         </span>
+      </div>
 
-        <span className="text-white text-[20px] w-1/2 poppins-thin text-center">
-          A showcase of our best concept work, highlighting our approach to a
-          unique visual language, and our skillset in understanding effective
-          media production.
-        </span>
-        <span className="text-white text-[150px] poppins-normal uppercase">
+      {/* Description */}
+      <span className="text-white text-[20px] w-1/2 poppins-thin text-center">
+        A showcase of our best concept work, highlighting our approach to a
+        unique visual language, and our skillset in understanding effective
+        media production.
+      </span>
+
+      {/* Title - "Playground" */}
+      <div className="w-fit overflow-hidden h-fit">
+        <span ref={text2Ref} className="text-white text-[150px] poppins-normal uppercase block">
           Playground
         </span>
+      </div>
       </div>
       {/* work with 1 item */}
       <div className="w-full flex flex-col items-center gap-[200px] justify-center">
@@ -239,6 +276,11 @@ const Work = () => {
         </span>
         <button className="buttonr px-16 py-5 text-2xl rounded-full poppins-light ">Let's Talk!</button>
         </div>
+
+
+        {/* <div className="w-full min-h-screen bg-black flex flex-col justify-center items-center gap-[4px]">
+
+            </div> */}
     </>
   );
 };
