@@ -17,6 +17,10 @@ import service2 from "../assets/2ajan.avif";
 import service3 from "../assets/3ajan.avif";
 import service4 from "../assets/4ajan.avif";
 import service5 from "../assets/5ajan.avif";
+import webDev from "../assets/1.jpg";
+import socialMedia from "../assets/2.jpg";
+import production from "../assets/3.jpg";
+import contentCreation from "../assets/4.jpg"
 import service6 from "../assets/6ajan.avif";
 import billboard from "../assets/billboard.png";
 
@@ -179,37 +183,37 @@ const LandingPage = () => {
           <div className="w-1/3 flex flex-col gap-4">
             <div className="w-full aspect-square rounded-4xl overflow-hidden relative">
               <img
-                src={service6}
+                src={production}
                 className="relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10"
               />
               <div className="artist z-0">0</div>
             </div>
             <span className="uppercase font-thin text-[30px] text-white pl-10">
-              Performance Marketing
+Event Content Production
             </span>
           </div>
           <div className="w-1/3 flex flex-col gap-4">
             <div className="w-full aspect-square rounded-4xl overflow-hidden relative">
               <img
-                src={service1}
+                src={contentCreation}
                 className="relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10"
               />
               <div className="artist z-0">0</div>
             </div>
             <span className="uppercase font-thin text-[30px] text-white pl-10">
-              Media Production
+             Content Creation
             </span>
           </div>
           <div className="w-1/3 flex flex-col gap-4">
             <div className="w-full aspect-square rounded-4xl overflow-hidden relative">
               <img
-                src={service3}
+                src={socialMedia}
                 className="relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10"
               />
               <div className="artist z-0">0</div>
             </div>
             <span className="uppercase font-thin text-[30px] text-white pl-10">
-              Web Development
+            Social Media Management
             </span>
           </div>
         </div>
@@ -218,13 +222,13 @@ const LandingPage = () => {
           <div className="w-1/3 flex flex-col gap-4">
             <div className="w-full aspect-square rounded-4xl overflow-hidden relative">
               <img
-                src={service4}
+                src={webDev}
                 className="relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10"
               />
               <div className="artist z-0">0</div>
             </div>
             <span className="uppercase font-thin text-[30px] text-white pl-10">
-              Social Media Marketing
+Website Development
             </span>
           </div>
           <div className="w-1/3 flex flex-col gap-4">
@@ -338,7 +342,7 @@ const LandingPage = () => {
       {/* Pipeline */}
       <div ref={sectionRef} className="w-full h-fit flex flex-col justify-center items-center bg-black p-20 gap-10">
       <h2 className="text-[90px] w-full text-transparent bg-clip-text font-medium p-2 hatch-background">
-        The Pipeline
+       Our Process
       </h2>
       <div className="w-full flex justify-center items-center gap-12">
         {[
