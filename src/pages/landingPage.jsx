@@ -23,7 +23,7 @@ import production from "../assets/3.jpg";
 import contentCreation from "../assets/4.jpg"
 import service6 from "../assets/6ajan.avif";
 import billboard from "../assets/billboard.png";
-
+import herImage from "../assets/herImage.jpeg";
 import InfiniteCarousel from "../components/infiniteCarousle";
 
 import logo1 from "../assets/logo1.webp";
@@ -129,7 +129,9 @@ const LandingPage = () => {
     <>
     {/* Hero Image  */}
       <div className="w-full h-screen bg-black flex justify-center items-center">
-        <video
+
+        <img src={herImage} alt="herImage" className="w-3/5 py-2 h-auto" />
+        {/* <video
           autoPlay
           loop
           muted
@@ -137,7 +139,7 @@ const LandingPage = () => {
           className="w-3/4 h-fit hero-banner transition-all duration-500 ease-in-out hover:w-4/5">
           <source src={heroImage} type="video/webm" />
           Your browser does not support the video tag.
-        </video>
+        </video> */}
       </div>
 
       {/* Middle Section */}
