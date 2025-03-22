@@ -57,6 +57,8 @@ import InfiniteCarouselRight from "../components/infiniteCarousleRight";
 
 
 import star from "../assets/star.svg";
+import Section from "./section";
+import ScrollingAnimation from "./section";
 const logos = [
   logo1,
   logo2,
@@ -124,6 +126,28 @@ const LandingPage = () => {
       link: "https://example.com/image2",
     },
   ];
+  const containerRef = useRef(null);
+  const textRef = useRef([]);
+
+  useEffect(() => {
+    const words = textRef.current;
+
+    gsap.fromTo(
+      words,
+      { y: 100, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top center",
+          end: "top 10%",
+          scrub: true,
+        },
+      }
+    );
+  }, []);
 
   return (
     <>
@@ -141,22 +165,30 @@ const LandingPage = () => {
           Your browser does not support the video tag.
         </video> */}
       </div>
-
+<ScrollingAnimation/>
       {/* Middle Section */}
-      <div className="relative w-full h-fit flex flex-col justify-center items-center bg-black">
-  <img
-    id="banner"
-    src={bgImage}
-    alt="bgImage"
-    className="w-full h-auto"
-  />
-  <div className="absolute flex flex-col justify-center items-center gap-5">
-   <span className="text-white poppins-medium text-[32px] text-center"> The next generation media pipeline.</span> 
-    <button className="buttonra px-1 py-1  rounded-full poppins-light w-[65px] bg-black"><img src={asset1}/></button>
-  </div>
- 
-</div>
-
+      <div
+      ref={containerRef}
+      className="relative w-full h-screen flex flex-col justify-center items-center bg-black"
+    >
+      <img id="banner" src={bgImage} alt="bgImage" className="w-full h-auto" />
+      <div className="absolute flex flex-col justify-center items-center gap-5">
+        <span className="text-white poppins-medium text-[32px] text-center">
+          {"The next generation media pipeline.".split(" ").map((word, index) => (
+            <span
+              key={index}
+              ref={(el) => (textRef.current[index] = el)}
+              className="inline-block overflow-hidden"
+            >
+              {word}&nbsp;
+            </span>
+          ))}
+        </span>
+        <button className="buttonra px-1 py-1 rounded-full poppins-light w-[65px] bg-black">
+          <img src={asset1} alt="Button Asset" />
+        </button>
+      </div>
+    </div>
       {/* What is Anev */}
       <div className="w-full h-fit relative">
         {/* Image */}
@@ -182,7 +214,7 @@ const LandingPage = () => {
           Services
         </h2>
         <div className="w-full flex flex-row items-center gap-10">
-          <div className="w-1/3 flex flex-col gap-4">
+          <div className="w-1/4 flex flex-col gap-4">
             <div className="w-full aspect-square rounded-4xl overflow-hidden relative">
               <img
                 src={production}
@@ -190,11 +222,11 @@ const LandingPage = () => {
               />
               <div className="artist z-0">0</div>
             </div>
-            <span className="uppercase font-thin text-[30px] text-white pl-10">
+            <span className="uppercase font-thin text-[20px] text-center  text-white ">
 Event Content Production
             </span>
           </div>
-          <div className="w-1/3 flex flex-col gap-4">
+          <div className="w-1/4 flex flex-col gap-4">
             <div className="w-full aspect-square rounded-4xl overflow-hidden relative">
               <img
                 src={contentCreation}
@@ -202,11 +234,11 @@ Event Content Production
               />
               <div className="artist z-0">0</div>
             </div>
-            <span className="uppercase font-thin text-[30px] text-white pl-10">
+            <span className="uppercase font-thin text-[20px] text-center  text-white ">
              Content Creation
             </span>
           </div>
-          <div className="w-1/3 flex flex-col gap-4">
+          <div className="w-1/4 flex flex-col gap-4">
             <div className="w-full aspect-square rounded-4xl overflow-hidden relative">
               <img
                 src={socialMedia}
@@ -214,14 +246,12 @@ Event Content Production
               />
               <div className="artist z-0">0</div>
             </div>
-            <span className="uppercase font-thin text-[30px] text-white pl-10">
+            <span className="uppercase font-thin text-[20px] text-center  text-white ">
             Social Media Management
             </span>
           </div>
-        </div>
-
-        <div className="w-full flex flex-row items-center gap-10">
-          <div className="w-1/3 flex flex-col gap-4">
+        
+          <div className="w-1/4 flex flex-col gap-4">
             <div className="w-full aspect-square rounded-4xl overflow-hidden relative">
               <img
                 src={webDev}
@@ -229,34 +259,11 @@ Event Content Production
               />
               <div className="artist z-0">0</div>
             </div>
-            <span className="uppercase font-thin text-[30px] text-white pl-10">
+            <span className="uppercase font-thin text-[20px] text-center  text-white ">
 Website Development
             </span>
           </div>
-          <div className="w-1/3 flex flex-col gap-4">
-            <div className="w-full aspect-square rounded-4xl overflow-hidden relative">
-              <img
-                src={service5}
-                className="relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10"
-              />
-              <div className="artist z-0">0</div>
-            </div>
-            <span className="uppercase font-thin text-[30px] text-white pl-10">
-              Whatsapp Marketing
-            </span>
-          </div>
-          <div className="w-1/3 flex flex-col gap-4">
-            <div className="w-full aspect-square rounded-4xl overflow-hidden relative">
-              <img
-                src={service6}
-                className="relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10"
-              />
-              <div className="artist z-0">0</div>
-            </div>
-            <span className="uppercase font-thin text-[30px] text-white pl-10">
-              Performance Marketing
-            </span>
-          </div>
+          
         </div>
       </div>
 

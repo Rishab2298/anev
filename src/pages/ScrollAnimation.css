@@ -1,0 +1,60 @@
+/* Container setup for a full viewport and modern typography */
+.scroll-container {
+  position: relative;
+  height: 100vh;
+  overflow-x: hidden;
+  padding: 20px;
+  background: #fdfdfd;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Letters wrapper displays "ANEV" in-line as one word */
+.letters-wrapper {
+  font-size: 4rem;
+  font-weight: bold;
+  letter-spacing: 5px;
+  position: relative;
+}
+
+/* Each letter is an inline-block for individual control */
+.letter {
+  display: inline-block;
+}
+
+/* Words wrapper is used to position the accompanying words */
+.words-wrapper {
+  position: relative;
+  width: 100%;
+  margin-top: 40px;
+  height: 2.5rem; /* Adjust height as needed */
+}
+
+/* Common styling for words (initially hidden) */
+.word {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transition: all 0.3s ease;
+}
+
+/* Position each word near its corresponding letter */
+/* Adjust the left percentages or positions based on your design */
+.word-alpha {
+  left: 0;  /* next to letter A */
+}
+
+.word-next {
+  left: 25%; /* roughly next to letter N */
+}
+
+.word-elevate {
+  left: 50%; /* next to letter E */
+}
+
+.word-vision {
+  left: 75%; /* next to letter V */
+}
