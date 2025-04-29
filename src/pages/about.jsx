@@ -1,5 +1,5 @@
 import React from "react";
-import bgImage from "../assets/bgImage.avif";
+import bgImage from "../assets/iconMod.jpg";
 import image01 from "../assets/image01.avif";
 import image02 from "../assets/image02.avif";
 import image03 from "../assets/image03.avif";
@@ -12,12 +12,12 @@ const About = () => {
         <span className="text-white text-[20px] poppins-thin uppercase">
           About
         </span>
-        <span className="text-white text-[120px] w-full justify-center leading-[110px]  font-normal  flex items-center uppercase text-center">
-          We Are Ajan
+        <span className="fonk text-[120px] uppercase text-center w-full text-transparent bg-clip-text font-medium  p-2  hatch-background">
+          We Are ANEV
         </span>
       </div>
 
-      <div className="w-full h-screen flex gap-[60px] px-[60px] pt-[60px] justify-center">
+      <div className="w-full h-fit flex gap-[60px] px-[60px] pt-[60px] justify-center items-center mt-10 ">
         <div className="h-full flex justify-center items-center text-[20px] text-center text-white">
           <span>Fundamentally we are storytellers</span>
         </div>
@@ -36,18 +36,27 @@ const About = () => {
 
       <div className="w-full flex flex-col justify-center items-center text-[30px] gap-[60px] text-white poppins-thin my-[200px]">
         <span className="text-center w-2/3">
-          AJAN was birthed to help aid and assist in effective digital media
-          production and branding.
+          ANEV was born out of a simple but urgent need — to bridge the growing
+          gap between brands and the digital-first world.
         </span>
         <span className="text-center w-2/3">
-          The problem was clear, though digitisation is happening at a rampant
-          pace, we're only scratching the surface of the countless businesses
-          that need to evolve to a digital first economy.{" "}
+          While the wave of digitisation continues to surge, thousands of
+          businesses are still struggling to build a real, resonant presence
+          online.
         </span>
         <span className="text-center w-2/3">
-          The sheer volume of this, coupled with a lack of organised talent &
-          structure for creating & maintaining a digital presence was the reason
-          AJAN came into being.{" "}
+          The challenge isn’t just speed — it’s quality, strategy, and execution
+          at scale.
+        </span>
+        <span className="text-center w-2/3">
+          A fragmented creative ecosystem, lack of organized talent, and absence
+          of structured content systems made it harder for brands to truly
+          thrive.
+        </span>
+        <span className="text-center w-2/3">
+          ANEV was created to change that — to empower brands with bold
+          storytelling, sharp strategy, and relentless execution — building not
+          just digital footprints, but digital leadership.{" "}
         </span>
       </div>
 
@@ -65,8 +74,8 @@ const About = () => {
           </span>
         </div>
         <div className="w-fit flex gap-[50px]">
-        <span className="text-[100px] font-normal leading-[90px] flex items-center text-white uppercase">
-           Rapid MGMT
+          <span className="text-[100px] font-normal leading-[90px] flex items-center text-white uppercase">
+            Rapid MGMT
           </span>
           <div className="w-[250px] rounded-full overflow-hidden relative">
             <img
@@ -75,7 +84,6 @@ const About = () => {
             />
             <div className="artist z-0">0</div>
           </div>
-         
         </div>
         <div className="w-fit flex gap-[50px]">
           <div className="w-[250px] rounded-full overflow-hidden relative">
@@ -90,8 +98,8 @@ const About = () => {
           </span>
         </div>
         <div className="w-fit flex gap-[50px]">
-        <span className="text-[100px] font-normal leading-[90px] flex items-center text-white uppercase">
-           Rapid MGMT
+          <span className="text-[100px] font-normal leading-[90px] flex items-center text-white uppercase">
+            Rapid MGMT
           </span>
           <div className="w-[250px] rounded-full overflow-hidden relative">
             <img
@@ -100,20 +108,28 @@ const About = () => {
             />
             <div className="artist z-0">0</div>
           </div>
-         
         </div>
       </div>
       {/* Call To Action */}
 
       <div className="w-full min-h-screen  flex flex-col justify-center items-center gap-[60px]">
         <span className="text-white text-[20px] poppins-thin uppercase">
-            Contact
+          Contact
         </span>
-        <span className="text-white text-[120px] w-3/4 leading-[110px]  poppins-normal uppercase text-center">
-          Have a cool project?
-        </span>
-        <button className="buttonr px-16 py-5 text-2xl rounded-full poppins-light ">Let's Talk!</button>
-        </div>
+        <div className="text-[120px] uppercase text-center w-full text-transparent bg-clip-text font-medium p-2 hatch-background leading-none">
+  <div className="flex flex-col items-center">
+    <span className="fonk">Have a cool</span>
+    <span>
+      <span className="fonk">project</span>
+      <span>?</span>
+    </span>
+  </div>
+</div>
+
+        <button className="buttonr px-16 py-5 text-2xl rounded-full poppins-light ">
+          Let's Talk!
+        </button>
+      </div>
     </>
   );
 };

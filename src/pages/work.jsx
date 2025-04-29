@@ -50,7 +50,7 @@ const Work = () => {
       <div className="w-full min-h-screen bg-black flex flex-col justify-center items-center gap-[4px]">
         {/* Title - "Explore Our" */}
       <div className="w-fit overflow-hidden h-fit">
-        <span ref={text1Ref} className="text-white text-[150px] poppins-normal uppercase block">
+        <span ref={text1Ref} className="fonk text-[150px] uppercase text-center w-full text-transparent bg-clip-text font-medium  p-2  hatch-background">
           Explore Our
         </span>
       </div>
@@ -64,7 +64,7 @@ const Work = () => {
 
       {/* Title - "Playground" */}
       <div className="w-fit overflow-hidden h-fit">
-        <span ref={text2Ref} className="text-white text-[150px] poppins-normal uppercase block">
+        <span ref={text2Ref} className="fonk text-[150px] uppercase text-center w-full text-transparent bg-clip-text font-medium  p-2  hatch-background">
           Playground
         </span>
       </div>
@@ -269,13 +269,22 @@ const Work = () => {
 
       <div className="w-full min-h-screen  flex flex-col justify-center items-center gap-[60px]">
         <span className="text-white text-[20px] poppins-thin uppercase">
-            Contact
+          Contact
         </span>
-        <span className="text-white text-[120px] w-3/4 leading-[110px]  poppins-normal uppercase text-center">
-          Have a cool project?
-        </span>
-        <button className="buttonr px-16 py-5 text-2xl rounded-full poppins-light ">Let's Talk!</button>
-        </div>
+        <div className="text-[120px] uppercase text-center w-full text-transparent bg-clip-text font-medium p-2 hatch-background leading-none">
+  <div className="flex flex-col items-center">
+    <span className="fonk">Have a cool</span>
+    <span>
+      <span className="fonk">project</span>
+      <span>?</span>
+    </span>
+  </div>
+</div>
+
+        <button className="buttonr px-16 py-5 text-2xl rounded-full poppins-light ">
+          Let's Talk!
+        </button>
+      </div>
 
 
         {/* <div className="w-full min-h-screen bg-black flex flex-col justify-center items-center gap-[4px]">

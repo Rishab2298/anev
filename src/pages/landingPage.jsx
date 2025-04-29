@@ -3,7 +3,6 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
@@ -20,10 +19,10 @@ import service5 from "../assets/5ajan.avif";
 import webDev from "../assets/1.jpg";
 import socialMedia from "../assets/2.jpg";
 import production from "../assets/3.jpg";
-import contentCreation from "../assets/4.jpg"
+import contentCreation from "../assets/4.jpg";
 import service6 from "../assets/6ajan.avif";
 import billboard from "../assets/billboard.png";
-import herImage from "../assets/herImage.jpeg";
+import herImage from "../assets/anevHeroImage.webp";
 import InfiniteCarousel from "../components/infiniteCarousle";
 
 import logo1 from "../assets/logo1.webp";
@@ -52,11 +51,7 @@ import asset1 from "../assets/asset1.png";
 import AnimatedList from "../components/animatedList";
 import InfiniteCarouselRight from "../components/infiniteCarousleRight";
 
-
-
-
-
-import star from "../assets/star.svg";
+import icon from "../assets/icon.svg";
 import Section from "./section";
 import ScrollingAnimation from "./section";
 const logos = [
@@ -85,10 +80,14 @@ const logos2 = [
 ];
 gsap.registerPlugin(ScrollTrigger);
 const LandingPage = () => {
-
   const sectionRef = useRef(null);
   const elementsRef = useRef([]);
-
+  const services = [
+    { img: production, title: "Event Content Production" },
+    { img: contentCreation, title: "Content Creation" },
+    { img: socialMedia, title: "Social Media Management" },
+    { img: webDev, title: "Website Development" },
+  ];
   useEffect(() => {
     const elements = elementsRef.current;
 
@@ -138,12 +137,14 @@ const LandingPage = () => {
       {
         y: 0,
         opacity: 1,
-        stagger: 0.2,
+        duration: 1, // smoothness: 1 second
+        ease: "power3.out",
+        stagger: 0.1,
         scrollTrigger: {
           trigger: containerRef.current,
           start: "top center",
           end: "top 10%",
-          scrub: true,
+          // scrub: true,
         },
       }
     );
@@ -151,10 +152,13 @@ const LandingPage = () => {
 
   return (
     <>
-    {/* Hero Image  */}
-      <div className="w-full h-screen bg-black flex justify-center items-center">
-
-        <img src={herImage} alt="herImage" className="w-3/5 py-2 h-auto" />
+      {/* Hero Image  */}
+      <div className="w-full  h-fit md:h-screen bg-black flex justify-center items-center">
+        <img
+          src={herImage}
+          alt="herImage"
+          className="w-full md:w-4/5 py-2 h-auto"
+        />
         {/* <video
           autoPlay
           loop
@@ -165,112 +169,101 @@ const LandingPage = () => {
           Your browser does not support the video tag.
         </video> */}
       </div>
-<ScrollingAnimation/>
+      <ScrollingAnimation />
       {/* Middle Section */}
       <div
-      ref={containerRef}
-      className="relative w-full h-screen flex flex-col justify-center items-center bg-black"
-    >
-      <img id="banner" src={bgImage} alt="bgImage" className="w-full h-auto" />
-      <div className="absolute flex flex-col justify-center items-center gap-5">
-        <span className="text-white poppins-medium text-[32px] text-center">
-          {"The next generation media pipeline.".split(" ").map((word, index) => (
-            <span
-              key={index}
-              ref={(el) => (textRef.current[index] = el)}
-              className="inline-block overflow-hidden"
-            >
-              {word}&nbsp;
-            </span>
-          ))}
-        </span>
-        <button className="buttonra px-1 py-1 rounded-full poppins-light w-[65px] bg-black">
-          <img src={asset1} alt="Button Asset" />
-        </button>
+        ref={containerRef}
+        className="relative w-full h-fit md:h-screen flex flex-col justify-center items-center bg-black">
+        <img
+          id="banner"
+          src={bgImage}
+          alt="bgImage"
+          className="w-full h-auto"
+        />
+        <div className="absolute flex flex-col justify-center items-center md:gap-5 gap-1.5">
+          <span className="text-white poppins-medium text-[20px] md:text-[32px] text-center">
+            {"The next generation media pipeline."
+              .split(" ")
+              .map((word, index) => (
+                <span
+                  key={index}
+                  ref={(el) => (textRef.current[index] = el)}
+                  className="inline-block overflow-hidden">
+                  {word}&nbsp;
+                </span>
+              ))}
+          </span>
+          <button className="buttonra p-1 md:p-3 rounded-full poppins-light w-[30px] md:w-[65px] bg-black">
+            <img src={icon} alt="Button Asset" />
+          </button>
+        </div>
       </div>
-    </div>
       {/* What is Anev */}
-      <div className="w-full h-fit relative">
+      <div className="w-full h-fit relative ">
         {/* Image */}
         <img src={starsBg} alt="starsBgImage" className="w-full h-fit z-0" />
 
         {/* Text Overlay */}
         <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center z-10">
-          <h2 className="text-[75px]  w-full text-transparent bg-clip-text font-bold  p-2 text-center hatch-background">
-            WHAT IS ANEV?
+          <h2 className=" text-[30px] md:text-[75px]  w-full text-transparent bg-clip-text font-bold  p-2 text-center hatch-background">
+            <span className="fonk">WHAT IS ANEV</span>?
           </h2>
-          <span className="w-1/2 text-white text-center text-[24px] p-4 leading-[36px] font-thin tracking-wide">
-            AJAN is an attempt at building a revolutionary new-age marketing
-            media pipeline that understands your brands’ needs and goals and,
-            through effective systems and rapid management, creates impactful
-            media solutions that captivate and engage your audiences to help
-            expand your brands digital presence.
+          <span className="w-full md:w-1/2 text-white text-center md:text-[24px] text-[15px] p-4 leading-[25px] md:leading-[36px] font-thin tracking-wide">
+            ANEV is a next-generation creative agency built to move brands
+            forward — fast. We combine sharp strategy, bold storytelling, and
+            agile execution to craft impactful content ecosystems that don’t
+            just catch attention, but hold it. With ANEV, your brand doesn’t
+            just exist online — it leads, resonates, and thrives.
           </span>
         </div>
       </div>
       {/* Services */}
-      <div className="w-full h-fit flex flex-col justify-center items-center bg-black px-20 py-20 gap-10">
-        <h2 className="text-[90px]  w-full text-transparent bg-clip-text font-bold  p-2  hatch-background">
-          Services
+      <div className="w-full h-fit flex flex-col justify-center items-center bg-black md:p-20 p-5 gap-4 md:gap-10">
+        <h2 className="text-[30px] md:text-[90px] md:text-left text-center  w-full text-transparent bg-clip-text font-bold  p-2  hatch-background fonk">
+          SERVICES
         </h2>
-        <div className="w-full flex flex-row items-center gap-10">
-          <div className="w-1/4 flex flex-col gap-4">
-            <div className="w-full aspect-square rounded-4xl overflow-hidden relative">
-              <img
-                src={production}
-                className="relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10"
-              />
-              <div className="artist z-0">0</div>
-            </div>
-            <span className="uppercase font-thin text-[20px] text-center  text-white ">
-Event Content Production
-            </span>
-          </div>
-          <div className="w-1/4 flex flex-col gap-4">
-            <div className="w-full aspect-square rounded-4xl overflow-hidden relative">
-              <img
-                src={contentCreation}
-                className="relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10"
-              />
-              <div className="artist z-0">0</div>
-            </div>
-            <span className="uppercase font-thin text-[20px] text-center  text-white ">
-             Content Creation
-            </span>
-          </div>
-          <div className="w-1/4 flex flex-col gap-4">
-            <div className="w-full aspect-square rounded-4xl overflow-hidden relative">
-              <img
-                src={socialMedia}
-                className="relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10"
-              />
-              <div className="artist z-0">0</div>
-            </div>
-            <span className="uppercase font-thin text-[20px] text-center  text-white ">
-            Social Media Management
-            </span>
-          </div>
-        
-          <div className="w-1/4 flex flex-col gap-4">
-            <div className="w-full aspect-square rounded-4xl overflow-hidden relative">
-              <img
-                src={webDev}
-                className="relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10"
-              />
-              <div className="artist z-0">0</div>
-            </div>
-            <span className="uppercase font-thin text-[20px] text-center  text-white ">
-Website Development
-            </span>
-          </div>
-          
+        <Swiper
+  slidesPerView={1}
+  spaceBetween={20}
+  pagination={{
+    el: '.my-custom-pagination',
+    clickable: true,
+  }}
+  breakpoints={{
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 20,
+    },
+  }}
+  modules={[Pagination]}
+  className="w-full"
+>
+  {services.map((item, idx) => (
+    <SwiperSlide key={idx}>
+      <div className="flex flex-col gap-4 px-4">
+        <div className="  w-full aspect-square rounded-4xl overflow-hidden relative">
+          <img
+            src={item.img}
+            className=" relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10"
+          />
+          <div className="artist z-0">0</div>
         </div>
+        <span className="uppercase font-thin text-[20px] text-center text-white">
+          {item.title}
+        </span>
+      </div>
+    </SwiperSlide>
+    
+  ))}
+<div className="my-custom-pagination  text-center" />
+</Swiper>
+
       </div>
 
       {/* Our Work */}
-      <div className="w-full h-fit flex flex-col justify-center items-center bg-black px-20 py-20 gap-10">
-        <h2 className="text-[90px]  w-full text-transparent bg-clip-text font-medium  p-2  hatch-background">
-          Our Work
+      <div className="w-full h-fit flex flex-col justify-center items-center bg-black p-5 md:p-20 gap-4 md:gap-10">
+        <h2 className="fonk text-[30px] text-center md:text-left md:text-[90px]  w-full text-transparent bg-clip-text font-medium  p-2  hatch-background">
+          OUR WORK
         </h2>
 
         {/* Carousel 1 */}
@@ -285,13 +278,16 @@ Website Development
 
       {/* Clientele */}
       <div className="w-full h-fit flex flex-col justify-center items-center bg-black px-20 py-20 gap-10">
-        <h2 className="text-[90px]  w-full text-transparent bg-clip-text font-medium  p-2  hatch-background">
-          Clientele
+        <h2 className="fonk text-[90px]  w-full text-transparent bg-clip-text font-medium  p-2  hatch-background">
+          CLIENTELE
         </h2>
 
         <div
           className="w-3/5 flex flex-row items-center  justify-center bg-contain bg-top"
-          style={{ backgroundImage: `url(${billboard})` }}>
+          style={{
+            backgroundImage: `url(${billboard})`,
+            backgroundRepeat: "no-repeat",
+          }}>
           <div className="w-4/5 h-[600px] flex-row mt-[100px]">
             {" "}
             {/* Set a fixed height here */}
@@ -349,46 +345,68 @@ Website Development
       </div>
 
       {/* Pipeline */}
-      <div ref={sectionRef} className="w-full h-fit flex flex-col justify-center items-center bg-black p-20 gap-10">
-      <h2 className="text-[90px] w-full text-transparent bg-clip-text font-medium p-2 hatch-background">
-       Our Process
-      </h2>
-      <div className="w-full flex justify-center items-center gap-12">
-        {[
-          { title: "1. Briefing", text: "Your brand's vision is our launchpad. We meticulously understand your goals, values, and target audience to kickstart the journey." },
-          { title: "2. Ideation", text: "Our creative minds spin concepts that align with your brand’s essence, ensuring every idea is groundbreaking and strategic." },
-          { title: "3. Execution", text: "From design to development, every step is marked by precision. Your project moves swiftly through each stage without compromising quality." },
-          { title: "4. Delivery & Beyond", text: "This partnership doesn't end at delivery. We analyze outcomes, gather insights, and iterate strategies for continuous growth." }
-        ].map((item, index) => (
-          <div
-            key={index}
-            ref={(el) => (elementsRef.current[index] = el)}
-            className="w-1/4 flex flex-col gap-4 opacity-0"
-          >
-            <img className="w-10 h-10 object-contain rounded-full" src={star} alt="icon" />
-            <span className="uppercase font-thin text-[30px] text-white">{item.title}</span>
-            <span className="text-white font-thin">{item.text}</span>
-          </div>
-        ))}
+      <div
+        ref={sectionRef}
+        className="w-full h-fit flex flex-col justify-center items-center bg-black p-20 gap-10">
+        <h2 className="fonk text-[90px] w-full text-transparent bg-clip-text font-medium p-2 hatch-background">
+          OUR PROCESS
+        </h2>
+        <div className="w-full flex justify-center items-center gap-12">
+          {[
+            {
+              title: "1. Briefing",
+              text: "Your brand's vision is our launchpad. We meticulously understand your goals, values, and target audience to kickstart the journey.",
+            },
+            {
+              title: "2. Ideation",
+              text: "Our creative minds spin concepts that align with your brand’s essence, ensuring every idea is groundbreaking and strategic.",
+            },
+            {
+              title: "3. Execution",
+              text: "From design to development, every step is marked by precision. Your project moves swiftly through each stage without compromising quality.",
+            },
+            {
+              title: "4. Delivery & Beyond",
+              text: "This partnership doesn't end at delivery. We analyze outcomes, gather insights, and iterate strategies for continuous growth.",
+            },
+          ].map((item, index) => (
+            <div
+              key={index}
+              ref={(el) => (elementsRef.current[index] = el)}
+              className="w-1/4 flex flex-col gap-4 opacity-0">
+              <img
+                className="w-10 h-10 object-contain rounded-full p-2 bg-neutral-800"
+                src={icon}
+                alt="icon"
+              />
+              <span className="uppercase font-thin text-[30px] text-white">
+                {item.title}
+              </span>
+              <span className="text-white font-thin">{item.text}</span>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
 
       {/* Call To Action */}
 
       <div className="relative w-full h-fit flex flex-col justify-center items-center bg-black">
-  <img
-    id="banner"
-    src={bgImage}
-    alt="bgImage"
-    className="w-full h-auto"
-  />
-  <div className="absolute flex flex-col justify-center items-center gap-5">
-   <span className="text-white poppins-medium uppercase text-[65px] text-center"> Digital Magic Together</span> 
-    <button className="buttonr px-16 py-5 text-2xl rounded-full poppins-light w-[300px] ">Get in Touch!</button>
-  </div>
- 
-</div>
-
+        <img
+          id="banner"
+          src={bgImage}
+          alt="bgImage"
+          className="w-full h-auto"
+        />
+        <div className="absolute flex flex-col justify-center items-center gap-5">
+          <span className=" fonk text-[90px]  w-full  text-white font-medium  p-2  ">
+            {" "}
+            Digital Magic Together
+          </span>
+          <button className="buttonr px-16 py-5 text-2xl rounded-full poppins-light w-[300px] ">
+            Get in Touch!
+          </button>
+        </div>
+      </div>
     </>
   );
 };
