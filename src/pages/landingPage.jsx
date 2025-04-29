@@ -8,6 +8,14 @@ import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
+// Splide core & React components
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+
+// Splide default CSS
+import "@splidejs/react-splide/css";
+
+// Splide Auto Scroll extension
+import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 import bgImage from "../assets/gradient.png";
 import heroImage from "../assets/heroImage.webm";
 import starsBg from "../assets/starsBg.jpg";
@@ -35,7 +43,18 @@ import logo7 from "../assets/logo7.png";
 import logo8 from "../assets/logo8.webp";
 import logo9 from "../assets/logo9.jpg";
 import logo10 from "../assets/logo10.webp";
-
+const logoso = [
+  logo1,
+  logo2,
+  logo3,
+  logo4,
+  logo5,
+  logo6,
+  logo7,
+  logo8,
+  logo9,
+  logo10,
+];
 import logo11 from "../assets/logo11.png";
 import logo12 from "../assets/logo12.png";
 import logo13 from "../assets/logo13.png";
@@ -79,7 +98,7 @@ const logos2 = [
   logo7,
 ];
 gsap.registerPlugin(ScrollTrigger);
-const LandingPage = () => {
+const LandingPage = ({ direction = "left", speed = 1.5 }) => {
   const sectionRef = useRef(null);
   const elementsRef = useRef([]);
   const services = [
@@ -108,23 +127,23 @@ const LandingPage = () => {
       }
     );
   }, []);
-  const carouselData = [
-    {
-      type: "image",
-      url: service1,
-      link: "https://example.com",
-    },
-    {
-      type: "video",
-      url: "https://www.w3schools.com/html/mov_bbb.mp4",
-      link: "https://example.com/video",
-    },
-    {
-      type: "image",
-      url: "https://via.placeholder.com/800x400",
-      link: "https://example.com/image2",
-    },
-  ];
+  // const carouselData = [
+  //   {
+  //     type: "image",
+  //     url: service1,
+  //     link: "https://example.com",
+  //   },
+  //   {
+  //     type: "video",
+  //     url: "https://www.w3schools.com/html/mov_bbb.mp4",
+  //     link: "https://example.com/video",
+  //   },
+  //   {
+  //     type: "image",
+  //     url: "https://via.placeholder.com/800x400",
+  //     link: "https://example.com/image2",
+  //   },
+  // ];
   const containerRef = useRef(null);
   const textRef = useRef([]);
 
@@ -223,41 +242,38 @@ const LandingPage = () => {
           SERVICES
         </h2>
         <Swiper
-  slidesPerView={1}
-  spaceBetween={20}
-  pagination={{
-    el: '.my-custom-pagination',
-    clickable: true,
-  }}
-  breakpoints={{
-    1024: {
-      slidesPerView: 4,
-      spaceBetween: 20,
-    },
-  }}
-  modules={[Pagination]}
-  className="w-full"
->
-  {services.map((item, idx) => (
-    <SwiperSlide key={idx}>
-      <div className="flex flex-col gap-4 px-4">
-        <div className="  w-full aspect-square rounded-4xl overflow-hidden relative">
-          <img
-            src={item.img}
-            className=" relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10"
-          />
-          <div className="artist z-0">0</div>
-        </div>
-        <span className="uppercase font-thin text-[20px] text-center text-white">
-          {item.title}
-        </span>
-      </div>
-    </SwiperSlide>
-    
-  ))}
-<div className="my-custom-pagination  text-center" />
-</Swiper>
-
+          slidesPerView={1}
+          spaceBetween={20}
+          pagination={{
+            el: ".my-custom-pagination",
+            clickable: true,
+          }}
+          breakpoints={{
+            1024: {
+              slidesPerView: 4,
+              spaceBetween: 20,
+            },
+          }}
+          modules={[Pagination]}
+          className="w-full">
+          {services.map((item, idx) => (
+            <SwiperSlide key={idx}>
+              <div className="flex flex-col gap-4 px-4">
+                <div className="  w-full aspect-square rounded-4xl overflow-hidden relative">
+                  <img
+                    src={item.img}
+                    className=" relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10"
+                  />
+                  <div className="artist z-0">0</div>
+                </div>
+                <span className="uppercase font-thin text-[20px] text-center text-white">
+                  {item.title}
+                </span>
+              </div>
+            </SwiperSlide>
+          ))}
+          <div className="my-custom-pagination  text-center" />
+        </Swiper>
       </div>
 
       {/* Our Work */}
@@ -268,22 +284,110 @@ const LandingPage = () => {
 
         {/* Carousel 1 */}
         <div className="w-full flex flex-col items-center gap-10">
-          <InfiniteCarousel />
+          {/* <InfiniteCarousel />
           <InfiniteCarouselRight />
-          <InfiniteCarousel />
-
+          <div className="hidden md:flex">
+            <InfiniteCarousel />  </div> */}
           {/* <AnimatedList /> */}
         </div>
       </div>
 
       {/* Clientele */}
-      <div className="w-full h-fit flex flex-col justify-center items-center bg-black px-20 py-20 gap-10">
-        <h2 className="fonk text-[90px]  w-full text-transparent bg-clip-text font-medium  p-2  hatch-background">
+      <div className="w-full h-fit flex flex-col justify-center items-center bg-black md:p-20 p-4 gap-10 mt-4 md:mt-0">
+        <h2 className="fonk text-[30px] md:text-left text-center md:text-[90px]  w-full text-transparent bg-clip-text font-medium  p-2  hatch-background">
           CLIENTELE
         </h2>
 
+        <div className="flex flex-col md:hidden w-full overflow-hidden my-10 bg-white rounded-lg mx-3 px-3">
+          <Splide
+            options={{
+              type: "loop",
+              drag: "free",
+              arrows: false,
+              pagination: false,
+              perPage: 4,
+              gap: "3rem",
+              autoScroll: {
+                speed: direction === "left" ? -speed : speed,
+                pauseOnHover: false,
+                pauseOnFocus: false,
+                rewind: false,
+              },
+            }}
+            extensions={{ AutoScroll }}>
+            {logos.map((logo, index) => (
+              <SplideSlide key={index}>
+                <div className="flex justify-center items-center h-24">
+                  <img
+                    src={logo}
+                    alt={`Logo ${index + 1}`}
+                    className="h-full object-contain"
+                  />
+                </div>
+              </SplideSlide>
+            ))}
+          </Splide>
+          <Splide
+            options={{
+              type: "loop",
+              drag: "free",
+              arrows: false,
+              pagination: false,
+              perPage: 4,
+              gap: "3rem",
+              autoScroll: {
+                direction: "right",
+                speed:  2,
+                pauseOnHover: false,
+                pauseOnFocus: false,
+                rewind: false,
+              },
+            }}
+            extensions={{ AutoScroll }}>
+            {logos.map((logo, index) => (
+              <SplideSlide key={index}>
+                <div className="flex justify-center items-center h-24">
+                  <img
+                    src={logo}
+                    alt={`Logo ${index + 1}`}
+                    className="h-full object-contain"
+                  />
+                </div>
+              </SplideSlide>
+            ))}
+          </Splide>
+          <Splide
+            options={{
+              type: "loop",
+              drag: "free",
+              arrows: false,
+              pagination: false,
+              perPage: 4,
+              gap: "3rem",
+              autoScroll: {
+                speed: direction === "left" ? -speed : speed,
+                pauseOnHover: false,
+                pauseOnFocus: false,
+                rewind: false,
+              },
+            }}
+            extensions={{ AutoScroll }}>
+            {logos.map((logo, index) => (
+              <SplideSlide key={index}>
+                <div className="flex justify-center items-center h-24">
+                  <img
+                    src={logo}
+                    alt={`Logo ${index + 1}`}
+                    className="h-full object-contain"
+                  />
+                </div>
+              </SplideSlide>
+            ))}
+          </Splide>
+        </div>
+
         <div
-          className="w-3/5 flex flex-row items-center  justify-center bg-contain bg-top"
+          className="hidden w-3/5 md:flex flex-row items-center  justify-center bg-contain bg-top"
           style={{
             backgroundImage: `url(${billboard})`,
             backgroundRepeat: "no-repeat",

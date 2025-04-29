@@ -1,13 +1,113 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap");
 @font-face {
-  font-family: 'Phonk';
-  src: url('/src/assets/fonts/Phonk.otf') format('opentype');
+  font-family: "Phonk";
+  src: url("/src/assets/fonts/Phonk.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.scroller-track {
+  display: flex;
+  width: max-content;
+  animation: scrollLeft 30s linear infinite;
+}
+
+.scroller-wrapper {
+  overflow: hidden;
+  width: 100%;
+  mask-image: linear-gradient(to right, rgba(0,0,0,0), black 20%, black 80%, rgba(0,0,0,0));
+}
+
+.logo-item {
+  width: 200px;
+  height: 100px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 1536px;
+  margin-inline: auto;
+  position: relative;
+  height: 100px;
+  align-items: center;
+  display: flex;
+  border-radius: 20px;
+  background-color: white;
+  margin-top: 5rem;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255),
+    rgba(255, 255, 255, 1) 20%,
+    rgba(255, 255, 255, 1) 80%,
+    rgba(255, 255, 255)
+  );
+}
+
+@keyframes scrollLeft {
+  to {
+    left: -200px;
+  }
+}
+
+.item0 {
+  width: 100px;
+  height: 50px;
+  align-items: center;
+  display: flex;
+  border-radius: 6px;
+  position: absolute;
+  left: max(calc(100px * 8), 100%);
+  animation-name: scrollLeft;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.item01 {
+  animation-delay: calc(30s / 8 * (8 - 1) * -1);
+}
+
+.item02 {
+  animation-delay: calc(30s / 8 * (8 - 2) * -1);
+}
+
+.item03 {
+  animation-delay: calc(30s / 8 * (8 - 3) * -1);
+}
+
+.item04 {
+  animation-delay: calc(30s / 8 * (8 - 4) * -1);
+}
+
+.item05 {
+  animation-delay: calc(30s / 8 * (8 - 5) * -1);
+}
+
+.item06 {
+  animation-delay: calc(30s / 8 * (8 - 6) * -1);
+}
+
+.item07 {
+  animation-delay: calc(30s / 8 * (8 - 7) * -1);
+}
+
+.item08 {
+  animation-delay: calc(30s / 8 * (8 - 8) * -1);
+}
 .my-custom-pagination .swiper-pagination-bullet {
   background: white;
   opacity: 0.5;
@@ -16,8 +116,8 @@
   opacity: 1;
   background: #facc15; /* example yellow */
 }
-.fonk{
-  font-family:'Phonk', sans-serif;
+.fonk {
+  font-family: "Phonk", sans-serif;
 }
 .gothic {
   font-family: "Special Gothic Expanded One", sans-serif;
@@ -217,27 +317,48 @@
   overflow: hidden;
 }
 .artist {
-    background: url("https://framerusercontent.com/images/rR6HYXBrMmX4cRpXfXUOvpvpB0.png");
-    opacity: 1;
-    inset: -200%;
-    width: 400%;
-    height: 400%;
-    position: absolute;
-    will-change: transform;
-    animation: moveBackground 2s steps(10) infinite;
+  background: url("https://framerusercontent.com/images/rR6HYXBrMmX4cRpXfXUOvpvpB0.png");
+  opacity: 1;
+  inset: -200%;
+  width: 400%;
+  height: 400%;
+  position: absolute;
+  will-change: transform;
+  animation: moveBackground 2s steps(10) infinite;
 }
 
 @keyframes moveBackground {
-    0%, 100% { transform:translate(0, 0) }
-    10% { transform:translate(-5%, -10%) }
-    20% { transform:translate(-15%, 5%) }
-    30% { transform:translate(7%, -25%) }
-    40% { transform:translate(-5%, 25%) }
-    50% { transform:translate(-15%, 10%) }
-    60% { transform:translate(15%, 0%) }
-    70% { transform:translate(0%, 15%) }
-    80% { transform:translate(3%, 35%) }
-    90% { transform:translate(-10%, 10%) }
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5%, -10%);
+  }
+  20% {
+    transform: translate(-15%, 5%);
+  }
+  30% {
+    transform: translate(7%, -25%);
+  }
+  40% {
+    transform: translate(-5%, 25%);
+  }
+  50% {
+    transform: translate(-15%, 10%);
+  }
+  60% {
+    transform: translate(15%, 0%);
+  }
+  70% {
+    transform: translate(0%, 15%);
+  }
+  80% {
+    transform: translate(3%, 35%);
+  }
+  90% {
+    transform: translate(-10%, 10%);
+  }
 }
 
 /* .app {
@@ -248,107 +369,108 @@
     justify-content: center;
     flex-direction: column;
   } */
-  .tag-list {
-    width: 30rem;
-    max-width: 90vw;
+.tag-list {
+  width: 30rem;
+  max-width: 90vw;
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  gap: 1rem 0;
+  position: relative;
+  padding: 1.5rem 0;
+  overflow: hidden;
+}
+
+.loop-slider {
+  .inner {
     display: flex;
-    flex-shrink: 0;
-    flex-direction: column;
-    gap: 1rem 0;
-    position: relative;
-    padding: 1.5rem 0;
-    overflow: hidden;
+    width: fit-content;
+    animation-name: loop;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: var(--direction);
+    animation-duration: var(--duration);
   }
-  
-  .loop-slider {
-    .inner {
-      display: flex;
-      width: fit-content;
-      animation-name: loop;
-      animation-timing-function: linear;
-      animation-iteration-count: infinite;
-      animation-direction: var(--direction);
-      animation-duration: var(--duration);
-    }
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  gap: 0 0.2rem;
+  color: #e2e8f0;
+  font-size: 0.9rem;
+  background-color: #334155;
+  border-radius: 0.4rem;
+  padding: 0.7rem 1rem;
+  margin-right: 1rem;
+  box-shadow: 0 0.1rem 0.2rem rgb(0 0 0 / 20%), 0 0.1rem 0.5rem rgb(0 0 0 / 30%),
+    0 0.2rem 1.5rem rgb(0 0 0 / 40%);
+
+  span {
+    font-size: 1.2rem;
+    color: #64748b;
   }
-  
-  .tag {
-    display: flex;
-    align-items: center;
-    gap: 0 0.2rem;
-    color: #e2e8f0;
-    font-size: 0.9rem;
-    background-color: #334155;
-    border-radius: 0.4rem;
-    padding: 0.7rem 1rem;
-    margin-right: 1rem; 
-    box-shadow: 
-      0 0.1rem 0.2rem rgb(0 0 0 / 20%),
-      0 0.1rem 0.5rem rgb(0 0 0 / 30%),
-      0 0.2rem 1.5rem rgb(0 0 0 / 40%);
-    
-    span {
-      font-size: 1.2rem;
-      color: #64748b;
-    }
+}
+
+.fade {
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    #1e293b,
+    transparent 30%,
+    transparent 70%,
+    #1e293b
+  );
+  position: absolute;
+  inset: 0;
+}
+
+@keyframes loop {
+  0% {
+    transform: translateX(0);
   }
-  
-  .fade {
-    pointer-events: none;
-    background: linear-gradient(90deg, #1e293b, transparent 30%, transparent 70%, #1e293b);
-    position: absolute;
-    inset: 0;
+  100% {
+    transform: translateX(-50%);
   }
-  
-  @keyframes loop {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
-  }
+}
 
-  /* Call TO Action Buttona */
-  .buttonr {
-    position: relative;
-    display: inline-block;
+/* Call TO Action Buttona */
+.buttonr {
+  position: relative;
+  display: inline-block;
 
-
-
-    color: black;
-    /* Text is black by default */
-    background: white;
-border: none;
-    overflow: hidden;
-    cursor: pointer;
-    transition: color 0.3s ease-in-out;
-    z-index: 1;
-
+  color: black;
+  /* Text is black by default */
+  background: white;
+  border: none;
+  overflow: hidden;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+  z-index: 1;
 }
 
 .buttonr::before {
-    border-radius: 10px;
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 0;
-    background:#FF7B1C;
-    transition: height 0.3s ease-in-out;
-    z-index: 0;
-    /* Keeps the background below text */
+  border-radius: 10px;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0;
+  background: #ff7b1c;
+  transition: height 0.3s ease-in-out;
+  z-index: 0;
+  /* Keeps the background below text */
 }
 
 .buttonr:hover::before {
-    height: 100%;
-    z-index: -1;
+  height: 100%;
+  z-index: -1;
 }
 
 .buttonr:hover {
-    color: white;
-    /* Text turns white on hover */
+  color: white;
+  /* Text turns white on hover */
 }
 
 /* Middle Section */
@@ -357,17 +479,14 @@ border: none;
   position: relative;
   display: inline-block;
 
-
-
   color: black;
   /* Text is black by default */
-  background:black;
-border: none;
+  background: black;
+  border: none;
   overflow: hidden;
   cursor: pointer;
   transition: color 0.3s ease-in-out;
   z-index: 1;
-
 }
 
 .buttonra::before {
@@ -378,7 +497,7 @@ border: none;
   bottom: 0;
   width: 100%;
   height: 0;
-  background:#FF7B1C;
+  background: #ff7b1c;
   transition: height 0.3s ease-in-out;
   z-index: 0;
   /* Keeps the background below text */
