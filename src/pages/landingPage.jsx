@@ -73,6 +73,7 @@ import InfiniteCarouselRight from "../components/infiniteCarousleRight";
 import icon from "../assets/icon.svg";
 import Section from "./section";
 import ScrollingAnimation from "./section";
+import InfiniteLandscapeRight from "../components/infiniteCarousleLandscapeVideoRight";
 const logos = [
   logo1,
   logo2,
@@ -101,6 +102,25 @@ gsap.registerPlugin(ScrollTrigger);
 const LandingPage = ({ direction = "left", speed = 1.5 }) => {
   const sectionRef = useRef(null);
   const elementsRef = useRef([]);
+
+  const processItems = [
+    {
+      title: "1. Briefing",
+      text: "Your brand's vision is our launchpad. We meticulously understand your goals, values, and target audience to kickstart the journey.",
+    },
+    {
+      title: "2. Ideation",
+      text: "Our creative minds spin concepts that align with your brand’s essence, ensuring every idea is groundbreaking and strategic.",
+    },
+    {
+      title: "3. Execution",
+      text: "From design to development, every step is marked by precision. Your project moves swiftly through each stage without compromising quality.",
+    },
+    {
+      title: "4. Delivery & Beyond",
+      text: "This partnership doesn't end at delivery. We analyze outcomes, gather insights, and iterate strategies for continuous growth.",
+    },
+  ];
   const services = [
     { img: production, title: "Event Content Production" },
     { img: contentCreation, title: "Content Creation" },
@@ -284,8 +304,10 @@ const LandingPage = ({ direction = "left", speed = 1.5 }) => {
 
         {/* Carousel 1 */}
         <div className="w-full flex flex-col items-center gap-10">
-          {/* <InfiniteCarousel />
-          <InfiniteCarouselRight />
+          <InfiniteLandscapeRight />
+          <InfiniteCarousel />
+          <InfiniteCarouselRight />{" "}
+          {/* 
           <div className="hidden md:flex">
             <InfiniteCarousel />  </div> */}
           {/* <AnimatedList /> */}
@@ -293,12 +315,12 @@ const LandingPage = ({ direction = "left", speed = 1.5 }) => {
       </div>
 
       {/* Clientele */}
-      <div className="w-full h-fit flex flex-col justify-center items-center bg-black md:p-20 p-4 gap-10 mt-4 md:mt-0">
+      <div className="w-full h-fit flex flex-col justify-center items-center bg-black md:p-20 p-4 gap-2 md:gap-10 mt-4 md:mt-0">
         <h2 className="fonk text-[30px] md:text-left text-center md:text-[90px]  w-full text-transparent bg-clip-text font-medium  p-2  hatch-background">
           CLIENTELE
         </h2>
 
-        <div className="flex flex-col md:hidden w-full overflow-hidden my-10 bg-white rounded-lg mx-3 px-3">
+        <div className="flex flex-col md:hidden w-full overflow-hidden mt-0 mb-5 bg-white rounded-lg mx-3 px-3">
           <Splide
             options={{
               type: "loop",
@@ -337,7 +359,7 @@ const LandingPage = ({ direction = "left", speed = 1.5 }) => {
               gap: "3rem",
               autoScroll: {
                 direction: "right",
-                speed:  2,
+                speed: 2,
                 pauseOnHover: false,
                 pauseOnFocus: false,
                 rewind: false,
@@ -449,9 +471,10 @@ const LandingPage = ({ direction = "left", speed = 1.5 }) => {
       </div>
 
       {/* Pipeline */}
+      {/* -----------for desktop----------- */}
       <div
         ref={sectionRef}
-        className="w-full h-fit flex flex-col justify-center items-center bg-black p-20 gap-10">
+        className="hidden w-full h-fit md:flex flex-col justify-center items-center bg-black p-20 gap-10">
         <h2 className="fonk text-[90px] w-full text-transparent bg-clip-text font-medium p-2 hatch-background">
           OUR PROCESS
         </h2>
@@ -491,6 +514,38 @@ const LandingPage = ({ direction = "left", speed = 1.5 }) => {
           ))}
         </div>
       </div>
+      {/* -----------for mobile----------- */}
+      <div className="w-full h-fit flex flex-col justify-center items-center bg-black p-5 gap-10 md:hidden">
+        <h2 className="fonk text-[40px] text-center w-full text-transparent bg-clip-text font-medium p-2 hatch-background">
+          OUR PROCESS
+        </h2>
+        <Swiper
+          slidesPerView={1}
+          spaceBetween={20}
+          pagination={{
+            el: ".process-pagination",
+            clickable: true,
+          }}
+          modules={[Pagination]}
+          className="w-full">
+          {processItems.map((item, index) => (
+            <SwiperSlide key={index}>
+              <div className="flex flex-col items-center text-center gap-4 px-4">
+                <img
+                  className="w-10 h-10 object-contain rounded-full p-2 bg-neutral-800"
+                  src={icon}
+                  alt="icon"
+                />
+                <span className="uppercase font-thin text-[24px] text-white">
+                  {item.title}
+                </span>
+                <span className="text-white font-thin">{item.text}</span>
+              </div>
+            </SwiperSlide>
+          ))}
+          <div className="process-pagination text-center mt-4" />
+        </Swiper>
+      </div>
 
       {/* Call To Action */}
 
@@ -501,12 +556,12 @@ const LandingPage = ({ direction = "left", speed = 1.5 }) => {
           alt="bgImage"
           className="w-full h-auto"
         />
-        <div className="absolute flex flex-col justify-center items-center gap-5">
-          <span className=" fonk text-[90px]  w-full  text-white font-medium  p-2  ">
+        <div className="absolute flex flex-col justify-center items-center gap-0 md:gap-5">
+          <span className=" fonk text-[25px] md:text-[90px] md:text-left text-center w-full  text-white font-medium  p-2  ">
             {" "}
             Digital Magic Together
           </span>
-          <button className="buttonr px-16 py-5 text-2xl rounded-full poppins-light w-[300px] ">
+          <button className="buttonr px-6 py-2 md:px-16 md:py-5 md:text-2xl rounded-full poppins-light md:w-[300px] w-[200px] ">
             Get in Touch!
           </button>
         </div>

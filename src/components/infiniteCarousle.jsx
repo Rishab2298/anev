@@ -1,53 +1,42 @@
 import React from "react";
-import "./Carousel.css";
-import logo1 from "../assets/logo1.webp";
-import logo2 from "../assets/logo2.webp";
-import logo3 from "../assets/logo3.png";
-import logo4 from "../assets/logo4.webp";
-import logo5 from "../assets/logo5.png";
-import logo6 from "../assets/logo6.webp";
-import logo7 from "../assets/logo7.png";
-import logo8 from "../assets/logo8.webp";
-import logo9 from "../assets/logo9.jpg";
-import logo10 from "../assets/logo10.webp";
 
-import video1 from "../assets/1.webm";
-import video2 from "../assets/2.webm";
-import video3 from "../assets/3.mp4";
-import video4 from "../assets/4.webm";
-import video5 from "../assets/5.webm";
+import image01 from "../assets/images/gtw1.png";
+import image02 from "../assets/images/gtw2.png";
+import image03 from "../assets/images/ms02.png";
+import image04 from "../assets/images/mc1.jpg";
+import image05 from "../assets/images/mc2.jpg";
+import image06 from "../assets/images/ms04.png";
+import image07 from "../assets/images/as1.png";
+import image08 from "../assets/images/zero24.png";
+import image09 from "../assets/images/as3.png";
+import image10 from "../assets/images/zero22.png";
+import image11 from "../assets/images/as5.png";
+import image12 from "../assets/images/ms01.png";
+import image13 from "../assets/images/as7.png";
+
+
+const images = [image01, image03, image04,image02, image06, image07, image08, image09, image10, image11, image12, image13];
 
 const InfiniteCarousel = () => {
-  const logos = [logo1, logo2, logo3, logo4, logo5, logo6, logo7, logo8, logo9, logo10];
-  const videos = [video1, video2, video3, video4, video5,video1, video2,];
+  const duplicatedImages = [...images, ...images]; // For infinite loop illusion
 
   return (
-    <>
-   
-      <div className="slider" style={{ "--width": "400px", "--height": "225px", "--quantity": videos.length }}>
-        <div className="list">
-          {videos.map((logo, index) => (
-            <div key={index} className="item" style={{ "--position": index + 1 }}>
-              <video className=" rounded-[40px] object-cover h-full" autoPlay muted loop preload="auto">
-  <source src={logo} type="video/webm" />
-  <source src={logo} type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
-            </div>
-          ))}
-        </div>
+    <div className="overflow-hidden w-full">
+      <div className="flex animate-scroll-left whitespace-nowrap">
+        {duplicatedImages.map((image, index) => (
+          <div
+            key={index}
+            className="flex-shrink-0 w-[150px] h-[150px] md:w-[300px] md:h-[300px] mx-2 rounded-xl overflow-hidden"
+          >
+            <img
+              src={image}
+              alt={`carousel-${index}`}
+              className="w-full h-full object-cover rounded-xl"
+            />
+          </div>
+        ))}
       </div>
-
-      {/* <div className="slider" data-reverse="true" style={{ "--width": "100px", "--height": "50px", "--quantity": logos.length }}>
-        <div className="list">
-          {logos.map((logo, index) => (
-            <div key={index} className="item" style={{ "--position": index + 1 }}>
-              <img src={logo} alt={`Logo ${index + 1}`} />
-            </div>
-          ))}
-        </div>
-      </div> */}
-    </>
+    </div>
   );
 };
 
