@@ -40,12 +40,12 @@ const Contact = () => {
   }, []);
   return (
     <>
-      <div className="w-full flex justify-center  mt-[100px] p-10 gap-10">
-        <div className="w-3/4 pl-4 flex flex-col justify-center">
-          <h2 className="fonk text-[120px]  text-center w-full text-transparent bg-clip-text  hatch-background mt-[40px]">
+      <div className="w-full flex flex-col items-center justify-center  mt-5 md:mt-[100px] p-0 md:p-10 md:gap-10 gap-5">
+        <div className="w-[90%] md:w-3/4  flex flex-col justify-center gap-5">
+          <h2 className="fonk text-[60px] md:text-[120px] leading-[70px] md:leading-normal text-center w-full text-transparent bg-clip-text  hatch-background mt-[40px]">
             GET A QUOTE
           </h2>
-          <span className="uppercase text-white  text-[30px] leading-[36px] text-center font-thin tracking-wide">
+          <span className="uppercase text-white  text-[20px] leading-[26px] md:text-[30px] md:leading-[36px] text-center font-thin tracking-wide">
             Take a step towards building an impactful digital <br /> presence,
             together.
           </span>
@@ -74,25 +74,26 @@ const Contact = () => {
               Send Email
             </button>{" "}
           </div> */}
-          <div className="w-full justify-center text-center flex mt-24">
-          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdp8ywH-YJ0ei1TlofkKGZTnxRjxvG_-VDZlQBvuhrDu7cN_Q/viewform?embedded=true" width="640" height="1300" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-          </div></div>
+          </div>
+          <div className="w-full justify-center text-center flex mt-10 md:mt-24">
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdp8ywH-YJ0ei1TlofkKGZTnxRjxvG_-VDZlQBvuhrDu7cN_Q/viewform?embedded=true" width="640" height="1500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+          </div>
       </div>
 
-      <div className="w-full flex gap-24 my-[200px] justify-center">
-        <div className="w-2/5  text-center ">
-          <p className="font-thin uppercase poppins text-[30px]  text-neutral-300 ">
+      <div className="w-full flex md:flex-row flex-col gap-24 md:my-[200px] my-[50px] justify-center items-center">
+        <div className="w-[90%] md:w-2/5  text-center ">
+          <p className="font-thin uppercase poppins md:text-[30px] text-[20px]  text-neutral-300 ">
             Canada (Toronto)
           </p>
-          <p className="gothic text-[80px]   w-full text-transparent bg-clip-text  hatch-background">
+          <p className="gothic md:text-[80px] text-[40px]   w-full text-transparent bg-clip-text  hatch-background">
             {canadaTime}
           </p>
         </div>
-        <div className="w-2/5 text-center">
-          <p className="font-thin uppercase poppins text-[30px]  text-neutral-300 ">
+        <div className="w-[90%] md:w-2/5  text-center">
+          <p className="font-thin uppercase poppins md:text-[30px] text-[20px]  text-neutral-300 ">
             India
           </p>
-          <p className="gothic text-[80px]   w-full text-transparent bg-clip-text  hatch-background">
+          <p className="gothic md:text-[80px] text-[40px]   w-full text-transparent bg-clip-text  hatch-background">
             {indiaTime}
           </p>
         </div>

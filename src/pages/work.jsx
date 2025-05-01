@@ -1,18 +1,18 @@
 import React from "react";
-import video001 from "../assets/video001.mp4";
-import video002 from "../assets/video002.webm";
-import video003 from "../assets/video003.webm";
-import video004 from "../assets/video004.webm";
-import image001 from "../assets/image001.avif";
-import image002 from "../assets/image002.avif";
-import image003 from "../assets/image003.avif";
-import image004 from "../assets/image004.avif";
-import image005 from "../assets/image005.avif";
-import image006 from "../assets/image006.avif";
-import image007 from "../assets/image007.avif";
-import image008 from "../assets/image008.avif";
-import image009 from "../assets/image009.avif";
-import image010 from "../assets/image010.avif";
+import video001 from "../assets/videos/icwLandscape.mp4";
+import video002 from "../assets/videos/hendrcik01.mp4";
+import video003 from "../assets/videos/monsho.mp4";
+import video004 from "../assets/videos/smokey.mp4";
+import image001 from "../assets/images/as1.png";
+import image002 from "../assets/images/gtw1.png";
+import image003 from "../assets/images/mc1.jpg";
+import image004 from "../assets/images/ms01.png";
+import image005 from "../assets/images/zero22.png";
+import image006 from "../assets/images/mc2.jpg";
+import image007 from "../assets/images/as7.png";
+import image008 from "../assets/images/gtw3.png";
+import image009 from "../assets/images/gtw4.png";
+import image010 from "../assets/images/zero210.png";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -47,16 +47,16 @@ const Work = () => {
   return (
     <>
       {/* Hero Text */}
-      <div className="w-full min-h-screen bg-black flex flex-col justify-center items-center gap-[4px]">
+      <div className="w-full  min-h-[450px] md:min-h-screen bg-black flex flex-col justify-center items-center gap-[10px] ">
         {/* Title - "Explore Our" */}
       <div className="w-fit overflow-hidden h-fit">
-        <span ref={text1Ref} className="fonk text-[150px] uppercase text-center w-full text-transparent bg-clip-text font-medium  p-2  hatch-background">
+        <span ref={text1Ref} className="fonk text-[40px] md:text-[150px] uppercase text-center w-full text-transparent bg-clip-text font-medium  p-2  hatch-background">
           Explore Our
         </span>
       </div>
 
       {/* Description */}
-      <span className="text-white text-[20px] w-1/2 poppins-thin text-center">
+      <span className="text-white text-[16px] md:text-[20px] w-[90%] md:w-1/2 poppins-thin text-center">
         A showcase of our best concept work, highlighting our approach to a
         unique visual language, and our skillset in understanding effective
         media production.
@@ -64,138 +64,138 @@ const Work = () => {
 
       {/* Title - "Playground" */}
       <div className="w-fit overflow-hidden h-fit">
-        <span ref={text2Ref} className="fonk text-[150px] uppercase text-center w-full text-transparent bg-clip-text font-medium  p-2  hatch-background">
+        <span ref={text2Ref} className="fonk text-[40px] md:text-[150px] uppercase text-center w-full text-transparent bg-clip-text font-medium  p-2  hatch-background">
           Playground
         </span>
       </div>
       </div>
       {/* work with 1 item */}
-      <div className="w-full flex flex-col items-center gap-[200px] justify-center">
+      <div className="w-full flex flex-col items-center gap-[50px] md:gap-[200px] justify-center">
 
         {/* Item 1 */}
-        <div className="w-3/4 h-fit-content flex flex-col items-center gap-[4px]">
-          <div className="rounded-[60px] relative w-full h-fit flex flex-col items-center gap-[4px] overflow-hidden">
+        <div className="w-[90%]  md:w-3/4 h-fit-content flex flex-col items-center gap-[4px]">
+          <div className="rounded-[30px] md:rounded-[60px] relative w-full h-fit flex flex-col items-center gap-[4px] overflow-hidden">
             <video
               autoPlay
               loop
               muted
               playsInline
-              className="rounded-[60px]  relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10">
+              className="rounded-[30px] md:rounded-[60px]  relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10">
               <source src={video001} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
           <div className="w-full h-fit flex flex-col pt-4 pl-14">
-            <span className="text-[16px] text-white font-thin">PODCAST</span>
-            <span className="text-[30px] text-white font-thin">WTF IS?</span>
+            <span className="text-[16px] text-white font-thin uppercase">brand films</span>
+            <span className="text-[30px] text-white font-thin uppercase">sky vodka @ bangalore</span>
           </div>
         </div>
 
         {/* Item 2 */}
-        <div className="w-3/4 h-fit-content flex flex-col items-center gap-[4px]">
-          <div className="rounded-[60px] relative w-full h-fit flex flex-col items-center gap-[4px] overflow-hidden">
+        <div className="w-[90%] md:w-3/4 h-fit-content flex flex-col items-center gap-[4px]">
+          <div className="rounded-[30px] md:rounded-[60px] relative w-full h-fit flex flex-col items-center gap-[4px] overflow-hidden">
             <video
               autoPlay
               loop
               muted
               playsInline
-              className="rounded-[60px]  relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10">
+              className="rounded-[30px] md:rounded-[60px]  relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10">
               <source src={video002} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
           <div className="w-full h-fit flex flex-col pt-4 pl-14">
             <span className="text-[16px] text-white font-thin uppercase">brand films</span>
-            <span className="text-[30px] text-white font-thin uppercase">Schevaran Labs</span>
+            <span className="text-[30px] text-white font-thin uppercase">hendricks @ grappa</span>
           </div>
         </div>
 
 {/* Item 3 */}
-<div className="w-3/4 h-fit-content flex flex-col items-center gap-[4px]">
-          <div className="rounded-[60px] relative w-full h-fit flex flex-col items-center gap-[4px] overflow-hidden">
+<div className="w-[90%] md:w-3/4 h-fit-content flex flex-col items-center gap-[4px]">
+          <div className="rounded-[30px] md:rounded-[60px] relative w-full h-fit flex flex-col items-center gap-[4px] overflow-hidden">
             <video
               autoPlay
               loop
               muted
               playsInline
-              className="rounded-[60px]  relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10">
+              className="rounded-[30px] md:rounded-[60px]  relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10">
               <source src={video003} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
           <div className="w-full h-fit flex flex-col pt-4 pl-14">
-            <span className="text-[16px] text-white font-thin uppercase">brand films</span>
-            <span className="text-[30px] text-white font-thin uppercase">FIGMA X Swiggy</span>
+            <span className="text-[16px] text-white font-thin uppercase">launch film</span>
+            <span className="text-[30px] text-white font-thin uppercase">SMOKEY MONKEY</span>
           </div>
         </div>
 
         {/* Item 4 image grid 2*/}
 
-        <div className="w-3/4 h-fit flex items-center gap-[40px] ">
-        <div style={{ width: "calc(50% - 20px)" }} className="flex flex-col ">
+        <div className="w-[90%] md:w-3/4 h-fit flex md:flex-row flex-col items-center gap-[40px] ">
+        <div  className="w-full md:w-1/2 flex flex-col ">
 
-            <div className="rounded-[60px] relative w-full h-fit flex flex-col items-center gap-[4px] overflow-hidden aspect-square" >
-                <img src={image001} alt="image001" className="rounded-[60px]  relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10" />
+            <div className="rounded-[30px] md:rounded-[60px] relative w-full h-fit flex flex-col items-center gap-[4px] overflow-hidden aspect-square" >
+                <img src={image001} alt="image001" className="rounded-[30px] md:rounded-[60px]  relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10" />
                 </div>
                 <div className="w-full h-fit flex flex-col pt-4 pl-14">
-            <span className="text-[16px] text-white font-thin uppercase">brand films</span>
-            <span className="text-[30px] text-white font-thin uppercase">FIGMA X Swiggy</span>
+            <span className="text-[16px] text-white font-thin uppercase">photoshoot</span>
+            <span className="text-[30px] text-white font-thin uppercase">APEROL SUNDOWNER</span>
           </div>
         </div>
-        <div style={{ width: "calc(50% - 20px)" }} className="flex flex-col">
+        <div  className="w-full md:w-1/2 flex flex-col ">
 
-<div className="rounded-[60px] relative w-full h-fit flex flex-col items-center gap-[4px] overflow-hidden aspect-square" >
-    <img src={image002} alt="image001" className="rounded-[60px]  relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10" />
+<div className="rounded-[30px] md:rounded-[60px] relative w-full h-fit flex flex-col items-center gap-[4px] overflow-hidden aspect-square" >
+    <img src={image002} alt="image001" className="rounded-[30px] md:rounded-[60px]  relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10" />
     </div>
     <div className="w-full h-fit flex flex-col pt-4 pl-14">
-            <span className="text-[16px] text-white font-thin uppercase">brand films</span>
-            <span className="text-[30px] text-white font-thin uppercase">FIGMA X Swiggy</span>
+            <span className="text-[16px] text-white font-thin uppercase">photoshoot</span>
+            <span className="text-[30px] text-white font-thin uppercase">grants triple wood</span>
           </div>
 </div>
         </div>
 
         {/* Item 5 Image Grid 3 */}
-        <div className="w-3/4 h-fit flex items-center gap-[20px] ">
-        <div style={{ width: "calc(33% - 10px)" }} className="flex flex-col ">
+        <div className="w-[90%] md:w-3/4 h-fit flex md:flex-row flex-col items-center gap-[20px] ">
+        <div  className="w-full md:w-1/3 flex flex-col">
 
-            <div className="rounded-[60px] relative w-full h-fit flex flex-col items-center gap-[4px] overflow-hidden aspect-square" >
-                <img src={image003} alt="image001" className="rounded-[60px]  relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10" />
+            <div className="rounded-[30px] md:rounded-[60px] relative w-full h-fit flex flex-col items-center gap-[4px] overflow-hidden aspect-square" >
+                <img src={image003} alt="image001" className="rounded-[30px] md:rounded-[60px]  relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10" />
                 </div>
                 <div className="w-full h-fit flex flex-col pt-4 pl-14">
-            <span className="text-[16px] text-white font-thin uppercase">brand films</span>
-            <span className="text-[30px] text-white font-thin uppercase">FIGMA X Swiggy</span>
+            <span className="text-[16px] text-white font-thin uppercase">photoshoot</span>
+            <span className="text-[30px] text-white font-thin uppercase">CAMPARI</span>
           </div>
         </div>
-        <div style={{ width: "calc(33% - 10px)" }} className="flex flex-col">
+        <div  className="w-full md:w-1/3 flex flex-col">
 
-<div className="rounded-[60px] relative w-full h-fit flex flex-col items-center gap-[4px] overflow-hidden aspect-square" >
-    <img src={image004} alt="image001" className="rounded-[60px]  relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10" />
+<div className="rounded-[30px] md:rounded-[60px] relative w-full h-fit flex flex-col items-center gap-[4px] overflow-hidden aspect-square" >
+    <img src={image004} alt="image001" className="rounded-[30px] md:rounded-[60px]  relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10" />
     </div>
     <div className="w-full h-fit flex flex-col pt-4 pl-14">
-            <span className="text-[16px] text-white font-thin uppercase">brand films</span>
-            <span className="text-[30px] text-white font-thin uppercase">FIGMA X Swiggy</span>
+            <span className="text-[16px] text-white font-thin uppercase">photoshoot</span>
+            <span className="text-[30px] text-white font-thin uppercase">MONKEY SHOULDERS</span>
           </div>
 </div>
-<div style={{ width: "calc(33% - 10px)" }} className="flex flex-col">
+<div  className="w-full md:w-1/3 flex flex-col">
 
-<div className="rounded-[60px] relative w-full h-fit flex flex-col items-center gap-[4px] overflow-hidden aspect-square" >
-    <img src={image005} alt="image001" className="rounded-[60px]  relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10" />
+<div className="rounded-[30px] md:rounded-[60px] relative w-full h-fit flex flex-col items-center gap-[4px] overflow-hidden aspect-square" >
+    <img src={image005} alt="image001" className="rounded-[30px] md:rounded-[60px]  relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10" />
     </div>
     <div className="w-full h-fit flex flex-col pt-4 pl-14">
-            <span className="text-[16px] text-white font-thin uppercase">brand films</span>
-            <span className="text-[30px] text-white font-thin uppercase">FIGMA X Swiggy</span>
+            <span className="text-[16px] text-white font-thin uppercase">photoshoot</span>
+            <span className="text-[30px] text-white font-thin uppercase">ZERO02</span>
           </div>
 </div>
         </div>
           {/* Item 6 Video Grid 1 */}
-          <div className="w-3/4 h-fit-content flex flex-col items-center gap-[4px]">
-          <div className="rounded-[60px] relative w-full h-fit flex flex-col items-center gap-[4px] overflow-hidden">
+          <div className="w-[90%] md:w-3/4 h-fit-content flex flex-col items-center gap-[4px]">
+          <div className="rounded-[30px] md:rounded-[60px] relative w-full h-fit flex flex-col items-center gap-[4px] overflow-hidden">
             <video
               autoPlay
               loop
               muted
               playsInline
-              className="rounded-[60px]  relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10">
+              className="rounded-[30px] md:rounded-[60px]  relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10">
               <source src={video004} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
@@ -206,60 +206,60 @@ const Work = () => {
           </div>
         </div>
          {/* Item 7 Image Grid 3 */}
-         <div className="w-3/4 h-fit flex items-center gap-[20px] ">
-        <div style={{ width: "calc(33% - 10px)" }} className="flex flex-col ">
+         <div className="w-[90%] md:w-3/4 h-fit flex md:flex-row flex-col items-center gap-[30px] ">
+        <div  className="w-full md:w-1/3 flex flex-col ">
 
-            <div className="rounded-[60px] relative w-full h-fit flex flex-col items-center gap-[4px] overflow-hidden aspect-square" >
-                <img src={image006} alt="image001" className="rounded-[60px]  relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10" />
+            <div className="rounded-[30px] md:rounded-[60px] relative w-full h-fit flex flex-col items-center gap-[4px] overflow-hidden aspect-square" >
+                <img src={image006} alt="image001" className="rounded-[30px] md:rounded-[60px]  relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10" />
                 </div>
                 <div className="w-full h-fit flex flex-col pt-4 pl-14">
-            <span className="text-[16px] text-white font-thin uppercase">brand films</span>
-            <span className="text-[30px] text-white font-thin uppercase">FIGMA X Swiggy</span>
+            <span className="text-[16px] text-white font-thin uppercase">photoshoot</span>
+            <span className="text-[30px] text-white font-thin uppercase">CAMPARI</span>
           </div>
         </div>
-        <div style={{ width: "calc(33% - 10px)" }} className="flex flex-col">
+        <div className="w-full md:w-1/3 flex flex-col">
 
-<div className="rounded-[60px] relative w-full h-fit flex flex-col items-center gap-[4px] overflow-hidden aspect-square" >
-    <img src={image007} alt="image001" className="rounded-[60px]  relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10" />
+<div className="rounded-[30px] md:rounded-[60px] relative w-full h-fit flex flex-col items-center gap-[4px] overflow-hidden aspect-square" >
+    <img src={image007} alt="image001" className="rounded-[30px] md:rounded-[60px]  relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10" />
     </div>
     <div className="w-full h-fit flex flex-col pt-4 pl-14">
-            <span className="text-[16px] text-white font-thin uppercase">brand films</span>
-            <span className="text-[30px] text-white font-thin uppercase">FIGMA X Swiggy</span>
+            <span className="text-[16px] text-white font-thin uppercase">photoshoot</span>
+            <span className="text-[30px] text-white font-thin uppercase">aperol sundowner</span>
           </div>
 </div>
-<div style={{ width: "calc(33% - 10px)" }} className="flex flex-col">
+<div  className="w-full md:w-1/3 flex flex-col">
 
-<div className="rounded-[60px] relative w-full h-fit flex flex-col items-center gap-[4px] overflow-hidden aspect-square" >
-    <img src={image008} alt="image001" className="rounded-[60px]  relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10" />
+<div className="rounded-[30px] md:rounded-[60px] relative w-full h-fit flex flex-col items-center gap-[4px] overflow-hidden aspect-square" >
+    <img src={image008} alt="image001" className="rounded-[30px] md:rounded-[60px]  relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10" />
     </div>
     <div className="w-full h-fit flex flex-col pt-4 pl-14">
-            <span className="text-[16px] text-white font-thin uppercase">brand films</span>
-            <span className="text-[30px] text-white font-thin uppercase">FIGMA X Swiggy</span>
+            <span className="text-[16px] text-white font-thin uppercase">photoshoot</span>
+            <span className="text-[30px] text-white font-thin uppercase">GRANTS TRIPLE WOOD</span>
           </div>
 </div>
         </div>
 
         {/* Item 8 image grid 2*/}
 
-        <div className="w-3/4 h-fit flex items-center gap-[40px] ">
-        <div style={{ width: "calc(50% - 20px)" }} className="flex flex-col ">
+        <div className="w-[90%] md:w-3/4 h-fit md:flex-row flex-col flex items-center gap-[40px] ">
+        <div  className="w-full md:w-1/2 flex flex-col  ">
 
-            <div className="rounded-[60px] relative w-full h-fit flex flex-col items-center gap-[4px] overflow-hidden aspect-square" >
-                <img src={image009} alt="image001" className="rounded-[60px]  relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10" />
+            <div className="rounded-[30px] md:rounded-[60px] relative w-full h-fit flex flex-col items-center gap-[4px] overflow-hidden aspect-square" >
+                <img src={image009} alt="image001" className="rounded-[30px] md:rounded-[60px]  relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10" />
                 </div>
                 <div className="w-full h-fit flex flex-col pt-4 pl-14">
-            <span className="text-[16px] text-white font-thin uppercase">brand films</span>
-            <span className="text-[30px] text-white font-thin uppercase">FIGMA X Swiggy</span>
+            <span className="text-[16px] text-white font-thin uppercase">photoshoot</span>
+            <span className="text-[30px] text-white font-thin uppercase">GRANTS TRIPLE WOOD</span>
           </div>
         </div>
-        <div style={{ width: "calc(50% - 20px)" }} className="flex flex-col">
+        <div  className="w-full md:w-1/2 flex flex-col ">
 
-<div className="rounded-[60px] relative w-full h-fit flex flex-col items-center gap-[4px] overflow-hidden aspect-square" >
-    <img src={image010} alt="image001" className="rounded-[60px]  relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10" />
+<div className="rounded-[30px] md:rounded-[60px] relative w-full h-fit flex flex-col items-center gap-[4px] overflow-hidden aspect-square" >
+    <img src={image010} alt="image001" className="rounded-[30px] md:rounded-[60px]  relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10" />
     </div>
     <div className="w-full h-fit flex flex-col pt-4 pl-14">
-            <span className="text-[16px] text-white font-thin uppercase">brand films</span>
-            <span className="text-[30px] text-white font-thin uppercase">FIGMA X Swiggy</span>
+            <span className="text-[16px] text-white font-thin uppercase">photoshoot</span>
+            <span className="text-[30px] text-white font-thin uppercase">zero02</span>
           </div>
 </div>
         </div>
@@ -267,11 +267,11 @@ const Work = () => {
 
       {/* Call To Action */}
 
-      <div className="w-full min-h-screen  flex flex-col justify-center items-center gap-[60px]">
+      <div className=" mt-[50px] md:mt-0 w-full h-fit md:min-h-screen  flex flex-col justify-center items-center gap-[30px] md:gap-[60px]">
         <span className="text-white text-[20px] poppins-thin uppercase">
           Contact
         </span>
-        <div className="text-[120px] uppercase text-center w-full text-transparent bg-clip-text font-medium p-2 hatch-background leading-none">
+        <div className="text-[50px] md:text-[120px] uppercase text-center w-full text-transparent bg-clip-text font-medium p-2 hatch-background leading-none">
   <div className="flex flex-col items-center">
     <span className="fonk">Have a cool</span>
     <span>

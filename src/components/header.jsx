@@ -108,8 +108,9 @@ const Header = () => {
         >
           Let's Talk
         </button>
-
-        <Mail className='md:hidden flex' strokeWidth={2} size={25} color='white'/>
+<Link to={"/contact-us"} className=' md:hidden flex'>
+        <Mail className='' strokeWidth={2} size={25} color='white'/>
+        </Link>
       </div>
 
       {/* Mobile Sidebar Menu */}
