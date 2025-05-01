@@ -11,30 +11,30 @@ const ScrollAnimation = () => {
       scrollTrigger: {
         trigger: '.animation-section',
         start: 'top center',
-        end: 'top 20%',
+        end: 'top 10%',
         scrub: true,
       },
     });
 
-    tl.to('#n, #e, #v', { y: 50, duration: 0.5 });
+    tl.to('#n, #e, #v', { y: 150, duration: 0.5 });
     tl.to('#action', { opacity: 1 }, '<');
 
-    tl.to('#e, #v', { y: 100, duration: 0.5 });
+    tl.to('#e, #v', { y: 300, duration: 0.5 });
     tl.to('#next', { opacity: 1 }, '<');
 
-    tl.to('#v', { y: 150, duration: 0.5 });
+    tl.to('#v', { y: 450, duration: 0.5 });
     tl.to('#energy', { opacity: 1 }, '<');
 
     tl.to('#vision', { opacity: 1, duration: 0.5 });
   }, []);
 
   return (
-    <section className="animation-section min-h-[600px] flex items-center justify-center overflow-hidden">
-      <div className="relative  flex gap-5 text-4xl">
-        <span className="relative text-white" id="a">A<span className="absolute left-10 text-white opacity-0 transition-all" id="action">Action</span></span>
-        <span className="relative text-white" id="n">N<span className="absolute left-10 text-white opacity-0 transition-all" id="next">Next</span></span>
-        <span className="relative text-white" id="e">E<span className="absolute left-10 text-white opacity-0 transition-all" id="energy">Energy</span></span>
-        <span className="relative text-white" id="v">V<span className="absolute left-10 text-white opacity-0 transition-all" id="vision">Vision</span></span>
+    <section className="animation-section min-h-[700px] hidden md:flex  justify-center overflow-hidden">
+      <div className="relative  flex gap-5 ">
+        <span className="relative " id="a"><span className='text-white fonk text-[150px]'>A</span><span className="absolute left-[200px] text-[100px] text-white opacity-0 transition-all items-center h-full mt-10" id="action">Artisinal</span></span>
+        <span className="relative " id="n"><span className='text-white fonk text-[150px]'>N</span><span className="absolute left-[200px] text-[100px] text-white opacity-0 transition-all items-center h-full mt-10" id="next">NextGen</span></span>
+        <span className="relative " id="e"><span className='text-white fonk text-[150px]'>E</span><span className="absolute left-[200px] text-[100px] text-white opacity-0 transition-all items-center h-full mt-10" id="energy">Experimental</span></span>
+        <span className="relative " id="v"><span className='text-white fonk text-[150px]'>V</span><span className="absolute left-[200px] text-[100px] text-white opacity-0 transition-all items-center h-full mt-10" id="vision">Viral</span></span>
       </div>
     </section>
   );

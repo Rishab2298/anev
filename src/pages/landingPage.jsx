@@ -16,7 +16,7 @@ import "@splidejs/react-splide/css";
 
 // Splide Auto Scroll extension
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
-import bgImage from "../assets/gradient.png";
+import bgImage from "../assets/gradient.jpg";
 import heroImage from "../assets/heroImage.webm";
 import starsBg from "../assets/starsBg.jpg";
 import service1 from "../assets/1ajan.avif";

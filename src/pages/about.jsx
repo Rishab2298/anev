@@ -12,16 +12,16 @@ const About = () => {
         <span className="text-white text-[20px] poppins-thin uppercase">
           About
         </span>
-        <span className="fonk text-[120px] uppercase text-center w-full text-transparent bg-clip-text font-medium  p-2  hatch-background">
+        <span className="fonk text-[60px] md:text-[120px] uppercase text-center w-full text-transparent bg-clip-text font-medium  p-2  hatch-background">
           We Are ANEV
         </span>
       </div>
 
-      <div className="w-full h-fit flex gap-[60px] px-[60px] pt-[60px] justify-center items-center mt-10 ">
+      <div className="w-full h-fit flex md:flex-row flex-col gap-[20px] md:gap-[60px] px-[60px] pt-[60px] justify-center items-center mt-0 md:mt-10 ">
         <div className="h-full flex justify-center items-center text-[20px] text-center text-white">
-          <span>Fundamentally we are storytellers</span>
+          <span>Fundamentally we are <br />storytellers</span>
         </div>
-        <div className="w-2/5  rounded-[60px] cover relative overflow-hidden">
+        <div className="w-full md:w-2/5  rounded-[60px] cover relative overflow-hidden">
           <img
             src={bgImage}
             alt="about"
@@ -30,11 +30,11 @@ const About = () => {
           <div className="artist z-0">0</div>
         </div>
         <div className="h-full flex justify-center items-center text-[20px] text-center text-white">
-          <span>Functionally we are a powerhouse</span>
+          <span>Functionally we are <br />a powerhouse</span>
         </div>
       </div>
 
-      <div className="w-full flex flex-col justify-center items-center text-[30px] gap-[60px] text-white poppins-thin my-[200px]">
+      <div className="w-full flex flex-col justify-center items-center text-[20px] md:text-[30px] gap-[60px] text-white poppins-thin my-[200px]">
         <span className="text-center w-2/3">
           ANEV was born out of a simple but urgent need — to bridge the growing
           gap between brands and the digital-first world.
