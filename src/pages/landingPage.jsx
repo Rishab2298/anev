@@ -17,7 +17,7 @@ import "@splidejs/react-splide/css";
 // Splide Auto Scroll extension
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 import bgImage from "../assets/gradient.jpg";
-import heroImage from "../assets/heroImage.webm";
+import heroImage from "../assets/videos/showReel.mp4";
 import starsBg from "../assets/starsBg.jpg";
 import service1 from "../assets/1ajan.avif";
 import service2 from "../assets/2ajan.avif";
@@ -33,17 +33,33 @@ import billboard from "../assets/billboard.png";
 import herImage from "../assets/anevHeroImage.webp";
 import InfiniteCarousel from "../components/infiniteCarousle";
 
-import logo1 from "../assets/logo1.webp";
-import logo2 from "../assets/logo2.webp";
-import logo3 from "../assets/logo3.png";
-import logo4 from "../assets/logo4.webp";
-import logo5 from "../assets/logo5.png";
-import logo6 from "../assets/logo6.webp";
-import logo7 from "../assets/logo7.png";
-import logo8 from "../assets/logo8.webp";
-import logo9 from "../assets/logo9.jpg";
-import logo10 from "../assets/logo10.webp";
-const logoso = [
+import logo1 from "../assets/logos/logo1.jpeg";
+import logo2 from "../assets/logos/logo2.png";
+import logo3 from "../assets/logos/logo3.png";
+import logo4 from "../assets/logos/logo4.png";
+import logo5 from "../assets/logos/logo5.jpeg";
+import logo6 from "../assets/logos/logo6.png";
+import logo7 from "../assets/logos/logo7.png";
+import logo8 from "../assets/logos/logo8.png";
+import logo9 from "../assets/logos/logo9.webp";
+import logo10 from "../assets/logos/logo10.png";
+import logo11 from "../assets/logos/logo11.png";
+import logo12 from "../assets/logos/logo12.jpeg";
+import logo13 from "../assets/logos/logo13.png";
+import logo14 from "../assets/logos/logo14.jpeg";
+import logo15 from "../assets/logos/logo15.jpeg";
+import logo16 from "../assets/logos/logo16.png";
+import logo17 from "../assets/logos/logo17.png";
+import logo18 from "../assets/logos/logo18.png";
+import logo19 from "../assets/logos/logo19.webp";
+import logo20 from "../assets/logos/logo20.webp";
+import logo21 from "../assets/logos/logo21.jpg";
+import logo22 from "../assets/logos/logo22.svg";
+import logo23 from "../assets/logos/logo23.webp";
+import logo24 from "../assets/logos/logo24.webp";
+import logo25 from "../assets/logos/logo25.png";
+import logo26 from "../assets/logos/logo26.jpg";
+const logos = [
   logo1,
   logo2,
   logo3,
@@ -54,17 +70,72 @@ const logoso = [
   logo8,
   logo9,
   logo10,
+  
 ];
-import logo11 from "../assets/logo11.png";
-import logo12 from "../assets/logo12.png";
-import logo13 from "../assets/logo13.png";
-import logo14 from "../assets/logo14.png";
-import logo15 from "../assets/logo15.webp";
-import logo16 from "../assets/logo16.jpeg";
-import logo17 from "../assets/logo17.png";
-import logo18 from "../assets/logo18.webp";
-import logo19 from "../assets/logo19.png";
-import logo20 from "../assets/logo20.png";
+const logoss = [
+logo11,
+
+  logo12,
+  logo13,
+  logo14,
+  logo15,
+  logo16,
+  logo17,
+  logo18,
+  logo19,
+  logo20,
+ 
+];
+const logosss=[
+  logo21,
+  logo22,
+  logo23,
+  logo24,
+  logo25,
+  logo26,
+  logo12,
+  logo4,
+  logo5,
+  logo20
+]
+
+
+const logos1=[
+  logo1,
+  logo2,
+  logo3,
+  logo4,
+  logo5,
+  logo6,
+  logo7,
+  logo8,
+  logo9,
+];
+const logos2=[
+  logo10,
+  logo11,
+  logo12,
+  logo13,
+  logo14,
+  logo15,
+  logo16,
+  logo17,
+  logo18,
+];
+const logos3=[
+  logo19,
+  logo20,
+  logo21,
+  logo22,
+  logo23,
+  logo24,
+  logo25,
+  logo26,
+  logo1,
+  
+
+]
+
 
 import asset1 from "../assets/asset1.png";
 import AnimatedList from "../components/animatedList";
@@ -74,30 +145,8 @@ import icon from "../assets/icon.svg";
 import Section from "./section";
 import ScrollingAnimation from "./section";
 import InfiniteLandscapeRight from "../components/infiniteCarousleLandscapeVideoRight";
-const logos = [
-  logo1,
-  logo2,
-  logo3,
-  logo4,
-  logo5,
-  logo16,
-  logo20,
-  logo18,
-  logo9,
-  logo10,
-];
-const logos2 = [
-  logo11,
-  logo12,
-  logo13,
-  logo14,
-  logo15,
-  logo6,
-  logo17,
-  logo8,
-  logo19,
-  logo7,
-];
+
+
 gsap.registerPlugin(ScrollTrigger);
 const LandingPage = ({ direction = "left", speed = 1.5 }) => {
   const sectionRef = useRef(null);
@@ -193,20 +242,20 @@ const LandingPage = ({ direction = "left", speed = 1.5 }) => {
     <>
       {/* Hero Image  */}
       <div className="w-full  h-fit md:h-screen bg-black flex justify-center items-center">
-        <img
+        {/* <img
           src={herImage}
           alt="herImage"
           className="w-full md:w-4/5 py-2 h-auto"
-        />
-        {/* <video
+        /> */}
+        <video
           autoPlay
-          loop
+
           muted
           playsInline
           className="w-3/4 h-fit hero-banner transition-all duration-500 ease-in-out hover:w-4/5">
           <source src={heroImage} type="video/webm" />
           Your browser does not support the video tag.
-        </video> */}
+        </video>
       </div>
       <ScrollingAnimation />
       {/* Middle Section */}
@@ -220,20 +269,22 @@ const LandingPage = ({ direction = "left", speed = 1.5 }) => {
           className="w-full h-auto"
         />
         <div className="absolute flex flex-col justify-center items-center md:gap-5 gap-1.5">
-          <span className="text-white poppins-medium text-[20px] md:text-[32px] text-center">
-            {"The next generation media pipeline."
+          <span className=" text-white uppercase  text-[15px] md:text-[60px] leading-[70px] text-center">
+            {"The next generation media pipeline "
               .split(" ")
-              .map((word, index) => (
+              .map((word, index) => (<>
                 <span
                   key={index}
                   ref={(el) => (textRef.current[index] = el)}
-                  className="inline-block overflow-hidden">
-                  {word}&nbsp;
+                  className="fonk inline-block overflow-hidden">
+                  {word}
                 </span>
+                <span className=" md:px-1">&nbsp;</span>
+                </>
               ))}
           </span>
-          <button className="buttonra p-1 md:p-3 rounded-full poppins-light w-[30px] md:w-[65px] bg-black">
-            <img src={icon} alt="Button Asset" />
+          <button className="buttonra p-1 md:p-3 rounded-full poppins-light w-[30px] md:w-[65px] overflow-auto bg-black">
+            <img src={icon} className="transition-transform duration-300 hover:scale-110" alt="Button Asset" />
           </button>
         </div>
       </div>
@@ -337,7 +388,7 @@ const LandingPage = ({ direction = "left", speed = 1.5 }) => {
               },
             }}
             extensions={{ AutoScroll }}>
-            {logos.map((logo, index) => (
+            {logos1.map((logo, index) => (
               <SplideSlide key={index}>
                 <div className="flex justify-center items-center h-24">
                   <img
@@ -366,7 +417,7 @@ const LandingPage = ({ direction = "left", speed = 1.5 }) => {
               },
             }}
             extensions={{ AutoScroll }}>
-            {logos.map((logo, index) => (
+            {logos2.map((logo, index) => (
               <SplideSlide key={index}>
                 <div className="flex justify-center items-center h-24">
                   <img
@@ -394,7 +445,7 @@ const LandingPage = ({ direction = "left", speed = 1.5 }) => {
               },
             }}
             extensions={{ AutoScroll }}>
-            {logos.map((logo, index) => (
+            {logos3.map((logo, index) => (
               <SplideSlide key={index}>
                 <div className="flex justify-center items-center h-24">
                   <img
@@ -451,7 +502,24 @@ const LandingPage = ({ direction = "left", speed = 1.5 }) => {
               <SwiperSlide key="2">
                 <div className="flex justify-center items-center h-[250px] ">
                   <div className="grid grid-cols-5 grid-rows-2 gap-1 w-full  h-full">
-                    {logos2.slice(0, 10).map((logo, index) => (
+                    {logoss.slice(0, 10).map((logo, index) => (
+                      <div
+                        key={index}
+                        className="flex justify-center items-center">
+                        <img
+                          src={logo}
+                          alt={`Logo ${index + 1}`}
+                          className="w-2/3  object-contain"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide key="3">
+                <div className="flex justify-center items-center h-[250px] ">
+                  <div className="grid grid-cols-5 grid-rows-2 gap-1 w-full  h-full">
+                    {logosss.slice(0, 10).map((logo, index) => (
                       <div
                         key={index}
                         className="flex justify-center items-center">
@@ -481,19 +549,19 @@ const LandingPage = ({ direction = "left", speed = 1.5 }) => {
         <div className="w-full flex justify-center items-center gap-12">
           {[
             {
-              title: "1. Briefing",
+              title: " Briefing",
               text: "Your brand's vision is our launchpad. We meticulously understand your goals, values, and target audience to kickstart the journey.",
             },
             {
-              title: "2. Ideation",
+              title: " Ideation",
               text: "Our creative minds spin concepts that align with your brand’s essence, ensuring every idea is groundbreaking and strategic.",
             },
             {
-              title: "3. Execution",
+              title: " Execution",
               text: "From design to development, every step is marked by precision. Your project moves swiftly through each stage without compromising quality.",
             },
             {
-              title: "4. Delivery & Beyond",
+              title: " Delivery and Beyond",
               text: "This partnership doesn't end at delivery. We analyze outcomes, gather insights, and iterate strategies for continuous growth.",
             },
           ].map((item, index) => (
@@ -506,7 +574,7 @@ const LandingPage = ({ direction = "left", speed = 1.5 }) => {
                 src={icon}
                 alt="icon"
               />
-              <span className="uppercase font-thin text-[30px] text-white">
+              <span className="uppercase fonk text-[30px] text-white">
                 {item.title}
               </span>
               <span className="text-white font-thin">{item.text}</span>
@@ -536,7 +604,7 @@ const LandingPage = ({ direction = "left", speed = 1.5 }) => {
                   src={icon}
                   alt="icon"
                 />
-                <span className="uppercase font-thin text-[24px] text-white">
+                <span className="uppercase fonk text-[24px] text-white">
                   {item.title}
                 </span>
                 <span className="text-white font-thin">{item.text}</span>
@@ -557,9 +625,9 @@ const LandingPage = ({ direction = "left", speed = 1.5 }) => {
           className="w-full h-auto"
         />
         <div className="absolute flex flex-col justify-center items-center gap-0 md:gap-5">
-          <span className=" fonk text-[25px] md:text-[90px] md:text-left text-center w-full  text-white font-medium  p-2  ">
+          <span className="uppercase  text-[25px] md:text-[90px] leading-none text-center w-full  text-white font-medium  p-2  ">
             {" "}
-            Digital Magic Together
+           <span className="fonk" >Let</span><span>'</span><span className="fonk">s Create Digital Magic Together</span>
           </span>
           <button className="buttonr px-6 py-2 md:px-16 md:py-5 md:text-2xl rounded-full poppins-light md:w-[300px] w-[200px] ">
             Get in Touch!

@@ -1,6 +1,6 @@
 import React, { use, useState } from 'react'
 
-import logo from '../assets/logo.png'
+import logo from '../assets/images/anevMediaLogo.png';
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Mail, Menu, X } from 'lucide-react';
 
@@ -87,7 +87,7 @@ const Header = () => {
         </div>
 
         {/* Desktop Nav Links */}
-        <div className="hidden md:flex rounded-full uppercase font-light gap-10 px-10 h-[50px] items-center text-white">
+        <div className="fonk hidden md:flex rounded-full uppercase font-light gap-10 px-10 h-[50px] items-center text-white">
           {navLinks.map(({ name, path }) => (
             <Link
               key={name}
@@ -106,7 +106,7 @@ const Header = () => {
           className="hidden md:block buttona  md:px-8 h-[50px] text-[14px] md:text-[15px] leading-4 opacity-80 uppercase font-light text-white border border-white"
           onClick={() => navigate("/contact-us")}
         >
-          Let's Talk
+          <span className='fonk'>Let</span>'<span className='fonk'>s Talk</span>
         </button>
 <Link to={"/contact-us"} className=' md:hidden flex'>
         <Mail className='' strokeWidth={2} size={25} color='white'/>

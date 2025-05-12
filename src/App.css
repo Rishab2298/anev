@@ -514,6 +514,7 @@
   cursor: pointer;
   transition: color 0.3s ease-in-out;
   z-index: 1;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .buttonra::before {
@@ -537,5 +538,6 @@
 
 .buttonra:hover {
   color: white;
+  transform: scale(1.5);
   /* Text turns white on hover */
 }

@@ -87,7 +87,7 @@ const Work = () => {
           </div>
           <div className="w-full h-fit flex flex-col pt-4 pl-14">
             <span className="text-[16px] text-white font-thin uppercase">brand films</span>
-            <span className="text-[30px] text-white font-thin uppercase">sky vodka @ bangalore</span>
+            <span className="text-[30px] text-white font-thin uppercase fonk">sky vodka bangalore</span>
           </div>
         </div>
 
@@ -106,7 +106,7 @@ const Work = () => {
           </div>
           <div className="w-full h-fit flex flex-col pt-4 pl-14">
             <span className="text-[16px] text-white font-thin uppercase">brand films</span>
-            <span className="text-[30px] text-white font-thin uppercase">hendricks @ grappa</span>
+            <span className="text-[30px] text-white font-thin uppercase fonk">hendricks grappa</span>
           </div>
         </div>
 
@@ -125,7 +125,7 @@ const Work = () => {
           </div>
           <div className="w-full h-fit flex flex-col pt-4 pl-14">
             <span className="text-[16px] text-white font-thin uppercase">launch film</span>
-            <span className="text-[30px] text-white font-thin uppercase">SMOKEY MONKEY</span>
+            <span className="text-[30px] text-white font-thin uppercase fonk">SMOKEY MONKEY</span>
           </div>
         </div>
 
@@ -139,7 +139,7 @@ const Work = () => {
                 </div>
                 <div className="w-full h-fit flex flex-col pt-4 pl-14">
             <span className="text-[16px] text-white font-thin uppercase">photoshoot</span>
-            <span className="text-[30px] text-white font-thin uppercase">APEROL SUNDOWNER</span>
+            <span className="text-[30px] text-white font-thin uppercase fonk">APEROL SUNDOWNER</span>
           </div>
         </div>
         <div  className="w-full md:w-1/2 flex flex-col ">
@@ -149,7 +149,7 @@ const Work = () => {
     </div>
     <div className="w-full h-fit flex flex-col pt-4 pl-14">
             <span className="text-[16px] text-white font-thin uppercase">photoshoot</span>
-            <span className="text-[30px] text-white font-thin uppercase">grants triple wood</span>
+            <span className="text-[30px] text-white font-thin uppercase fonk">grants triple wood</span>
           </div>
 </div>
         </div>
@@ -163,7 +163,7 @@ const Work = () => {
                 </div>
                 <div className="w-full h-fit flex flex-col pt-4 pl-14">
             <span className="text-[16px] text-white font-thin uppercase">photoshoot</span>
-            <span className="text-[30px] text-white font-thin uppercase">CAMPARI</span>
+            <span className="text-[30px] text-white font-thin uppercase fonk">CAMPARI</span>
           </div>
         </div>
         <div  className="w-full md:w-1/3 flex flex-col">
@@ -173,7 +173,7 @@ const Work = () => {
     </div>
     <div className="w-full h-fit flex flex-col pt-4 pl-14">
             <span className="text-[16px] text-white font-thin uppercase">photoshoot</span>
-            <span className="text-[30px] text-white font-thin uppercase">MONKEY SHOULDERS</span>
+            <span className="text-[30px] text-white font-thin uppercase fonk">MONKEY SHOULDERS</span>
           </div>
 </div>
 <div  className="w-full md:w-1/3 flex flex-col">
@@ -183,7 +183,7 @@ const Work = () => {
     </div>
     <div className="w-full h-fit flex flex-col pt-4 pl-14">
             <span className="text-[16px] text-white font-thin uppercase">photoshoot</span>
-            <span className="text-[30px] text-white font-thin uppercase">ZERO02</span>
+            <span className="text-[30px] text-white font-thin uppercase fonk">ZERO02</span>
           </div>
 </div>
         </div>
@@ -200,9 +200,9 @@ const Work = () => {
               Your browser does not support the video tag.
             </video>
           </div>
-          <div className="w-full h-fit flex flex-col pt-4 pl-14">
-            <span className="text-[16px] text-white font-thin">PODCAST</span>
-            <span className="text-[30px] text-white font-thin">WTF IS?</span>
+          <div className="w-full h-fit flex flex-col pt-4 pl-14 uppercase">
+            <span className="text-[16px] text-white font-thin">brand film</span>
+            <span className="text-[30px] text-white font-thin fonk">smokey monkey</span>
           </div>
         </div>
          {/* Item 7 Image Grid 3 */}
@@ -214,7 +214,7 @@ const Work = () => {
                 </div>
                 <div className="w-full h-fit flex flex-col pt-4 pl-14">
             <span className="text-[16px] text-white font-thin uppercase">photoshoot</span>
-            <span className="text-[30px] text-white font-thin uppercase">CAMPARI</span>
+            <span className="text-[30px] text-white font-thin uppercase fonk">CAMPARI</span>
           </div>
         </div>
         <div className="w-full md:w-1/3 flex flex-col">
@@ -224,7 +224,7 @@ const Work = () => {
     </div>
     <div className="w-full h-fit flex flex-col pt-4 pl-14">
             <span className="text-[16px] text-white font-thin uppercase">photoshoot</span>
-            <span className="text-[30px] text-white font-thin uppercase">aperol sundowner</span>
+            <span className="text-[30px] text-white font-thin uppercase fonk">aperol sundowner</span>
           </div>
 </div>
 <div  className="w-full md:w-1/3 flex flex-col">
@@ -234,7 +234,7 @@ const Work = () => {
     </div>
     <div className="w-full h-fit flex flex-col pt-4 pl-14">
             <span className="text-[16px] text-white font-thin uppercase">photoshoot</span>
-            <span className="text-[30px] text-white font-thin uppercase">GRANTS TRIPLE WOOD</span>
+            <span className="text-[30px] text-white font-thin uppercase fonk">GRANTS TRIPLE </span>
           </div>
 </div>
         </div>
@@ -249,7 +249,7 @@ const Work = () => {
                 </div>
                 <div className="w-full h-fit flex flex-col pt-4 pl-14">
             <span className="text-[16px] text-white font-thin uppercase">photoshoot</span>
-            <span className="text-[30px] text-white font-thin uppercase">GRANTS TRIPLE WOOD</span>
+            <span className="text-[30px] text-white font-thin uppercase fonk">GRANTS TRIPLE WOOD</span>
           </div>
         </div>
         <div  className="w-full md:w-1/2 flex flex-col ">
@@ -259,7 +259,7 @@ const Work = () => {
     </div>
     <div className="w-full h-fit flex flex-col pt-4 pl-14">
             <span className="text-[16px] text-white font-thin uppercase">photoshoot</span>
-            <span className="text-[30px] text-white font-thin uppercase">zero02</span>
+            <span className="text-[30px] text-white font-thin uppercase fonk">zero02</span>
           </div>
 </div>
         </div>

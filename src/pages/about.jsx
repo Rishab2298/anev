@@ -70,15 +70,15 @@ const About = () => {
       />
       <div className="artist z-0">0</div>
     </div>
-    <span className="text-[30px] md:text-[100px] font-normal leading-[40px] sm:leading-[90px] flex items-center text-white uppercase">
+    <span className="text-[30px] md:text-[100px] font-normal leading-[40px] sm:leading-[90px] flex items-center text-white uppercase fonk">
       ARTISINAL
     </span>
   </div>
 
   {/* Row 2 */}
   <div className="w-fit flex flex-nowrap gap-[20px] sm:gap-[50px] items-center   md:mt-[30px]">
-    <span className="text-[30px] md:text-[100px] font-normal leading-[40px] sm:leading-[90px] flex items-center text-white uppercase">
-      NEXT-GEN
+    <span className="text-[30px] md:text-[100px] font-normal leading-[40px] sm:leading-[90px] flex items-center text-white uppercase fonk">
+      NEXT GEN
     </span>
     <div className="w-[120px] sm:w-[250px] rounded-full overflow-hidden relative">
       <img
@@ -98,14 +98,14 @@ const About = () => {
       />
       <div className="artist z-0">0</div>
     </div>
-    <span className="text-[30px] md:text-[100px] font-normal leading-[40px] sm:leading-[90px] flex items-center text-white uppercase">
+    <span className="text-[30px] md:text-[100px] font-normal leading-[40px] sm:leading-[90px] flex items-center text-white uppercase fonk">
       EXPERIMENTAL
     </span>
   </div>
 
   {/* Row 4 */}
   <div className="w-fit flex flex-nowrap gap-[20px] sm:gap-[50px] items-center   md:mt-[30px]">
-    <span className="text-[30px] md:text-[100px] font-normal leading-[40px] sm:leading-[90px] flex items-center text-white uppercase">
+    <span className="text-[30px] md:text-[100px] font-normal leading-[40px] sm:leading-[90px] flex items-center text-white uppercase fonk">
       VIRAL
     </span>
     <div className="w-[120px] sm:w-[250px] rounded-full overflow-hidden relative">
