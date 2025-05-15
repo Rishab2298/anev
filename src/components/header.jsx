@@ -92,7 +92,7 @@ const Header = () => {
             <Link
               key={name}
               to={path}
-              className={`text-[15px] leading-4 opacity-80 hover:text-[#FF7B1C] ${
+              className={`md:text-[15px]  text-[14px] leading-4 opacity-80 hover:text-[#FF7B1C] ${
                 location.pathname === path ? "text-[#FF7B1C] font-semibold" : ""
               }`}
             >
@@ -103,7 +103,7 @@ const Header = () => {
 
         {/* Let's Talk Button */}
         <button
-          className="hidden md:block buttona  md:px-8 h-[50px] text-[14px] md:text-[15px] leading-4 opacity-80 uppercase font-light text-white border border-white"
+          className="hidden md:block buttona  md:px-8 h-[50px] text-[14px] md:text-[14px] leading-4 opacity-80 uppercase font-light text-white border border-white"
           onClick={() => navigate("/contact-us")}
         >
           <span className='fonk'>Let</span>'<span className='fonk'>s Talk</span>
@@ -125,7 +125,7 @@ const Header = () => {
           {navLinks.map(({ name, path }) => (
             <div
               key={name}
-              className={`cursor-pointer uppercase text-[16px] text-center ${
+              className={`cursor-pointer uppercase text-[15px] text-center ${
                 location.pathname === path ? "text-[#FF7B1C] font-semibold" : ""
               }`}
               onClick={() => handleNavigate(path)}

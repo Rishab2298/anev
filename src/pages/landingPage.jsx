@@ -252,64 +252,32 @@ const LandingPage = ({ direction = "left", speed = 1.5 }) => {
 
           muted
           playsInline
-          className="w-3/4 h-fit hero-banner transition-all duration-500 ease-in-out hover:w-4/5">
+          className="w-full h-fit hero-banner transition-all duration-500 ease-in-out hover:w-4/5">
           <source src={heroImage} type="video/webm" />
           Your browser does not support the video tag.
         </video>
       </div>
-      <ScrollingAnimation />
-      {/* Middle Section */}
-      <div
-        ref={containerRef}
-        className="relative w-full h-fit md:h-screen flex flex-col justify-center items-center bg-black">
-        <img
-          id="banner"
-          src={bgImage}
-          alt="bgImage"
-          className="w-full h-auto"
-        />
-        <div className="absolute flex flex-col justify-center items-center md:gap-5 gap-1.5">
-          <span className=" text-white uppercase  text-[15px] md:text-[60px] leading-[70px] text-center">
-            {"The next generation media pipeline "
-              .split(" ")
-              .map((word, index) => (<>
-                <span
-                  key={index}
-                  ref={(el) => (textRef.current[index] = el)}
-                  className="fonk inline-block overflow-hidden">
-                  {word}
-                </span>
-                <span className=" md:px-1">&nbsp;</span>
-                </>
-              ))}
-          </span>
-          <button className="buttonra p-1 md:p-3 rounded-full poppins-light w-[30px] md:w-[65px] overflow-auto bg-black">
-            <img src={icon} className="transition-transform duration-300 hover:scale-110" alt="Button Asset" />
-          </button>
-        </div>
-      </div>
-      {/* What is Anev */}
-      <div className="w-full h-fit relative ">
-        {/* Image */}
-        <img src={starsBg} alt="starsBgImage" className="w-full h-fit z-0" />
+      {/* <ScrollingAnimation /> */}
+       {/* Our Work */}
+       <div className="w-full h-fit flex flex-col justify-center items-center bg-black p-5 md:p-20 gap-4 md:gap-10">
+        <h2 className="fonk text-[30px] text-center md:text-left md:text-[65px]  w-full text-transparent bg-clip-text font-medium  p-2  hatch-background">
+          OUR WORK
+        </h2>
 
-        {/* Text Overlay */}
-        <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center z-10">
-          <h2 className=" text-[30px] md:text-[75px]  w-full text-transparent bg-clip-text font-bold  p-2 text-center hatch-background">
-            <span className="fonk">WHAT IS ANEV</span>?
-          </h2>
-          <span className="w-full md:w-1/2 text-white text-center md:text-[24px] text-[15px] p-4 leading-[25px] md:leading-[36px] font-thin tracking-wide">
-            ANEV is a next-generation creative agency built to move brands
-            forward — fast. We combine sharp strategy, bold storytelling, and
-            agile execution to craft impactful content ecosystems that don’t
-            just catch attention, but hold it. With ANEV, your brand doesn’t
-            just exist online — it leads, resonates, and thrives.
-          </span>
+        {/* Carousel 1 */}
+        <div className="w-full flex flex-col items-center gap-10">
+          <InfiniteLandscapeRight />
+          <InfiniteCarousel />
+          <InfiniteCarouselRight />{" "}
+          {/* 
+          <div className="hidden md:flex">
+            <InfiniteCarousel />  </div> */}
+          {/* <AnimatedList /> */}
         </div>
       </div>
-      {/* Services */}
-      <div className="w-full h-fit flex flex-col justify-center items-center bg-black md:p-20 p-5 gap-4 md:gap-10">
-        <h2 className="text-[30px] md:text-[90px] md:text-left text-center  w-full text-transparent bg-clip-text font-bold  p-2  hatch-background fonk">
+        {/* Services */}
+        <div className="w-full h-fit flex flex-col justify-center items-center bg-black md:p-20 p-5 gap-4 md:gap-10">
+        <h2 className="text-[30px] md:text-[65px] md:text-left text-center  w-full text-transparent bg-clip-text font-bold  p-2  hatch-background fonk">
           SERVICES
         </h2>
         <Swiper
@@ -346,28 +314,63 @@ const LandingPage = ({ direction = "left", speed = 1.5 }) => {
           <div className="my-custom-pagination  text-center" />
         </Swiper>
       </div>
+      {/* What is Anev */}
+      <div className="w-full h-fit relative ">
+        {/* Image */}
+        <img src={starsBg} alt="starsBgImage" className="w-full h-fit z-0" />
 
-      {/* Our Work */}
-      <div className="w-full h-fit flex flex-col justify-center items-center bg-black p-5 md:p-20 gap-4 md:gap-10">
-        <h2 className="fonk text-[30px] text-center md:text-left md:text-[90px]  w-full text-transparent bg-clip-text font-medium  p-2  hatch-background">
-          OUR WORK
-        </h2>
-
-        {/* Carousel 1 */}
-        <div className="w-full flex flex-col items-center gap-10">
-          <InfiniteLandscapeRight />
-          <InfiniteCarousel />
-          <InfiniteCarouselRight />{" "}
-          {/* 
-          <div className="hidden md:flex">
-            <InfiniteCarousel />  </div> */}
-          {/* <AnimatedList /> */}
+        {/* Text Overlay */}
+        <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center z-10">
+          <h2 className=" text-[30px] md:text-[65px]  w-full text-transparent bg-clip-text font-bold  p-2 text-center hatch-background">
+            <span className="fonk">WHAT IS ANEV</span>?
+          </h2>
+          <span className="w-full md:w-1/2 text-white text-center md:text-[24px] text-[15px] p-4 leading-[25px] md:leading-[36px] font-thin tracking-wide">
+            ANEV is a next-generation creative agency built to move brands
+            forward — fast. We combine sharp strategy, bold storytelling, and
+            agile execution to craft impactful content ecosystems that don’t
+            just catch attention, but hold it. With ANEV, your brand doesn’t
+            just exist online — it leads, resonates, and thrives.
+          </span>
         </div>
       </div>
 
+      {/* NEXT GEN media pipeline */}
+      <div
+        ref={containerRef}
+        className="relative w-full h-fit md:h-screen flex flex-col justify-center items-center bg-black">
+        <img
+          id="banner"
+          src={bgImage}
+          alt="bgImage"
+          className="w-full h-auto"
+        />
+        <div className="absolute flex flex-col justify-center items-center md:gap-5 gap-1.5">
+          <span className=" text-white uppercase  text-[15px] md:text-[60px] leading-[70px] text-center">
+            {"The next generation media pipeline "
+              .split(" ")
+              .map((word, index) => (<>
+                <span
+                  key={index}
+                  ref={(el) => (textRef.current[index] = el)}
+                  className="fonk inline-block overflow-hidden">
+                  {word}
+                </span>
+                <span className=" md:px-1">&nbsp;</span>
+                </>
+              ))}
+          </span>
+          <button className="buttonra p-1 md:p-3 rounded-full poppins-light w-[30px] md:w-[65px] overflow-auto bg-black">
+            <img src={icon} className="transition-transform duration-300 hover:scale-110" alt="Button Asset" />
+          </button>
+        </div>
+      </div>
+      
+    
+     
+
       {/* Clientele */}
       <div className="w-full h-fit flex flex-col justify-center items-center bg-black md:p-20 p-4 gap-2 md:gap-10 mt-4 md:mt-0">
-        <h2 className="fonk text-[30px] md:text-left text-center md:text-[90px]  w-full text-transparent bg-clip-text font-medium  p-2  hatch-background">
+        <h2 className="fonk text-[30px] md:text-left text-center md:text-[75px]  w-full text-transparent bg-clip-text font-medium  p-2  hatch-background">
           CLIENTELE
         </h2>
 
@@ -543,7 +546,7 @@ const LandingPage = ({ direction = "left", speed = 1.5 }) => {
       <div
         ref={sectionRef}
         className="hidden w-full h-fit md:flex flex-col justify-center items-center bg-black p-20 gap-10">
-        <h2 className="fonk text-[90px] w-full text-transparent bg-clip-text font-medium p-2 hatch-background">
+        <h2 className="fonk text-[65px] w-full text-transparent bg-clip-text font-medium p-2 hatch-background">
           OUR PROCESS
         </h2>
         <div className="w-full flex justify-center items-center gap-12">
@@ -584,7 +587,7 @@ const LandingPage = ({ direction = "left", speed = 1.5 }) => {
       </div>
       {/* -----------for mobile----------- */}
       <div className="w-full h-fit flex flex-col justify-center items-center bg-black p-5 gap-10 md:hidden">
-        <h2 className="fonk text-[40px] text-center w-full text-transparent bg-clip-text font-medium p-2 hatch-background">
+        <h2 className="fonk text-[40px] md:text-[75px] text-center w-full text-transparent bg-clip-text font-medium p-2 hatch-background">
           OUR PROCESS
         </h2>
         <Swiper
@@ -625,7 +628,7 @@ const LandingPage = ({ direction = "left", speed = 1.5 }) => {
           className="w-full h-auto"
         />
         <div className="absolute flex flex-col justify-center items-center gap-0 md:gap-5">
-          <span className="uppercase  text-[25px] md:text-[90px] leading-none text-center w-full  text-white font-medium  p-2  ">
+          <span className="uppercase  text-[25px] md:text-[60px] leading-none text-center w-full  text-white font-medium  p-2  ">
             {" "}
            <span className="fonk" >Let</span><span>'</span><span className="fonk">s Create Digital Magic Together</span>
           </span>
