@@ -630,10 +630,10 @@ const LandingPage = ({ direction = "left", speed = 1.5 }) => {
         <div className="absolute flex flex-col justify-center items-center gap-0 md:gap-5">
           <span className="uppercase  text-[25px] md:text-[60px] leading-none text-center w-full  text-white font-medium  p-2  ">
             {" "}
-           <span className="fonk" >Let</span><span>'</span><span className="fonk">s Create Digital Magic Together</span>
+           <span className="fonk" >Let</span><span>'</span><span className="fonk">s Create Digital <br />Magic Together</span>
           </span>
-          <button className="buttonr px-6 py-2 md:px-16 md:py-5 md:text-2xl rounded-full poppins-light md:w-[300px] w-[200px] ">
-            Get in Touch!
+          <button className="fonk  uppercase buttonr px-6 py-2 md:px-16 md:py-5 md:text-2xl rounded-full md:w-[400px] w-[250px] ">
+            Get in Touch
           </button>
         </div>
       </div>
