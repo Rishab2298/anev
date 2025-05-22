@@ -8,16 +8,16 @@ import image04 from "../assets/images/04.webp";
 const About = () => {
   return (
     <>
-      <div className="w-full h-[300px] mt-[100px] md:mt-[200px] flex flex-col justify-center items-center gap-[25px] md:gap-[60px]">
-        <span className="text-white text-[20px] poppins-thin uppercase">
+      <div className="bgblink w-full h-[300px] pt-[100px] md:pt-[200px] flex flex-col justify-center items-center gap-[25px] md:gap-[60px]">
+        {/* <span className="text-white text-[20px] poppins-thin uppercase">
           About
-        </span>
+        </span> */}
         <span className="fonk text-[60px] md:text-[120px] leading-[60px] md:leading-normal uppercase text-center w-full text-transparent bg-clip-text font-medium  p-2  hatch-background">
           We Are ANEV
         </span>
       </div>
 
-      <div className="w-full h-fit flex md:flex-row flex-col gap-[20px] md:gap-[60px] px-[60px] pt-[60px] justify-center items-center mt-0 md:mt-10 ">
+      <div className="bgblink w-full h-fit flex md:flex-row flex-col gap-[20px] md:gap-[60px] px-[60px] pt-[60px] justify-center items-center  md:pt-10 ">
         <div className="h-full flex justify-center items-center text-[20px] text-center text-white">
           <span>Fundamentally we are <br />storytellers</span>
         </div>
@@ -34,7 +34,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className="w-full flex flex-col justify-center items-center text-[20px] md:text-[30px] gap-[60px] text-white poppins-thin my-[200px]">
+      <div className="bgblink w-full flex flex-col justify-center items-center text-[20px] md:text-[30px] gap-[60px] text-white poppins-thin py-[200px]">
         <span className="text-center w-2/3">
           ANEV was born out of a simple but urgent need — to bridge the growing
           gap between brands and the digital-first world.
@@ -60,8 +60,8 @@ const About = () => {
         </span>
       </div>
 
-      <div className="w-full flex flex-col justify-center items-center text-white poppins-thin my-[100px] sm:my-[200px]">
-  {/* Row 1 */}
+      {/* <div className="w-full flex flex-col justify-center items-center text-white poppins-thin my-[100px] sm:my-[200px]">
+// Row 1
   <div className="w-fit flex flex-nowrap gap-[20px] sm:gap-[50px] items-center">
     <div className="w-[120px] sm:w-[250px] rounded-full overflow-hidden relative">
       <img
@@ -75,7 +75,7 @@ const About = () => {
     </span>
   </div>
 
-  {/* Row 2 */}
+// Row 2 
   <div className="w-fit flex flex-nowrap gap-[20px] sm:gap-[50px] items-center   md:mt-[30px]">
     <span className="text-[30px] md:text-[100px] font-normal leading-[40px] sm:leading-[90px] flex items-center text-white uppercase fonk">
       NEXT GEN
@@ -89,7 +89,7 @@ const About = () => {
     </div>
   </div>
 
-  {/* Row 3 */}
+  // Row 3 
   <div className="w-fit flex flex-nowrap gap-[20px] sm:gap-[50px] items-center   md:mt-[30px]">
     <div className="w-[120px] sm:w-[250px] rounded-full overflow-hidden relative">
       <img
@@ -103,7 +103,7 @@ const About = () => {
     </span>
   </div>
 
-  {/* Row 4 */}
+// Row 4
   <div className="w-fit flex flex-nowrap gap-[20px] sm:gap-[50px] items-center   md:mt-[30px]">
     <span className="text-[30px] md:text-[100px] font-normal leading-[40px] sm:leading-[90px] flex items-center text-white uppercase fonk">
       VIRAL
@@ -116,12 +116,12 @@ const About = () => {
       <div className="artist z-0">0</div>
     </div>
   </div>
-</div>
+</div> */}
 
 
       {/* Call To Action */}
 
-      <div className="w-full h-fit md:min-h-screen  flex flex-col justify-center items-center gap-[30px] md:gap-[60px]">
+      <div className="bgblink w-full h-fit md:min-h-screen  flex flex-col justify-center items-center gap-[30px] md:gap-[60px]">
         <span className="text-white text-[20px] poppins-thin uppercase">
           Contact
         </span>

@@ -92,7 +92,7 @@ const Header = () => {
             <Link
               key={name}
               to={path}
-              className={`md:text-[15px]  text-[14px] leading-4 opacity-80 hover:text-[#FF7B1C] ${
+              className={`md:text-[20px]  text-[14px] leading-4 opacity-80 hover:text-[#FF7B1C] ${
                 location.pathname === path ? "text-[#FF7B1C] font-semibold" : ""
               }`}
             >

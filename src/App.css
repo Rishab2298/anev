@@ -8,7 +8,31 @@
   font-style: normal;
 }
 
+.bgblink {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
 
+.bgblink::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-image: url('/starsBg.jpg');
+  background-repeat: repeat;
+  background-size: contain;
+  background-attachment: fixed;
+  animation: starsBlink 2s infinite ease-in-out;
+  opacity: 1;
+  z-index: -1;
+  pointer-events: none;
+}
+
+@keyframes starsBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
 @keyframes scroll-right {
   0% {
     transform: translateX(-50%);

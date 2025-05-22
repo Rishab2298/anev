@@ -154,19 +154,19 @@ const LandingPage = ({ direction = "left", speed = 1.5 }) => {
 
   const processItems = [
     {
-      title: "1. Briefing",
+      title: "Briefing",
       text: "Your brand's vision is our launchpad. We meticulously understand your goals, values, and target audience to kickstart the journey.",
     },
     {
-      title: "2. Ideation",
+      title: "Ideation",
       text: "Our creative minds spin concepts that align with your brand’s essence, ensuring every idea is groundbreaking and strategic.",
     },
     {
-      title: "3. Execution",
+      title: "Execution",
       text: "From design to development, every step is marked by precision. Your project moves swiftly through each stage without compromising quality.",
     },
     {
-      title: "4. Delivery & Beyond",
+      title: "Delivery And Beyond",
       text: "This partnership doesn't end at delivery. We analyze outcomes, gather insights, and iterate strategies for continuous growth.",
     },
   ];
@@ -241,7 +241,7 @@ const LandingPage = ({ direction = "left", speed = 1.5 }) => {
   return (
     <>
       {/* Hero Image  */}
-      <div className="w-full  h-fit md:h-screen bg-black flex justify-center items-center">
+      <div className="bgblink w-full  h-fit  bg-black flex justify-center items-center">
         {/* <img
           src={herImage}
           alt="herImage"
@@ -252,14 +252,14 @@ const LandingPage = ({ direction = "left", speed = 1.5 }) => {
 
           muted
           playsInline
-          className="w-full h-fit hero-banner transition-all duration-500 ease-in-out hover:w-4/5">
+          className="w-full h-fit hero-banner ">
           <source src={heroImage} type="video/webm" />
           Your browser does not support the video tag.
         </video>
       </div>
       {/* <ScrollingAnimation /> */}
        {/* Our Work */}
-       <div className="w-full h-fit flex flex-col justify-center items-center bg-black p-5 md:p-20 gap-4 md:gap-10">
+       <div className="bgblink w-full h-fit flex flex-col justify-center items-center bg-black p-5 md:px-20 gap-4 md:gap-10">
         <h2 className="fonk text-[30px] text-center md:text-left md:text-[65px]  w-full text-transparent bg-clip-text font-medium  p-2  hatch-background">
           OUR WORK
         </h2>
@@ -276,7 +276,7 @@ const LandingPage = ({ direction = "left", speed = 1.5 }) => {
         </div>
       </div>
         {/* Services */}
-        <div className="w-full h-fit flex flex-col justify-center items-center bg-black md:p-20 p-5 gap-4 md:gap-10">
+        <div className="bgblink w-full h-fit flex flex-col justify-center items-center bg-black md:p-20 p-5 gap-4 md:gap-10">
         <h2 className="text-[30px] md:text-[65px] md:text-left text-center  w-full text-transparent bg-clip-text font-bold  p-2  hatch-background fonk">
           SERVICES
         </h2>
@@ -305,7 +305,7 @@ const LandingPage = ({ direction = "left", speed = 1.5 }) => {
                   />
                   <div className="artist z-0">0</div>
                 </div>
-                <span className="uppercase font-thin text-[20px] text-center text-white">
+                <span className="fonk uppercase font-thin text-[20px] text-center text-white">
                   {item.title}
                 </span>
               </div>
@@ -315,12 +315,12 @@ const LandingPage = ({ direction = "left", speed = 1.5 }) => {
         </Swiper>
       </div>
       {/* What is Anev */}
-      <div className="w-full h-fit relative ">
+      <div className="bgblink w-full h-fit relative ">
         {/* Image */}
-        <img src={starsBg} alt="starsBgImage" className="w-full h-fit z-0" />
+        
 
         {/* Text Overlay */}
-        <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center z-10">
+        <div className=" w-full h-full flex flex-col justify-center items-center pb-[200px] py-10 ">
           <h2 className=" text-[30px] md:text-[65px]  w-full text-transparent bg-clip-text font-bold  p-2 text-center hatch-background">
             <span className="fonk">WHAT IS ANEV</span>?
           </h2>
@@ -345,7 +345,7 @@ const LandingPage = ({ direction = "left", speed = 1.5 }) => {
           className="w-full h-auto"
         />
         <div className="absolute flex flex-col justify-center items-center md:gap-5 gap-1.5">
-          <span className=" text-white uppercase  text-[15px] md:text-[60px] leading-[70px] text-center">
+          <span className=" text-white uppercase  text-[15px] md:text-[60px] md:leading-[70px] text-center">
             {"The next generation media pipeline "
               .split(" ")
               .map((word, index) => (<>
@@ -369,7 +369,7 @@ const LandingPage = ({ direction = "left", speed = 1.5 }) => {
      
 
       {/* Clientele */}
-      <div className="w-full h-fit flex flex-col justify-center items-center bg-black md:p-20 p-4 gap-2 md:gap-10 mt-4 md:mt-0">
+      <div className="bgblink  w-full h-fit flex flex-col justify-center items-center bg-black md:px-20 md:py-10 p-4 gap-2 md:gap-10 mt-4 md:mt-0">
         <h2 className="fonk text-[30px] md:text-left text-center md:text-[75px]  w-full text-transparent bg-clip-text font-medium  p-2  hatch-background">
           CLIENTELE
         </h2>
@@ -463,12 +463,12 @@ const LandingPage = ({ direction = "left", speed = 1.5 }) => {
         </div>
 
         <div
-          className="hidden w-3/5 md:flex flex-row items-center  justify-center bg-contain bg-top"
+          className="hidden w-full md:flex flex-row items-center  justify-center bg-contain bg-top"
           style={{
             backgroundImage: `url(${billboard})`,
             backgroundRepeat: "no-repeat",
           }}>
-          <div className="w-4/5 h-[600px] flex-row mt-[100px]">
+          <div className="w-2/5 h-[600px] flex-row mt-[100px]">
             {" "}
             {/* Set a fixed height here */}
             <Swiper
@@ -545,7 +545,7 @@ const LandingPage = ({ direction = "left", speed = 1.5 }) => {
       {/* -----------for desktop----------- */}
       <div
         ref={sectionRef}
-        className="hidden w-full h-fit md:flex flex-col justify-center items-center bg-black p-20 gap-10">
+        className="bgblink hidden w-full h-fit md:flex flex-col justify-center items-center bg-black p-20 gap-10">
         <h2 className="fonk text-[65px] w-full text-transparent bg-clip-text font-medium p-2 hatch-background">
           OUR PROCESS
         </h2>

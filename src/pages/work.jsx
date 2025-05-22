@@ -47,7 +47,7 @@ const Work = () => {
   return (
     <>
       {/* Hero Text */}
-      <div className="w-full  min-h-[450px] md:min-h-screen bg-black flex flex-col justify-center items-center gap-[10px] ">
+      <div className="bgblink w-full  min-h-[450px] md:min-h-screen bg-black flex flex-col justify-center items-center gap-[10px] ">
         {/* Title - "Explore Our" */}
         <div className="w-fit overflow-hidden h-fit">
           <span
@@ -74,7 +74,7 @@ const Work = () => {
         </div>
       </div>
       {/* work with 1 item */}
-      <div className="w-full flex flex-col items-center gap-[50px] md:gap-[200px] justify-center">
+      <div className="bgblink w-full flex flex-col items-center gap-[50px] md:gap-[200px] justify-center">
         {/* item 1 grid x2 */}
         <div className="w-[90%] md:w-3/4 h-fit flex md:flex-row flex-col items-center gap-[20px] ">
           <div className="w-full md:w-1/2 flex flex-col">
@@ -378,7 +378,7 @@ const Work = () => {
 
       {/* Call To Action */}
 
-      <div className=" mt-[50px] md:mt-0 w-full h-fit md:min-h-screen  flex flex-col justify-center items-center gap-[30px] md:gap-[60px]">
+      <div className="bgblink mt-[50px] md:mt-0 w-full h-fit md:min-h-screen  flex flex-col justify-center items-center gap-[30px] md:gap-[60px]">
         <span className="text-white text-[20px] poppins-thin uppercase">
           Contact
         </span>
