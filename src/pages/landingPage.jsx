@@ -16,7 +16,7 @@ import "@splidejs/react-splide/css";
 
 // Splide Auto Scroll extension
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
-import bgImage from "../assets/gradient.jpg";
+import bgImage from "../assets/images/bgGradient.png";
 import heroImage from "../assets/videos/showReel.mp4";
 import starsBg from "../assets/starsBg.jpg";
 import service1 from "../assets/1ajan.avif";
@@ -328,7 +328,7 @@ const LandingPage = ({ direction = "left", speed = 1.5 }) => {
             ANEV is a next-generation creative agency built to move brands
             forward — fast. We combine sharp strategy, bold storytelling, and
             agile execution to craft impactful content ecosystems that don’t
-            just catch attention, but hold it. With ANEV, your brand doesn’t
+            just catch attention, but hold it. <br /><br />With ANEV, your brand doesn’t
             just exist online — it leads, resonates, and thrives.
           </span>
         </div>
@@ -337,7 +337,7 @@ const LandingPage = ({ direction = "left", speed = 1.5 }) => {
       {/* NEXT GEN media pipeline */}
       <div
         ref={containerRef}
-        className="relative w-full h-fit md:h-screen flex flex-col justify-center items-center bg-black">
+        className="bgblink relative w-full h-fit md:h-screen flex flex-col justify-center items-center">
         <img
           id="banner"
           src={bgImage}
@@ -620,7 +620,7 @@ const LandingPage = ({ direction = "left", speed = 1.5 }) => {
 
       {/* Call To Action */}
 
-      <div className="relative w-full h-fit flex flex-col justify-center items-center bg-black">
+      <div className="bgblink relative w-full h-fit flex flex-col justify-center items-center ">
         <img
           id="banner"
           src={bgImage}
