@@ -369,7 +369,7 @@ const LandingPage = ({ direction = "left", speed = 1.5 }) => {
      
 
       {/* Clientele */}
-      <div className="bgblink  w-full h-fit flex flex-col justify-center items-center bg-black md:px-20 md:py-10 p-4 gap-2 md:gap-10 mt-4 md:mt-0">
+      <div className="bgblink  w-full h-fit flex flex-col justify-center items-center bg-black md:px-20 md:pt-10 md:pb-0 p-4 gap-2 md:gap-10 mt-4 md:mt-0">
         <h2 className="fonk text-[30px] md:text-left text-center md:text-[75px]  w-full text-transparent bg-clip-text font-medium  p-2  hatch-background">
           CLIENTELE
         </h2>
@@ -545,7 +545,7 @@ const LandingPage = ({ direction = "left", speed = 1.5 }) => {
       {/* -----------for desktop----------- */}
       <div
         ref={sectionRef}
-        className="bgblink hidden w-full h-fit md:flex flex-col justify-center items-center bg-black p-20 gap-10">
+        className="bgblink hidden w-full h-fit md:flex flex-col justify-center items-center bg-black px-20 py-10 gap-10">
         <h2 className="fonk text-[65px] w-full text-transparent bg-clip-text font-medium p-2 hatch-background">
           OUR PROCESS
         </h2>

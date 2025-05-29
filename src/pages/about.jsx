@@ -18,7 +18,7 @@ const About = () => {
       </div>
 
       <div className="bgblink w-full h-fit flex md:flex-row flex-col gap-[20px] md:gap-[60px] px-[60px] pt-[60px] justify-center items-center  md:pt-10 ">
-        <div className="h-full flex justify-center items-center text-[20px] text-center text-white">
+        <div className="h-full flex justify-center items-center md:text-[20px]  text-[14px] fonk uppercase text-center text-white">
           <span>Fundamentally we are <br />storytellers</span>
         </div>
         <div className="w-full md:w-2/5  rounded-[60px] cover relative overflow-hidden">
@@ -29,31 +29,31 @@ const About = () => {
           />
           <div className="artist z-0">0</div>
         </div>
-        <div className="h-full flex justify-center items-center text-[20px] text-center text-white">
+        <div className="h-full flex justify-center items-center md:text-[20px]  text-[14px] fonk uppercase text-center text-white">
           <span>Functionally we are <br />a powerhouse</span>
         </div>
       </div>
 
-      <div className="bgblink w-full flex flex-col justify-center items-center text-[20px] md:text-[30px] gap-[60px] text-white poppins-thin py-[200px]">
-        <span className="text-center w-2/3">
+      <div className="bgblink w-full flex flex-col justify-center items-center md:text-[24px] text-[15px] p-4 leading-[25px] md:leading-[36px] gap-[25px] font-thin  text-white poppins-thin py-[200px]">
+        <span className="text-center w-1/2">
           ANEV was born out of a simple but urgent need — to bridge the growing
           gap between brands and the digital-first world.
         </span>
-        <span className="text-center w-2/3">
+        <span className="text-center w-1/2">
           While the wave of digitisation continues to surge, thousands of
           businesses are still struggling to build a real, resonant presence
           online.
         </span>
-        <span className="text-center w-2/3">
+        <span className="text-center w-1/2">
           The challenge isn’t just speed — it’s quality, strategy, and execution
           at scale.
         </span>
-        <span className="text-center w-2/3">
+        <span className="text-center w-1/2">
           A fragmented creative ecosystem, lack of organized talent, and absence
           of structured content systems made it harder for brands to truly
           thrive.
         </span>
-        <span className="text-center w-2/3">
+        <span className="text-center w-1/2">
           ANEV was created to change that — to empower brands with bold
           storytelling, sharp strategy, and relentless execution — building not
           just digital footprints, but digital leadership.{" "}
@@ -121,10 +121,10 @@ const About = () => {
 
       {/* Call To Action */}
 
-      <div className="bgblink w-full h-fit md:min-h-screen  flex flex-col justify-center items-center gap-[30px] md:gap-[60px]">
-        <span className="text-white text-[20px] poppins-thin uppercase">
+      <div className="bgblink w-full h-fit md:min-h-fit  flex flex-col justify-center items-center gap-[30px] md:gap-[60px]">
+        {/* <span className="text-white text-[20px] poppins-thin uppercase">
           Contact
-        </span>
+        </span> */}
         <div className="text-[50px] md:text-[120px] uppercase text-center w-full text-transparent bg-clip-text font-medium p-2 hatch-background leading-none">
   <div className="flex flex-col items-center">
     <span className="fonk">Have a cool</span>

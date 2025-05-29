@@ -47,7 +47,7 @@ const Work = () => {
   return (
     <>
       {/* Hero Text */}
-      <div className="bgblink w-full  min-h-[450px] md:min-h-screen bg-black flex flex-col justify-center items-center gap-[10px] ">
+      <div className="bgblink w-full  min-h-[450px] md:min-h-fit md:py-16 bg-black flex flex-col justify-center items-center gap-[10px] ">
         {/* Title - "Explore Our" */}
         <div className="w-fit overflow-hidden h-fit">
           <span
@@ -152,7 +152,7 @@ const Work = () => {
                 photoshoot
               </span>
               <span className="text-[30px] text-white font-thin uppercase fonk">
-                MONKEY SHOULDERS
+                MONKEY SHOULDER
               </span>
             </div>
           </div>
@@ -378,10 +378,10 @@ const Work = () => {
 
       {/* Call To Action */}
 
-      <div className="bgblink mt-[50px] md:mt-0 w-full h-fit md:min-h-screen  flex flex-col justify-center items-center gap-[30px] md:gap-[60px]">
-        <span className="text-white text-[20px] poppins-thin uppercase">
+      <div className="bgblink mt-[50px]  md:mt-0 md:pt-[150px] w-full h-fit md:min-h-fit  flex flex-col justify-center items-center gap-[30px] md:gap-[60px]">
+        {/* <span className="text-white text-[20px] poppins-thin uppercase">
           Contact
-        </span>
+        </span> */}
         <div className="text-[50px] md:text-[120px] uppercase text-center w-full text-transparent bg-clip-text font-medium p-2 hatch-background leading-none">
           <div className="flex flex-col items-center">
             <span className="fonk">Have a cool</span>
