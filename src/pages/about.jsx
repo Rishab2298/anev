@@ -1,5 +1,5 @@
 import React from "react";
-import bgImage from "../assets/iconMod.jpg";
+import bgImage from "../assets/iconMod.jpeg";
 import image01 from "../assets/images/01.webp";
 import image02 from "../assets/images/02.webp";
 import image03 from "../assets/images/03.webp";
