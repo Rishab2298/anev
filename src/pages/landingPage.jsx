@@ -145,12 +145,30 @@ import icon from "../assets/icon.svg";
 import Section from "./section";
 import ScrollingAnimation from "./section";
 import InfiniteLandscapeRight from "../components/infiniteCarousleLandscapeVideoRight";
+import { useLocation } from "react-router-dom";
 
 
 gsap.registerPlugin(ScrollTrigger);
+
+
+
 const LandingPage = ({ direction = "left", speed = 1.5 }) => {
+
+
   const sectionRef = useRef(null);
   const elementsRef = useRef([]);
+
+  const location = useLocation();
+
+useEffect(() => {
+  const hash = location.hash;
+  if (hash) {
+    const element = document.querySelector(hash);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+}, [location]);
 
   const processItems = [
     {
@@ -320,7 +338,7 @@ const LandingPage = ({ direction = "left", speed = 1.5 }) => {
         
 
         {/* Text Overlay */}
-        <div className=" w-full h-full flex flex-col justify-center items-center pb-[200px] py-10 ">
+        <div className=" w-full h-full flex flex-col justify-center items-center pt-10 ">
           <h2 className=" text-[30px] md:text-[65px]  w-full text-transparent bg-clip-text font-bold  p-2 text-center hatch-background">
             <span className="fonk">WHAT IS ANEV</span>?
           </h2>
@@ -337,7 +355,7 @@ const LandingPage = ({ direction = "left", speed = 1.5 }) => {
       {/* NEXT GEN media pipeline */}
       <div
         ref={containerRef}
-        className="bgblink relative w-full h-fit md:h-screen flex flex-col justify-center items-center">
+        className="bgblink relative w-full h-fit  flex flex-col justify-center items-center">
         <img
           id="banner"
           src={bgImage}
@@ -369,8 +387,8 @@ const LandingPage = ({ direction = "left", speed = 1.5 }) => {
      
 
       {/* Clientele */}
-      <div className="bgblink  w-full h-fit flex flex-col justify-center items-center bg-black md:px-20 md:pt-10 md:pb-0 p-4 gap-2 md:gap-10 mt-4 md:mt-0">
-        <h2 className="fonk text-[30px] md:text-left text-center md:text-[75px]  w-full text-transparent bg-clip-text font-medium  p-2  hatch-background">
+      <div id="clientele" className="bgblink  w-full h-fit flex flex-col justify-center items-center bg-black  md:pt-10 md:pb-0 p-4 gap-2 md:gap-10 mt-4 md:mt-0">
+        <h2 className="fonk text-[30px] md:text-left md:px-20 text-center md:text-[75px]  w-full text-transparent bg-clip-text font-medium  p-2  hatch-background">
           CLIENTELE
         </h2>
 
@@ -463,12 +481,12 @@ const LandingPage = ({ direction = "left", speed = 1.5 }) => {
         </div>
 
         <div
-          className="hidden w-full md:flex flex-row items-center  justify-center bg-contain bg-top"
+          className="hidden w-full min-h-[120vh]  md:flex flex-row items-center  justify-center bg-contain bg-top"
           style={{
             backgroundImage: `url(${billboard})`,
             backgroundRepeat: "no-repeat",
           }}>
-          <div className="w-2/5 h-[600px] flex-row mt-[100px]">
+          <div className="w-4/6 h-[700px] flex-row mt-[0px]">
             {" "}
             {/* Set a fixed height here */}
             <Swiper
@@ -486,8 +504,8 @@ const LandingPage = ({ direction = "left", speed = 1.5 }) => {
               className="h-[300px]" // Ensure full height is used
             >
               <SwiperSlide key="1">
-                <div className="flex justify-center items-center h-[250px] ">
-                  <div className="grid grid-cols-5 grid-rows-2 gap-1 w-full  h-full">
+                <div className="flex justify-center items-center h-[300px] ">
+                  <div className="grid grid-cols-5 grid-rows-2 gap-5 w-full  h-[300px]">
                     {logos.slice(0, 10).map((logo, index) => (
                       <div
                         key={index}
@@ -495,7 +513,7 @@ const LandingPage = ({ direction = "left", speed = 1.5 }) => {
                         <img
                           src={logo}
                           alt={`Logo ${index + 1}`}
-                          className="w-2/3  object-contain"
+                          className="w-2/3 h-auto max-w-full max-h-full object-contain"
                         />
                       </div>
                     ))}
@@ -503,8 +521,8 @@ const LandingPage = ({ direction = "left", speed = 1.5 }) => {
                 </div>
               </SwiperSlide>
               <SwiperSlide key="2">
-                <div className="flex justify-center items-center h-[250px] ">
-                  <div className="grid grid-cols-5 grid-rows-2 gap-1 w-full  h-full">
+                <div className="flex justify-center items-center h-[300px] ">
+                  <div className="grid grid-cols-5 grid-rows-2 gap-5 w-full  h-[300px]">
                     {logoss.slice(0, 10).map((logo, index) => (
                       <div
                         key={index}
@@ -512,7 +530,7 @@ const LandingPage = ({ direction = "left", speed = 1.5 }) => {
                         <img
                           src={logo}
                           alt={`Logo ${index + 1}`}
-                          className="w-2/3  object-contain"
+                          className="w-2/3 h-auto max-w-full max-h-full object-contain"
                         />
                       </div>
                     ))}
@@ -520,8 +538,8 @@ const LandingPage = ({ direction = "left", speed = 1.5 }) => {
                 </div>
               </SwiperSlide>
               <SwiperSlide key="3">
-                <div className="flex justify-center items-center h-[250px] ">
-                  <div className="grid grid-cols-5 grid-rows-2 gap-1 w-full  h-full">
+                <div className="flex justify-center items-center h-[300px] ">
+                  <div className="grid grid-cols-5 grid-rows-2 gap-5 w-full  h-[300px]">
                     {logosss.slice(0, 10).map((logo, index) => (
                       <div
                         key={index}
@@ -529,7 +547,7 @@ const LandingPage = ({ direction = "left", speed = 1.5 }) => {
                         <img
                           src={logo}
                           alt={`Logo ${index + 1}`}
-                          className="w-2/3  object-contain"
+                          className="w-2/3 h-auto max-w-full max-h-full object-contain"
                         />
                       </div>
                     ))}
@@ -545,7 +563,7 @@ const LandingPage = ({ direction = "left", speed = 1.5 }) => {
       {/* -----------for desktop----------- */}
       <div
         ref={sectionRef}
-        className="bgblink hidden w-full h-fit md:flex flex-col justify-center items-center bg-black px-20 py-10 gap-10">
+        className="bgblink hidden w-full h-fit md:flex flex-col justify-center items-center bg-black px-20 pt-10 gap-10 ">
         <h2 className="fonk text-[65px] w-full text-transparent bg-clip-text font-medium p-2 hatch-background">
           OUR PROCESS
         </h2>
