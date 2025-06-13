@@ -1,6 +1,7 @@
 import React from "react";
 import bgImage from "../assets/iconMod.jpeg";
 import image01 from "../assets/images/01.webp";
+import founderImg from "../assets/images/founder.jpg";
 import image02 from "../assets/images/02.webp";
 import image03 from "../assets/images/03.webp";
 import image04 from "../assets/images/04.webp";
@@ -59,6 +60,9 @@ const About = () => {
           just digital footprints, but digital leadership.{" "}
         </span>
       </div>
+      
+
+      
 
       {/* <div className="w-full flex flex-col justify-center items-center text-white poppins-thin my-[100px] sm:my-[200px]">
 // Row 1
@@ -117,7 +121,39 @@ const About = () => {
     </div>
   </div>
 </div> */}
+<div className="bgblink w-full md:px-[200px]  min-h-fit grid grid-cols-1 md:grid-cols-2 gap-4  items-center justify-center pb-[200px]">
+ <div className="w-full  rounded-[60px] cover relative overflow-hidden">
+          <img
+            src={founderImg}
+            alt="foudner"
+            className="rounded-[60px]  relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10"
+          />
+          <div className="artist z-0">0</div>
+        </div>
+        <div className="w-full pl-10 gap-5 flex flex-col justify-center items-center text-white poppins-thin p-10">
+          <div className="flex flex-col items-center">
+          <span className="text-[20px] md:text-[30px] fonk uppercase text-center">
+            Udai Sareen
+          </span>
+          <span>
+            Founder, ANEV Media
+          </span>
+          </div>
+          <span className="text-[16px] md:text-[16px] text-center mt-4 flex flex-col gap-5">
+            
+<p>
 
+At heart, Udai is a storyteller — one who believes that every frame, caption, or campaign should evoke a feeling, spark curiosity, or leave someone wanting more.</p><p>
+
+What started as a fascination with photography and social media quickly turned into a full-blown pursuit: building brands that don’t just sell, but connect. With a background in marketing and years of hands-on experience across content creation, digital strategy, and campaign production, Udai launched ANEV Media as a creative house that merges intuition with insight.
+</p><p>
+When he’s not obsessing over shot lists or moodboards, you’ll probably find him somewhere between a café and an airport — chasing the next story, the perfect brew, or both. His creative compass is fueled by three things: great content, great coffee, and the thrill of travel. That spirit is woven into everything ANEV Media does — bold, intentional, and rooted in culture.
+</p><p>
+Udai’s mission? To help brands show up online with clarity, charisma, and a little bit of edge.</p>
+          </span>
+
+      </div>
+</div>
 
       {/* Call To Action */}
 

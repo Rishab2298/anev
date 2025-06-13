@@ -42,7 +42,7 @@ const Contact = () => {
           </div> */}
           </div>
           <div className="bgblink w-full justify-center text-center flex mt-10 md:mt-24">
-          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdp8ywH-YJ0ei1TlofkKGZTnxRjxvG_-VDZlQBvuhrDu7cN_Q/viewform?embedded=true" width="640" height="1500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc8NaIV8EanNhhrJQ0NVQFxLTElFZJA8god5L6nYx0cD8cOrw/viewform?embedded=true" width="640" height="1500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
           </div>
       </div>
 
