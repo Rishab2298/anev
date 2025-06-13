@@ -13,6 +13,20 @@ import image007 from "../assets/images/as7.png";
 import image008 from "../assets/images/gtw3.png";
 import image009 from "../assets/images/gtw4.png";
 import image010 from "../assets/images/zero210.png";
+import video17 from "../assets/videos/video17.mp4";
+import video18 from "../assets/videos/video18.mp4";
+
+import image1 from "../assets/images/1.png";
+import image2 from "../assets/images/2.png";
+import image3 from "../assets/images/3.png";
+import image4 from "../assets/images/4.png";
+import image5 from "../assets/images/5.png";
+import image6 from "../assets/images/6.png";
+import image7 from "../assets/images/7.png";
+import image8 from "../assets/images/8.png";
+
+
+
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -220,7 +234,60 @@ const Work = () => {
             </div>
           </div>
         </div>
-       
+        {/* Item 2 Image Grid 3 */}
+        <div className="w-[90%] md:w-3/4 h-fit flex md:flex-row flex-col items-center gap-[20px] ">
+          <div className="w-full md:w-1/3 flex flex-col">
+            <div className="rounded-[30px] md:rounded-[60px] relative w-full h-fit flex flex-col items-center gap-[4px] overflow-hidden aspect-square">
+              <img
+                src={image1}
+                alt="image001"
+                className="rounded-[30px] md:rounded-[60px]  relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10"
+              />
+            </div>
+            <div className="w-full h-fit flex flex-col pt-4 pl-14">
+              <span className="text-[16px] text-white font-thin uppercase">
+                photoshoot
+              </span>
+              <span className="text-[30px] text-white font-thin uppercase fonk">
+                CAMPARI
+              </span>
+            </div>
+          </div>
+          <div className="w-full md:w-1/3 flex flex-col">
+            <div className="rounded-[30px] md:rounded-[60px] relative w-full h-fit flex flex-col items-center gap-[4px] overflow-hidden aspect-square">
+              <img
+                src={image2}
+                alt="image001"
+                className="rounded-[30px] md:rounded-[60px]  relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10"
+              />
+            </div>
+            <div className="w-full h-fit flex flex-col pt-4 pl-14">
+              <span className="text-[16px] text-white font-thin uppercase">
+                photoshoot
+              </span>
+              <span className="text-[30px] text-white font-thin uppercase fonk">
+                MONKEY SHOULDER
+              </span>
+            </div>
+          </div>
+          <div className="w-full md:w-1/3 flex flex-col">
+            <div className="rounded-[30px] md:rounded-[60px] relative w-full h-fit flex flex-col items-center gap-[4px] overflow-hidden aspect-square">
+              <img
+                src={image3}
+                alt="image001"
+                className="rounded-[30px] md:rounded-[60px]  relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10"
+              />
+            </div>
+            <div className="w-full h-fit flex flex-col pt-4 pl-14">
+              <span className="text-[16px] text-white font-thin uppercase">
+                photoshoot
+              </span>
+              <span className="text-[30px] text-white font-thin uppercase fonk">
+                ZERO02
+              </span>
+            </div>
+          </div>
+        </div>
 
         {/* Item 4 image grid 2*/}
 
@@ -370,6 +437,105 @@ const Work = () => {
               </span>
               <span className="text-[30px] text-white font-thin uppercase fonk">
                 zero02
+              </span>
+            </div>
+          </div>
+        </div>
+         {/* Item 2 Image Grid 3 */}
+        <div className="w-[90%] md:w-3/4 h-fit flex md:flex-row flex-col items-center gap-[20px] ">
+          <div className="w-full md:w-1/3 flex flex-col">
+            <div className="rounded-[30px] md:rounded-[60px] relative w-full h-fit flex flex-col items-center gap-[4px] overflow-hidden aspect-square">
+              <img
+                src={image4}
+                alt="image001"
+                className="rounded-[30px] md:rounded-[60px]  relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10"
+              />
+            </div>
+            <div className="w-full h-fit flex flex-col pt-4 pl-14">
+              <span className="text-[16px] text-white font-thin uppercase">
+                photoshoot
+              </span>
+              <span className="text-[30px] text-white font-thin uppercase fonk">
+                CAMPARI
+              </span>
+            </div>
+          </div>
+          <div className="w-full md:w-1/3 flex flex-col">
+            <div className="rounded-[30px] md:rounded-[60px] relative w-full h-fit flex flex-col items-center gap-[4px] overflow-hidden aspect-square">
+              <img
+                src={image5}
+                alt="image001"
+                className="rounded-[30px] md:rounded-[60px]  relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10"
+              />
+            </div>
+            <div className="w-full h-fit flex flex-col pt-4 pl-14">
+              <span className="text-[16px] text-white font-thin uppercase">
+                photoshoot
+              </span>
+              <span className="text-[30px] text-white font-thin uppercase fonk">
+                MONKEY SHOULDER
+              </span>
+            </div>
+          </div>
+          <div className="w-full md:w-1/3 flex flex-col">
+            <div className="rounded-[30px] md:rounded-[60px] relative w-full h-fit flex flex-col items-center gap-[4px] overflow-hidden aspect-square">
+              <img
+                src={image6}
+                alt="image001"
+                className="rounded-[30px] md:rounded-[60px]  relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10"
+              />
+            </div>
+            <div className="w-full h-fit flex flex-col pt-4 pl-14">
+              <span className="text-[16px] text-white font-thin uppercase">
+                photoshoot
+              </span>
+              <span className="text-[30px] text-white font-thin uppercase fonk">
+                ZERO02
+              </span>
+            </div>
+          </div>
+        </div>
+          {/* item 9 grid x2 */}
+        <div className="w-[90%] md:w-3/4 h-fit flex md:flex-row flex-col items-center gap-[20px] ">
+          <div className="w-full md:w-1/2 flex flex-col">
+            <div className="rounded-[30px] md:rounded-[60px] relative w-full h-fit flex flex-col items-center gap-[4px] overflow-hidden">
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="rounded-[30px] md:rounded-[60px]  relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10">
+                <source src={video17} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div className="w-full h-fit flex flex-col pt-4 pl-14">
+              <span className="text-[16px] text-white font-thin uppercase">
+                brand films
+              </span>
+              <span className="text-[30px] text-white font-thin uppercase fonk">
+                sky vodka bangalore
+              </span>
+            </div>
+          </div>
+          <div className="w-full md:w-1/2 flex flex-col">
+            <div className="rounded-[30px] md:rounded-[60px] relative w-full h-fit flex flex-col items-center gap-[4px] overflow-hidden">
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="rounded-[30px] md:rounded-[60px]  relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10">
+                <source src={video18} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div className="w-full h-fit flex flex-col pt-4 pl-14">
+              <span className="text-[16px] text-white font-thin uppercase">
+                brand films
+              </span>
+              <span className="text-[30px] text-white font-thin uppercase fonk">
+               smokey monkey
               </span>
             </div>
           </div>

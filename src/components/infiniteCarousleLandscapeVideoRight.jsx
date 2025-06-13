@@ -2,8 +2,11 @@ import React, { useEffect, useRef, useState } from "react";
 import video1 from "../assets/videos/hendrcik01.mp4";
 import video2 from "../assets/videos/icwLandscape.mp4";
 import video3 from "../assets/videos/monsho.mp4";
+import video17 from "../assets/videos/video17.mp4";
+import video18 from "../assets/videos/video18.mp4";
+import video19 from "../assets/videos/video19.mp4";
 
-const videos = [video1, video2, video3, video1, video2, video3, video1, video2, video3];
+const videos = [video1, video2, video3, video17,video18, video2, video3, video1, video17,video18, video3,video19];
 
 const LazyLandscapeVideo = ({ src }) => {
   const videoRef = useRef();
