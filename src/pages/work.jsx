@@ -30,13 +30,14 @@ import image8 from "../assets/images/8.png";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useNavigate } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Work = () => {
   const text1Ref = useRef(null);
   const text2Ref = useRef(null);
-
+const navigate = useNavigate();
   useEffect(() => {
     const elements = [text1Ref.current, text2Ref.current];
 
@@ -295,7 +296,7 @@ const Work = () => {
           <div className="w-full md:w-1/2 flex flex-col ">
             <div className="rounded-[30px] md:rounded-[60px] relative w-full h-fit flex flex-col items-center gap-[4px] overflow-hidden aspect-square">
               <img
-                src={image001}
+                src={image8}
                 alt="image001"
                 className="rounded-[30px] md:rounded-[60px]  relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10"
               />
@@ -558,7 +559,7 @@ const Work = () => {
           </div>
         </div>
 
-        <button className="buttonr px-16 py-5 text-2xl rounded-full poppins-light ">
+        <button onClick={()=>{navigate("/contact-us")}} className="buttonr px-16 py-5 text-2xl rounded-full poppins-light ">
           Let's Talk!
         </button>
       </div>

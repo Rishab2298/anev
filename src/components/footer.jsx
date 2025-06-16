@@ -103,6 +103,11 @@ const Footer = () => {
             href="https://instagram.com/anevmedia">
             <span className="fonk uppercase">Instagram</span>
           </a>
+           <a
+            className="fonk text-white md:text-left text-center w-full poppins-medium hover:underline hover:text-orange-300"
+            href="http://linkedin.com/company/anev-media/">
+            <span className="fonk uppercase">LINKEDIN</span>
+          </a>
         </div>
         <div className="hidden w-fit md:flex text-white font-semibold gap-4">
           SCROLL TO TOP

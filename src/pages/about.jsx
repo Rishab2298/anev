@@ -5,8 +5,10 @@ import founderImg from "../assets/images/founder.jpg";
 import image02 from "../assets/images/02.webp";
 import image03 from "../assets/images/03.webp";
 import image04 from "../assets/images/04.webp";
+import { useNavigate } from "react-router-dom";
 
 const About = () => {
+  const navigate = useNavigate();
   return (
     <>
       <div className="bgblink w-full h-[300px] pt-[100px] md:pt-[200px] flex flex-col justify-center items-center gap-[25px] md:gap-[60px]">
@@ -35,7 +37,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className="bgblink w-full flex flex-col justify-center items-center md:text-[24px] text-[15px] p-4 leading-[25px] md:leading-[36px] gap-[25px] font-thin  text-white poppins-thin py-[200px]">
+      <div className="bgblink w-full flex flex-col justify-center items-center md:text-[22px] text-[15px] p-4 leading-[24px] md:leading-[30px] gap-[25px] font-thin  text-white poppins-thin py-[100px]">
         <span className="text-center w-1/2">
           ANEV was born out of a simple but urgent need — to bridge the growing
           gap between brands and the digital-first world.
@@ -49,11 +51,7 @@ const About = () => {
           The challenge isn’t just speed — it’s quality, strategy, and execution
           at scale.
         </span>
-        <span className="text-center w-1/2">
-          A fragmented creative ecosystem, lack of organized talent, and absence
-          of structured content systems made it harder for brands to truly
-          thrive.
-        </span>
+       
         <span className="text-center w-1/2">
           ANEV was created to change that — to empower brands with bold
           storytelling, sharp strategy, and relentless execution — building not
@@ -171,7 +169,7 @@ Udai’s mission? To help brands show up online with clarity, charisma, and a li
   </div>
 </div>
 
-        <button className="buttonr px-16 py-5 text-2xl rounded-full poppins-light ">
+        <button onClick={()=>{navigate("/contact-us")}} className="buttonr px-16 py-5 text-2xl rounded-full poppins-light ">
           Let's Talk!
         </button>
       </div>

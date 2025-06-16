@@ -1,14 +1,26 @@
 import React, { useEffect, useState } from "react";
 
 import icon from "./../assets/icon.svg";
+import { useLocation } from "react-router-dom";
 
 const Contact = () => {
+    const location = useLocation();
+  useEffect(() => {
+    const hash = location.hash;
+    if (hash) {
+      const element = document.querySelector(hash);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]);
+  
  
   return (
     <>
       <div className="bgblink w-full flex flex-col items-center justify-center  pt-5 md:pt-[100px] p-0 md:p-10 md:gap-10 gap-5">
         <div className="w-[90%] md:w-3/4  flex flex-col justify-center gap-5">
-          <h2 className="fonk text-[60px] md:text-[120px] leading-[70px] md:leading-[140px] text-center w-full text-transparent bg-clip-text  hatch-background mt-[40px]">
+          <h2 className="fonk uppercase text-[60px] md:text-[120px] leading-[70px] md:leading-[140px] text-center w-full text-transparent bg-clip-text  hatch-background mt-[40px]">
             Lets Create Art Together
           </h2>
           <span className="uppercase text-white  text-[20px] leading-[26px] md:text-[30px] md:leading-[36px] text-center font-thin tracking-wide">
@@ -41,7 +53,7 @@ const Contact = () => {
             </button>{" "}
           </div> */}
           </div>
-          <div className="bgblink w-full justify-center text-center flex mt-10 md:mt-24">
+          <div id="form" className="bgblink w-full justify-center text-center flex mt-10 md:mt-24">
           <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc8NaIV8EanNhhrJQ0NVQFxLTElFZJA8god5L6nYx0cD8cOrw/viewform?embedded=true" width="640" height="1500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
           </div>
       </div>

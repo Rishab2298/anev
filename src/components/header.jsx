@@ -14,7 +14,7 @@ const Header = () => {
     { name: "About", path: "/about" },
     { name: "Work", path: "/work" },
     { name: "Clients", path: "/#clientele" },
-    { name: "Contact Us", path: "/contact-us" },
+    { name: "Contact Us", path: "/contact-us/#form" },
   ];
 
   const handleNavigate = (path) => {
@@ -105,7 +105,7 @@ const Header = () => {
         {/* Let's Talk Button */}
         <button
           className="hidden md:block buttona  md:px-8 h-[50px] text-[14px] md:text-[14px] leading-4 opacity-80 uppercase font-light text-white border border-white"
-          onClick={() => navigate("/contact-us")}
+          onClick={() => navigate("/contact-us/#form")}
         >
           <span className='fonk'>Let</span>'<span className='fonk'>s Talk</span>
         </button>

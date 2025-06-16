@@ -145,7 +145,7 @@ import icon from "../assets/icon.svg";
 import Section from "./section";
 import ScrollingAnimation from "./section";
 import InfiniteLandscapeRight from "../components/infiniteCarousleLandscapeVideoRight";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -233,7 +233,7 @@ useEffect(() => {
   // ];
   const containerRef = useRef(null);
   const textRef = useRef([]);
-
+const navigate =useNavigate();
   useEffect(() => {
     const words = textRef.current;
 
@@ -377,7 +377,7 @@ useEffect(() => {
                 </>
               ))}
           </span>
-          <button className="buttonra p-1 md:p-3 rounded-full poppins-light w-[30px] md:w-[65px] overflow-auto bg-black">
+          <button  onClick={() => navigate("/work")} className="buttonra p-1 md:p-3 rounded-full poppins-light w-[30px] md:w-[65px] overflow-auto bg-black">
             <img src={icon} className="transition-transform duration-300 hover:scale-110" alt="Button Asset" />
           </button>
         </div>
@@ -481,12 +481,12 @@ useEffect(() => {
         </div>
 
         <div
-          className="hidden w-full min-h-[120vh]  md:flex flex-row items-center  justify-center bg-contain bg-top"
+          className="hidden w-full min-h-[1080px]  md:flex flex-row   justify-center bg-contain bg-top"
           style={{
             backgroundImage: `url(${billboard})`,
             backgroundRepeat: "no-repeat",
           }}>
-          <div className="w-4/6 h-[700px] flex-row mt-[0px]">
+          <div className="w-4/6  h-fit flex-row items-start 2xl:mt-[200px] xl:mt-[180px] lg:mt-[130px] md:mt-[100px] mt-0">
             {" "}
             {/* Set a fixed height here */}
             <Swiper
@@ -501,11 +501,11 @@ useEffect(() => {
               spaceBetween={10}
               slidesPerView={1} // Show 3 slides at a time
               modules={[Autoplay]}
-              className="h-[300px]" // Ensure full height is used
+              className="md:h-[300px] h-fit" // Ensure full height is used
             >
               <SwiperSlide key="1">
-                <div className="flex justify-center items-center h-[300px] ">
-                  <div className="grid grid-cols-5 grid-rows-2 gap-5 w-full  h-[300px]">
+                <div className="flex justify-center  md:h-fit h-fit ">
+                  <div className="grid grid-cols-5 grid-rows-2 gap-5 w-full  h-fit">
                     {logos.slice(0, 10).map((logo, index) => (
                       <div
                         key={index}
@@ -521,8 +521,8 @@ useEffect(() => {
                 </div>
               </SwiperSlide>
               <SwiperSlide key="2">
-                <div className="flex justify-center items-center h-[300px] ">
-                  <div className="grid grid-cols-5 grid-rows-2 gap-5 w-full  h-[300px]">
+                <div className="flex justify-center  h-fit ">
+                  <div className="grid grid-cols-5 grid-rows-2 gap-5 w-full  h-fit">
                     {logoss.slice(0, 10).map((logo, index) => (
                       <div
                         key={index}
@@ -538,8 +538,8 @@ useEffect(() => {
                 </div>
               </SwiperSlide>
               <SwiperSlide key="3">
-                <div className="flex justify-center items-center h-[300px] ">
-                  <div className="grid grid-cols-5 grid-rows-2 gap-5 w-full  h-[300px]">
+                <div className="flex justify-center  h-fit ">
+                  <div className="grid grid-cols-5 grid-rows-2 gap-5 w-full  h-fit">
                     {logosss.slice(0, 10).map((logo, index) => (
                       <div
                         key={index}
@@ -650,7 +650,7 @@ useEffect(() => {
             {" "}
            <span className="fonk" >Let</span><span>'</span><span className="fonk">s Create Digital <br />Magic Together</span>
           </span>
-          <button className="fonk  uppercase buttonr px-6 py-2 md:px-16 md:py-5 md:text-2xl rounded-full md:w-[400px] w-[250px] ">
+          <button onClick={()=>{navigate("/contact-us/#form")}} className="fonk  uppercase buttonr px-6 py-2 md:px-16 md:py-5 md:text-2xl rounded-full md:w-[400px] w-[250px] ">
             Get in Touch
           </button>
         </div>
