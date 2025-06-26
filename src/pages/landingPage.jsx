@@ -259,12 +259,8 @@ const navigate =useNavigate();
   return (
     <>
       {/* Hero Image  */}
-      <div className="bgblink w-full  h-fit  bg-black flex justify-center items-center">
-        {/* <img
-          src={herImage}
-          alt="herImage"
-          className="w-full md:w-4/5 py-2 h-auto"
-        /> */}
+      {/* <div className="bgblink w-full  h-fit  bg-black flex justify-center items-center">
+       
         <video
           autoPlay
 
@@ -274,7 +270,19 @@ const navigate =useNavigate();
           <source src={heroImage} type="video/webm" />
           Your browser does not support the video tag.
         </video>
-      </div>
+      </div> */}
+      <div className="bgblink w-full bg-black flex justify-center items-center">
+  <video
+    autoPlay
+    muted
+    playsInline
+    className="w-full min-h-[300px] hero-banner"
+  >
+    <source src={heroImage} type="video/mp4" />
+    {/* <source src="/path/to/video.webm" type="video/webm" /> */}
+    Your browser does not support the video tag.
+  </video>
+</div>
       {/* <ScrollingAnimation /> */}
        {/* Our Work */}
        <div className="bgblink w-full h-fit flex flex-col justify-center items-center bg-black p-5 md:px-20 gap-4 md:gap-10">
