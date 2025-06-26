@@ -24,10 +24,10 @@ import service2 from "../assets/2ajan.avif";
 import service3 from "../assets/3ajan.avif";
 import service4 from "../assets/4ajan.avif";
 import service5 from "../assets/5ajan.avif";
-import webDev from "../assets/1.jpg";
-import socialMedia from "../assets/2.jpg";
-import production from "../assets/3.jpg";
-import contentCreation from "../assets/4.jpg";
+import webDev from "../assets/1.jpeg";
+import socialMedia from "../assets/2.jpeg";
+import production from "../assets/3.jpeg";
+import contentCreation from "../assets/4.jpeg";
 import service6 from "../assets/6ajan.avif";
 import billboard from "../assets/billboard.png";
 import herImage from "../assets/anevHeroImage.webp";
@@ -192,7 +192,7 @@ useEffect(() => {
     { img: production, title: "Event Content Production" },
     { img: contentCreation, title: "Content Creation" },
     { img: socialMedia, title: "Social Media Management" },
-    { img: webDev, title: "Website Development" },
+    { img: webDev, title: "Influencer Marketing" },
   ];
   useEffect(() => {
     const elements = elementsRef.current;
