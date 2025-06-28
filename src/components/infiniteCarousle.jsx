@@ -20,7 +20,7 @@ const images = [
   image04,
   image02,
   image06,
-  image07,
+
   image08,
   image09,
   image10,
