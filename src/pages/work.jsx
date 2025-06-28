@@ -786,7 +786,7 @@ const Work = () => {
         </div>
         <button
           className=" block buttonb self-center mt-20 w-[80%] md:px-20   h-[150px] text-[14px] md:text-[30px] leading-normal opacity-80 uppercase font-light text-white border border-white"
-          onClick={() => navigate("/contact-us/#form")}>
+          onClick={() => navigate("https://instagram.com/anevmedia")}>
           <span className="fonk">CLICK HERE TO SEE MORE OF OUR WORK</span>
         </button>
       </div>
