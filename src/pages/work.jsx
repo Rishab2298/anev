@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import video001 from "../assets/videos/icwLandscape.mp4";
 import video002 from "../assets/videos/hendrcik01.mp4";
 import video003 from "../assets/videos/monsho.mp4";
@@ -38,6 +38,8 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useNavigate } from "react-router-dom";
+import { Dialog } from "@headlessui/react";
+import { set } from "date-fns";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -45,6 +47,9 @@ const Work = () => {
   const text1Ref = useRef(null);
   const text2Ref = useRef(null);
   const navigate = useNavigate();
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeVideoUrl, setActiveVideoUrl] = useState(null);
+
   useEffect(() => {
     const elements = [text1Ref.current, text2Ref.current];
 
@@ -71,7 +76,7 @@ const Work = () => {
       {/* Hero Text */}
       <div className="bgblink w-full  min-h-[450px] md:min-h-fit md:py-16 bg-black flex flex-col justify-center items-center gap-[10px] ">
         {/* Title - "Explore Our" */}
-        <div className="w-fit overflow-hidden h-fit">
+        <div className="w-fit overflow-hidden justify-center flex h-fit">
           <span
             ref={text1Ref}
             className="fonk text-[40px] md:text-[150px] uppercase text-center w-full text-transparent bg-clip-text font-medium  p-2  hatch-background">
@@ -99,16 +104,38 @@ const Work = () => {
       <div className="bgblink w-full flex flex-col items-center gap-[50px] md:gap-[200px] justify-center">
         {/* ========================================================================= ITEM 1 VIDEO GRID 1 =========================================================================*/}
         <div className="w-[90%] md:w-3/4 h-fit-content flex flex-col items-center gap-[4px]">
-          <div className="rounded-[30px] md:rounded-[60px] relative w-full h-fit flex flex-col items-center gap-[4px] overflow-hidden">
+          <div className="relative w-full rounded-[30px] md:rounded-[60px] overflow-hidden group">
             <video
               autoPlay
               loop
               muted
               playsInline
-              className="rounded-[30px] md:rounded-[60px]  relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10">
+              className="rounded-[30px] md:rounded-[60px] w-full h-full object-cover opacity-90 transition-transform duration-700 ease-in-out transform group-hover:scale-150">
               <source src={video004} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
+
+            {/* Play button */}
+            <button
+              onClick={() => {
+                setIsOpen(true);
+                setActiveVideoUrl(
+                  "https://www.youtube.com/embed/u6Cdd4lggUM?si=jJXiT7eLw93lbJmM"
+                );
+              }}
+              className="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="bg-black/60 p-4 rounded-full">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="white"
+                  viewBox="0 0 24 24"
+                  className="w-10 h-10">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </div>
+            </button>
+
+            {/* Popup Modal */}
           </div>
           <div className="w-full h-fit flex flex-col pt-4 pl-14 uppercase">
             <span className="text-[30px] text-white font-thin fonk">
@@ -118,16 +145,36 @@ const Work = () => {
         </div>
         {/* ========================================================================= ITEM 2 VIDEO GRID 1 ========================================================================= */}
         <div className="w-[90%] md:w-3/4 h-fit-content flex flex-col items-center gap-[4px]">
-          <div className="rounded-[30px] md:rounded-[60px] relative w-full h-fit flex flex-col items-center gap-[4px] overflow-hidden">
+          <div className="relative w-full rounded-[30px] md:rounded-[60px] overflow-hidden group">
             <video
               autoPlay
               loop
               muted
               playsInline
-              className="rounded-[30px] md:rounded-[60px]  relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10">
+              className="rounded-[30px] md:rounded-[60px] w-full h-full object-cover opacity-90 transition-transform duration-700 ease-in-out transform group-hover:scale-150">
               <source src={video005} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
+
+            {/* Play button */}
+            <button
+              onClick={() => {
+                setActiveVideoUrl(
+                  "https://www.youtube.com/embed/Q5GEcahhgEI?si=zGT6mjnAd56nkwlD"
+                );
+                setIsOpen(true);
+              }}
+              className="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="bg-black/60 p-4 rounded-full">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="white"
+                  viewBox="0 0 24 24"
+                  className="w-10 h-10">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </div>
+            </button>
           </div>
           <div className="w-full h-fit flex flex-col pt-4 pl-14 uppercase">
             <span className="text-[30px] text-white font-thin fonk">
@@ -138,16 +185,39 @@ const Work = () => {
         {/* ========================================================================= ITEM 3 VIDEO GRID 2 ========================================================================= */}
         <div className="w-[90%] md:w-3/4 h-fit flex md:flex-row flex-col items-center gap-[20px] ">
           <div className="w-full md:w-1/2 flex flex-col">
-            <div className="rounded-[30px] md:rounded-[60px] relative w-full h-fit flex flex-col items-center gap-[4px] overflow-hidden">
+            <div className="relative w-full rounded-[30px] md:rounded-[60px] overflow-hidden group">
               <video
                 autoPlay
                 loop
                 muted
                 playsInline
-                className="rounded-[30px] md:rounded-[60px]  relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10">
+                className="rounded-[30px] md:rounded-[60px] w-full h-full object-cover opacity-90 transition-transform duration-700 ease-in-out transform group-hover:scale-150">
                 <source src={video006} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
+
+              {/* Play button */}
+              <button
+               onClick={() => {
+                setActiveVideoUrl(
+                  "https://www.youtube.com/embed/jcerlyF-mo4?si=e8eEVtD4FnCfEMR3"
+                );
+                setIsOpen(true);
+              }}
+                className="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="bg-black/60 p-4 rounded-full">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="white"
+                    viewBox="0 0 24 24"
+                    className="w-10 h-10">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+              </button>
+
+              {/* Popup Modal */}
+             
             </div>
             <div className="w-full h-fit flex flex-col pt-4 pl-14">
               <span className="text-[30px] text-white font-thin uppercase fonk">
@@ -156,16 +226,36 @@ const Work = () => {
             </div>
           </div>
           <div className="w-full md:w-1/2 flex flex-col">
-            <div className="rounded-[30px] md:rounded-[60px] relative w-full h-fit flex flex-col items-center gap-[4px] overflow-hidden">
+            <div className="relative w-full rounded-[30px] md:rounded-[60px] overflow-hidden group aspect-video object-cover">
               <video
                 autoPlay
                 loop
                 muted
                 playsInline
-                className="rounded-[30px] md:rounded-[60px] aspect-video relative opacity-90 w-full h-auto  object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10">
+                className="rounded-[30px] md:rounded-[60px] w-full h-full object-cover opacity-90 transition-transform duration-700 ease-in-out transform group-hover:scale-150">
                 <source src={video007} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
+
+              {/* Play button */}
+              <button
+                onClick={() => {setIsOpen(true)
+                  setActiveVideoUrl("https://www.youtube.com/embed/wH9gtOAWPIk?si=VowCmHwbXFQ6loWo");
+                }}
+                className="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="bg-black/60 p-4 rounded-full">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="white"
+                    viewBox="0 0 24 24"
+                    className="w-10 h-10">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+              </button>
+
+              {/* Popup Modal */}
+             
             </div>
             <div className="w-full h-fit flex flex-col pt-4 pl-14">
               <span className="text-[30px] text-white font-thin uppercase fonk">
@@ -220,16 +310,36 @@ const Work = () => {
         {/* =========================================================================  ITEM 4 VIDEO GRID 2  =========================================================================*/}
         <div className="w-[90%] md:w-3/4 h-fit flex md:flex-row flex-col items-center gap-[20px] ">
           <div className="w-full md:w-1/2 flex flex-col">
-            <div className="rounded-[30px] md:rounded-[60px] relative w-full h-fit flex flex-col items-center gap-[4px] overflow-hidden">
+             <div className="relative w-full rounded-[30px] md:rounded-[60px] overflow-hidden group aspect-video object-cover">
               <video
                 autoPlay
                 loop
                 muted
                 playsInline
-                className="rounded-[30px] md:rounded-[60px]  relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10">
+                className="rounded-[30px] md:rounded-[60px] w-full h-full object-cover opacity-90 transition-transform duration-700 ease-in-out transform group-hover:scale-150">
                 <source src={video013} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
+
+              {/* Play button */}
+              <button
+                onClick={() => {setIsOpen(true)
+                  setActiveVideoUrl("https://www.youtube.com/embed/wH9gtOAWPIk?si=VowCmHwbXFQ6loWo");
+                }}
+                className="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="bg-black/60 p-4 rounded-full">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="white"
+                    viewBox="0 0 24 24"
+                    className="w-10 h-10">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+              </button>
+
+              {/* Popup Modal */}
+             
             </div>
             <div className="w-full h-fit flex flex-col pt-4 pl-14">
               <span className="text-[30px] text-white font-thin uppercase fonk">
@@ -238,16 +348,36 @@ const Work = () => {
             </div>
           </div>
           <div className="w-full md:w-1/2 flex flex-col">
-            <div className="rounded-[30px] md:rounded-[60px] relative w-full h-fit flex flex-col items-center gap-[4px] overflow-hidden">
+            <div className="relative w-full rounded-[30px] md:rounded-[60px] overflow-hidden group aspect-video object-cover">
               <video
                 autoPlay
                 loop
                 muted
                 playsInline
-                className="rounded-[30px] md:rounded-[60px]  relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10">
+                className="rounded-[30px] md:rounded-[60px] w-full h-full object-cover opacity-90 transition-transform duration-700 ease-in-out transform group-hover:scale-150">
                 <source src={video002} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
+
+              {/* Play button */}
+              <button
+                onClick={() => {setIsOpen(true)
+                  setActiveVideoUrl("https://www.youtube.com/embed/YYqp8ym1ul4?si=rmA1XxKbUn77K6Ji");
+                }}
+                className="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="bg-black/60 p-4 rounded-full">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="white"
+                    viewBox="0 0 24 24"
+                    className="w-10 h-10">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+              </button>
+
+              {/* Popup Modal */}
+             
             </div>
             <div className="w-full h-fit flex flex-col pt-4 pl-14">
               <span className="text-[30px] text-white font-thin uppercase fonk">
@@ -448,16 +578,36 @@ const Work = () => {
         {/* ========================================================================= ITEM 7 VIDEO GRID 3 ========================================================================= */}
         <div className="w-[90%] md:w-3/4 h-fit flex md:flex-row flex-col items-center gap-[20px] ">
           <div className="w-full md:w-1/3 flex flex-col">
-            <div className="rounded-[30px] md:rounded-[60px] relative w-full h-fit flex flex-col items-center gap-[4px] overflow-hidden">
+            <div className="relative w-full rounded-[30px] md:rounded-[60px] overflow-hidden group  ">
               <video
                 autoPlay
                 loop
                 muted
                 playsInline
-                className="rounded-[30px] md:rounded-[60px]  relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10">
+                className="rounded-[30px] md:rounded-[60px] w-full h-full object-cover opacity-90 transition-transform duration-700 ease-in-out transform group-hover:scale-150">
                 <source src={video008} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
+
+              {/* Play button */}
+              <button
+                onClick={() => {setIsOpen(true)
+                  setActiveVideoUrl("https://www.youtube.com/embed/R7mwvbgNK0M?si=VowCmHwbXFQ6loWo");
+                }}
+                className="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="bg-black/60 p-4 rounded-full">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="white"
+                    viewBox="0 0 24 24"
+                    className="w-10 h-10">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+              </button>
+
+              {/* Popup Modal */}
+             
             </div>
             <div className="w-full h-fit flex flex-col pt-4 pl-14">
               <span className="text-[30px] text-white font-thin uppercase fonk">
@@ -466,16 +616,36 @@ const Work = () => {
             </div>
           </div>
           <div className="w-full md:w-1/3 flex flex-col">
-            <div className="rounded-[30px] md:rounded-[60px] relative w-full h-fit flex flex-col items-center gap-[4px] overflow-hidden">
+            <div className="relative w-full rounded-[30px] md:rounded-[60px] overflow-hidden group  ">
               <video
                 autoPlay
                 loop
                 muted
                 playsInline
-                className="rounded-[30px] md:rounded-[60px]  relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10">
+                className="rounded-[30px] md:rounded-[60px] w-full h-full object-cover opacity-90 transition-transform duration-700 ease-in-out transform group-hover:scale-150">
                 <source src={video009} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
+
+              {/* Play button */}
+              <button
+                onClick={() => {setIsOpen(true)
+                  setActiveVideoUrl("https://www.youtube.com/embed/RPgKoynw4FE?si=VowCmHwbXFQ6loWo");
+                }}
+                className="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="bg-black/60 p-4 rounded-full">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="white"
+                    viewBox="0 0 24 24"
+                    className="w-10 h-10">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+              </button>
+
+              {/* Popup Modal */}
+             
             </div>
             <div className="w-full h-fit flex flex-col pt-4 pl-14">
               <span className="text-[30px] text-white font-thin uppercase fonk">
@@ -484,16 +654,36 @@ const Work = () => {
             </div>
           </div>
           <div className="w-full md:w-1/3 flex flex-col">
-            <div className="rounded-[30px] md:rounded-[60px] relative w-full h-fit flex flex-col items-center gap-[4px] overflow-hidden">
+            <div className="relative w-full rounded-[30px] md:rounded-[60px] overflow-hidden group  ">
               <video
                 autoPlay
                 loop
                 muted
                 playsInline
-                className="rounded-[30px] md:rounded-[60px]  relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10">
+                className="rounded-[30px] md:rounded-[60px] w-full h-full object-cover opacity-90 transition-transform duration-700 ease-in-out transform group-hover:scale-150">
                 <source src={video010} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
+
+              {/* Play button */}
+              <button
+                onClick={() => {setIsOpen(true)
+                  setActiveVideoUrl("https://www.youtube.com/embed/hIZnUnAzcxQ?si=VowCmHwbXFQ6loWo");
+                }}
+                className="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="bg-black/60 p-4 rounded-full">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="white"
+                    viewBox="0 0 24 24"
+                    className="w-10 h-10">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+              </button>
+
+              {/* Popup Modal */}
+             
             </div>
             <div className="w-full h-fit flex flex-col pt-4 pl-14">
               <span className="text-[30px] text-white font-thin uppercase fonk">
@@ -505,16 +695,36 @@ const Work = () => {
         {/* ========================================================================= ITEM 8 VIDEO GRID 3 ========================================================================= */}
         <div className="w-[90%] md:w-3/4 h-fit flex md:flex-row flex-col items-center gap-[20px] ">
           <div className="w-full md:w-1/3 flex flex-col">
-            <div className="rounded-[30px] md:rounded-[60px] relative w-full h-fit flex flex-col items-center gap-[4px] overflow-hidden">
+            <div className="relative w-full rounded-[30px] md:rounded-[60px] overflow-hidden group  ">
               <video
                 autoPlay
                 loop
                 muted
                 playsInline
-                className="rounded-[30px] md:rounded-[60px]  relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10">
+                className="rounded-[30px] md:rounded-[60px] w-full h-full object-cover opacity-90 transition-transform duration-700 ease-in-out transform group-hover:scale-150">
                 <source src={video011} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
+
+              {/* Play button */}
+              <button
+                onClick={() => {setIsOpen(true)
+                  setActiveVideoUrl("https://www.youtube.com/embed/xcOhp7SVBAo?si=VowCmHwbXFQ6loWo");
+                }}
+                className="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="bg-black/60 p-4 rounded-full">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="white"
+                    viewBox="0 0 24 24"
+                    className="w-10 h-10">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+              </button>
+
+              {/* Popup Modal */}
+             
             </div>
             <div className="w-full h-fit flex flex-col pt-4 pl-14">
               <span className="text-[30px] text-white font-thin uppercase fonk">
@@ -523,16 +733,36 @@ const Work = () => {
             </div>
           </div>
           <div className="w-full md:w-1/3 flex flex-col">
-            <div className="rounded-[30px] md:rounded-[60px] relative w-full h-fit flex flex-col items-center gap-[4px] overflow-hidden">
+            <div className="relative w-full rounded-[30px] md:rounded-[60px] overflow-hidden group  ">
               <video
                 autoPlay
                 loop
                 muted
                 playsInline
-                className="rounded-[30px] md:rounded-[60px]  relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10">
+                className="rounded-[30px] md:rounded-[60px] w-full h-full object-cover opacity-90 transition-transform duration-700 ease-in-out transform group-hover:scale-150">
                 <source src={video007} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
+
+              {/* Play button */}
+              <button
+                onClick={() => {setIsOpen(true)
+                  setActiveVideoUrl("https://www.youtube.com/embed/wH9gtOAWPIk?si=VowCmHwbXFQ6loWo");
+                }}
+                className="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="bg-black/60 p-4 rounded-full">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="white"
+                    viewBox="0 0 24 24"
+                    className="w-10 h-10">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+              </button>
+
+              {/* Popup Modal */}
+             
             </div>
             <div className="w-full h-fit flex flex-col pt-4 pl-14">
               <span className="text-[30px] text-white font-thin uppercase fonk">
@@ -541,16 +771,36 @@ const Work = () => {
             </div>
           </div>
           <div className="w-full md:w-1/3 flex flex-col">
-            <div className="rounded-[30px] md:rounded-[60px] relative w-full h-fit flex flex-col items-center gap-[4px] overflow-hidden">
+            <div className="relative w-full rounded-[30px] md:rounded-[60px] overflow-hidden group  ">
               <video
                 autoPlay
                 loop
                 muted
                 playsInline
-                className="rounded-[30px] md:rounded-[60px]  relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10">
+                className="rounded-[30px] md:rounded-[60px] w-full h-full object-cover opacity-90 transition-transform duration-700 ease-in-out transform group-hover:scale-150">
                 <source src={video012} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
+
+              {/* Play button */}
+              <button
+                onClick={() => {setIsOpen(true)
+                  setActiveVideoUrl("https://www.youtube.com/embed/HK6I_MH9Y1Q?si=VowCmHwbXFQ6loWo");
+                }}
+                className="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="bg-black/60 p-4 rounded-full">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="white"
+                    viewBox="0 0 24 24"
+                    className="w-10 h-10">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+              </button>
+
+              {/* Popup Modal */}
+             
             </div>
             <div className="w-full h-fit flex flex-col pt-4 pl-14">
               <span className="text-[30px] text-white font-thin uppercase fonk">
@@ -562,16 +812,36 @@ const Work = () => {
         {/* ========================================================================= ITEM 9 VIDEO GRID 2 =========================================================================*/}
         <div className="w-[90%] md:w-3/4 h-fit flex md:flex-row flex-col items-center gap-[20px] ">
           <div className="w-full md:w-1/2 flex flex-col">
-            <div className="rounded-[30px] md:rounded-[60px] relative w-full h-fit flex flex-col items-center gap-[4px] overflow-hidden">
+           <div className="relative w-full rounded-[30px] md:rounded-[60px] overflow-hidden group  ">
               <video
                 autoPlay
                 loop
                 muted
                 playsInline
-                className="rounded-[30px] md:rounded-[60px]  relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10">
+                className="rounded-[30px] md:rounded-[60px] w-full h-full object-cover opacity-90 transition-transform duration-700 ease-in-out transform group-hover:scale-150">
                 <source src={video013} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
+
+              {/* Play button */}
+              <button
+                onClick={() => {setIsOpen(true)
+                  setActiveVideoUrl("https://www.youtube.com/embed/7Dn0BAiXvKc?si=VowCmHwbXFQ6loWo");
+                }}
+                className="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="bg-black/60 p-4 rounded-full">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="white"
+                    viewBox="0 0 24 24"
+                    className="w-10 h-10">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+              </button>
+
+              {/* Popup Modal */}
+             
             </div>
             <div className="w-full h-fit flex flex-col pt-4 pl-14">
               <span className="text-[16px] text-white font-thin uppercase">
@@ -583,16 +853,36 @@ const Work = () => {
             </div>
           </div>
           <div className="w-full md:w-1/2 flex flex-col">
-            <div className="rounded-[30px] md:rounded-[60px] relative w-full h-fit flex flex-col items-center gap-[4px] overflow-hidden">
+              <div className="relative w-full rounded-[30px] md:rounded-[60px] overflow-hidden group  ">
               <video
                 autoPlay
                 loop
                 muted
                 playsInline
-                className="rounded-[30px] md:rounded-[60px]  relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10">
+                className="rounded-[30px] md:rounded-[60px] w-full h-full object-cover opacity-90 transition-transform duration-700 ease-in-out transform group-hover:scale-150">
                 <source src={video002} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
+
+              {/* Play button */}
+              <button
+                onClick={() => {setIsOpen(true)
+                  setActiveVideoUrl("https://www.youtube.com/embed/a8_fTBq-cTE?si=VowCmHwbXFQ6loWo");
+                }}
+                className="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="bg-black/60 p-4 rounded-full">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="white"
+                    viewBox="0 0 24 24"
+                    className="w-10 h-10">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+              </button>
+
+              {/* Popup Modal */}
+             
             </div>
             <div className="w-full h-fit flex flex-col pt-4 pl-14">
               <span className="text-[16px] text-white font-thin uppercase">
@@ -820,6 +1110,35 @@ const Work = () => {
       {/* <div className="w-full min-h-screen bg-black flex flex-col justify-center items-center gap-[4px]">
 
             </div> */}
+     <Dialog
+  open={isOpen}
+  onClose={() => {
+    setActiveVideoUrl(null);
+    setIsOpen(false);
+  }}
+  className="fixed z-50 inset-0 flex items-center justify-center bg-black/70 px-4">
+  <div className="relative bg-white rounded-2xl w-full max-w-[500px] md:max-w-[1280px] aspect-video shadow-lg">
+    <button
+      onClick={() => setIsOpen(false)}
+      className="absolute top-2 right-2 text-white bg-black p-2 rounded-full z-50">
+      ✕
+    </button>
+    {activeVideoUrl && (
+      <div className="w-full h-full">
+        <iframe
+          src={activeVideoUrl}
+          title="YouTube video player"
+          className="w-full h-full rounded-b-2xl"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+        ></iframe>
+      </div>
+    )}
+  </div>
+</Dialog>
+
     </>
   );
 };
