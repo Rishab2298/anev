@@ -12,6 +12,10 @@ import video010 from "../assets/videos/houseOfGlenfiddich.mp4";
 import video011 from "../assets/videos/shortStorySpirits.mp4";
 import video012 from "../assets/videos/barsCombined.mp4";
 import video013 from "../assets/videos/smokey.mp4";
+import video014 from "../assets/videos/negroniTalks.mp4";
+import video015 from "../assets/videos/negroniTalks2.mp4";
+import video016 from "../assets/videos/hendricksGinExplorerClub.mp4";
+import video017 from "../assets/videos/vacoBinary.mp4";
 import image001 from "../assets/images/as1.png";
 import image002 from "../assets/images/gtw1.png";
 import image003 from "../assets/images/mc1.jpg";
@@ -22,7 +26,7 @@ import image007 from "../assets/images/as7.png";
 import image008 from "../assets/images/gtw3.png";
 import image009 from "../assets/images/gtw4.png";
 import image010 from "../assets/images/zero210.png";
-import video17 from "../assets/videos/video17.mp4";
+
 import video18 from "../assets/videos/video18.mp4";
 
 import image1 from "../assets/images/1.png";
@@ -160,7 +164,7 @@ const Work = () => {
             <button
               onClick={() => {
                 setActiveVideoUrl(
-                  "https://www.youtube.com/embed/Q5GEcahhgEI?si=zGT6mjnAd56nkwlD"
+                  "https://drive.google.com/file/d/1chvcKYeXW_8cuxjQ2gN_Wuvj8XR3HStS/preview"
                 );
                 setIsOpen(true);
               }}
@@ -317,14 +321,15 @@ const Work = () => {
                 muted
                 playsInline
                 className="rounded-[30px] md:rounded-[60px] w-full h-full object-cover opacity-90 transition-transform duration-700 ease-in-out transform group-hover:scale-150">
-                <source src={video013} type="video/mp4" />
+                <source src={video014} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
 
               {/* Play button */}
               <button
                 onClick={() => {setIsOpen(true)
-                  setActiveVideoUrl("https://www.youtube.com/embed/wH9gtOAWPIk?si=VowCmHwbXFQ6loWo");
+
+                  setActiveVideoUrl("https://drive.google.com/file/d/1MDR2HTdJV64Obw8aVEAN2-fJMWOVRx7b/preview");
                 }}
                 className="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="bg-black/60 p-4 rounded-full">
@@ -355,14 +360,14 @@ const Work = () => {
                 muted
                 playsInline
                 className="rounded-[30px] md:rounded-[60px] w-full h-full object-cover opacity-90 transition-transform duration-700 ease-in-out transform group-hover:scale-150">
-                <source src={video002} type="video/mp4" />
+                <source src={video015} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
 
               {/* Play button */}
               <button
                 onClick={() => {setIsOpen(true)
-                  setActiveVideoUrl("https://www.youtube.com/embed/YYqp8ym1ul4?si=rmA1XxKbUn77K6Ji");
+                  setActiveVideoUrl("https://drive.google.com/file/d/1Q1QiLuanMbOD068wu1wTx_5UiMpVbOiJ/preview");
                 }}
                 className="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="bg-black/60 p-4 rounded-full">
@@ -533,16 +538,36 @@ const Work = () => {
         {/* ========================================================================= ITEM 6 VIDEO GRID 2 =========================================================================*/}
         <div className="w-[90%] md:w-3/4 h-fit flex md:flex-row flex-col items-center gap-[20px] ">
           <div className="w-full md:w-1/2 flex flex-col">
-            <div className="rounded-[30px] md:rounded-[60px] relative w-full h-fit flex flex-col items-center gap-[4px] overflow-hidden">
+            <div className="relative w-full rounded-[30px] md:rounded-[60px] overflow-hidden group  ">
               <video
                 autoPlay
                 loop
                 muted
                 playsInline
-                className="rounded-[30px] md:rounded-[60px]  relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10">
+                className="rounded-[30px] md:rounded-[60px] w-full h-full object-cover opacity-90 transition-transform duration-700 ease-in-out transform group-hover:scale-150">
                 <source src={video013} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
+
+              {/* Play button */}
+              <button
+                onClick={() => {setIsOpen(true)
+                  setActiveVideoUrl("https://drive.google.com/file/d/1W1p_D9fdlaaW-uMjKM-Esj5utZvBhEZf/preview");
+                }}
+                className="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="bg-black/60 p-4 rounded-full">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="white"
+                    viewBox="0 0 24 24"
+                    className="w-10 h-10">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+              </button>
+
+              {/* Popup Modal */}
+             
             </div>
             <div className="w-full h-fit flex flex-col pt-4 pl-14">
               <span className="text-[16px] text-white font-thin uppercase">
@@ -554,16 +579,36 @@ const Work = () => {
             </div>
           </div>
           <div className="w-full md:w-1/2 flex flex-col">
-            <div className="rounded-[30px] md:rounded-[60px] relative w-full h-fit flex flex-col items-center gap-[4px] overflow-hidden">
+            <div className="relative w-full rounded-[30px] md:rounded-[60px] overflow-hidden group  ">
               <video
                 autoPlay
                 loop
                 muted
                 playsInline
-                className="rounded-[30px] md:rounded-[60px]  relative opacity-90 w-full h-full object-cover transition-transform duration-700 ease-in-out transform hover:scale-150 z-10">
+                className="rounded-[30px] md:rounded-[60px] w-full h-full object-cover opacity-90 transition-transform duration-700 ease-in-out transform group-hover:scale-150">
                 <source src={video002} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
+
+              {/* Play button */}
+              <button
+                onClick={() => {setIsOpen(true)
+                  setActiveVideoUrl("https://drive.google.com/file/d/1chvcKYeXW_8cuxjQ2gN_Wuvj8XR3HStS/view?usp=drive_link");
+                }}
+                className="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="bg-black/60 p-4 rounded-full">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="white"
+                    viewBox="0 0 24 24"
+                    className="w-10 h-10">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+              </button>
+
+              {/* Popup Modal */}
+             
             </div>
             <div className="w-full h-fit flex flex-col pt-4 pl-14">
               <span className="text-[16px] text-white font-thin uppercase">
@@ -819,14 +864,14 @@ const Work = () => {
                 muted
                 playsInline
                 className="rounded-[30px] md:rounded-[60px] w-full h-full object-cover opacity-90 transition-transform duration-700 ease-in-out transform group-hover:scale-150">
-                <source src={video013} type="video/mp4" />
+                <source src={video016} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
 
               {/* Play button */}
               <button
                 onClick={() => {setIsOpen(true)
-                  setActiveVideoUrl("https://www.youtube.com/embed/7Dn0BAiXvKc?si=VowCmHwbXFQ6loWo");
+                  setActiveVideoUrl("ttps://www.youtube.com/embed/7Dn0BAiXvKc?si=LgEgq_tZzkxrtZfV");
                 }}
                 className="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="bg-black/60 p-4 rounded-full">
@@ -860,14 +905,14 @@ const Work = () => {
                 muted
                 playsInline
                 className="rounded-[30px] md:rounded-[60px] w-full h-full object-cover opacity-90 transition-transform duration-700 ease-in-out transform group-hover:scale-150">
-                <source src={video002} type="video/mp4" />
+                <source src={video017} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
 
               {/* Play button */}
               <button
                 onClick={() => {setIsOpen(true)
-                  setActiveVideoUrl("https://www.youtube.com/embed/a8_fTBq-cTE?si=VowCmHwbXFQ6loWo");
+                  setActiveVideoUrl("https://www.youtube.com/embed/a8_fTBq-cTE?si=yRMf4KX-rdgTh1lk");
                 }}
                 className="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="bg-black/60 p-4 rounded-full">
