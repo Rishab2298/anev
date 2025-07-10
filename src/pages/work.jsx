@@ -417,7 +417,7 @@ const Work = () => {
                 PHOTOSHOOT
               </span>
               <span className="text-[30px] text-white font-thin uppercase fonk">
-                Monkey Shoulders
+                Monkey Shoulder
               </span>
             </div>
           </div>
@@ -434,7 +434,7 @@ const Work = () => {
                 PHOTOSHOOT
               </span>
               <span className="text-[30px] text-white font-thin uppercase fonk">
-                Monkey Shoulders
+                Monkey Shoulder
               </span>
             </div>
           </div>
@@ -451,7 +451,7 @@ const Work = () => {
                 PHOTOSHOOT
               </span>
               <span className="text-[30px] text-white font-thin uppercase fonk">
-                Monkey Shoulders
+                Monkey Shoulder
               </span>
             </div>
           </div>
