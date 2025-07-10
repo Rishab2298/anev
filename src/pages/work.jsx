@@ -5,7 +5,7 @@ import video003 from "../assets/videos/monsho.mp4";
 import video004 from "../assets/videos/IndiaBartenderWeek.mp4";
 import video005 from "../assets/videos/MenBohmer.mp4";
 import video006 from "../assets/videos/aperol.mp4";
-import video007 from "../assets/videos/Glenddificih.mp4";
+import video007 from "../assets/videos/icwLandscape.mp4";
 import video008 from "../assets/videos/pahadiTakeover1.mp4";
 import video009 from "../assets/videos/grants.mp4";
 import video010 from "../assets/videos/houseOfGlenfiddich.mp4";
@@ -182,7 +182,7 @@ const Work = () => {
           </div>
           <div className="w-full h-fit flex flex-col pt-4 pl-14 uppercase">
             <span className="text-[30px] text-white font-thin fonk">
-              Men Bohmer
+              Ben Bohmer India Tour
             </span>
           </div>
         </div>
@@ -202,12 +202,12 @@ const Work = () => {
 
               {/* Play button */}
               <button
-               onClick={() => {
-                setActiveVideoUrl(
-                  "https://www.youtube.com/embed/jcerlyF-mo4?si=e8eEVtD4FnCfEMR3"
-                );
-                setIsOpen(true);
-              }}
+                onClick={() => {
+                  setActiveVideoUrl(
+                    "https://www.youtube.com/embed/jcerlyF-mo4?si=e8eEVtD4FnCfEMR3"
+                  );
+                  setIsOpen(true);
+                }}
                 className="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="bg-black/60 p-4 rounded-full">
                   <svg
@@ -221,11 +221,13 @@ const Work = () => {
               </button>
 
               {/* Popup Modal */}
-             
             </div>
             <div className="w-full h-fit flex flex-col pt-4 pl-14">
+              <span className="text-[16px] text-white font-thin uppercase">
+                India Cocktail Week
+              </span>
               <span className="text-[30px] text-white font-thin uppercase fonk">
-                Aperol ICW
+                Aperol Spritz
               </span>
             </div>
           </div>
@@ -243,8 +245,11 @@ const Work = () => {
 
               {/* Play button */}
               <button
-                onClick={() => {setIsOpen(true)
-                  setActiveVideoUrl("https://www.youtube.com/embed/wH9gtOAWPIk?si=VowCmHwbXFQ6loWo");
+                onClick={() => {
+                  setIsOpen(true);
+                  setActiveVideoUrl(
+                    "https://drive.google.com/file/d/1f7CxDekT-GzMdfGnyZmBvCpFZLZoz7ts/preview"
+                  );
                 }}
                 className="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="bg-black/60 p-4 rounded-full">
@@ -259,11 +264,13 @@ const Work = () => {
               </button>
 
               {/* Popup Modal */}
-             
             </div>
             <div className="w-full h-fit flex flex-col pt-4 pl-14">
+              <span className="text-[16px] text-white font-thin uppercase">
+                Indian Cocktail Week
+              </span>
               <span className="text-[30px] text-white font-thin uppercase fonk">
-                Glenfiddich WWD
+                Sky Vodka
               </span>
             </div>
           </div>
@@ -314,7 +321,7 @@ const Work = () => {
         {/* =========================================================================  ITEM 4 VIDEO GRID 2  =========================================================================*/}
         <div className="w-[90%] md:w-3/4 h-fit flex md:flex-row flex-col items-center gap-[20px] ">
           <div className="w-full md:w-1/2 flex flex-col">
-             <div className="relative w-full rounded-[30px] md:rounded-[60px] overflow-hidden group aspect-video object-cover">
+            <div className="relative w-full rounded-[30px] md:rounded-[60px] overflow-hidden group  object-cover">
               <video
                 autoPlay
                 loop
@@ -327,9 +334,12 @@ const Work = () => {
 
               {/* Play button */}
               <button
-                onClick={() => {setIsOpen(true)
+                onClick={() => {
+                  setIsOpen(true);
 
-                  setActiveVideoUrl("https://drive.google.com/file/d/1MDR2HTdJV64Obw8aVEAN2-fJMWOVRx7b/preview");
+                  setActiveVideoUrl(
+                    "https://drive.google.com/file/d/1MDR2HTdJV64Obw8aVEAN2-fJMWOVRx7b/preview"
+                  );
                 }}
                 className="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="bg-black/60 p-4 rounded-full">
@@ -344,7 +354,6 @@ const Work = () => {
               </button>
 
               {/* Popup Modal */}
-             
             </div>
             <div className="w-full h-fit flex flex-col pt-4 pl-14">
               <span className="text-[30px] text-white font-thin uppercase fonk">
@@ -353,7 +362,7 @@ const Work = () => {
             </div>
           </div>
           <div className="w-full md:w-1/2 flex flex-col">
-            <div className="relative w-full rounded-[30px] md:rounded-[60px] overflow-hidden group aspect-video object-cover">
+            <div className="relative w-full rounded-[30px] md:rounded-[60px] overflow-hidden group  object-cover">
               <video
                 autoPlay
                 loop
@@ -366,8 +375,11 @@ const Work = () => {
 
               {/* Play button */}
               <button
-                onClick={() => {setIsOpen(true)
-                  setActiveVideoUrl("https://drive.google.com/file/d/1Q1QiLuanMbOD068wu1wTx_5UiMpVbOiJ/preview");
+                onClick={() => {
+                  setIsOpen(true);
+                  setActiveVideoUrl(
+                    "https://drive.google.com/file/d/1Q1QiLuanMbOD068wu1wTx_5UiMpVbOiJ/preview"
+                  );
                 }}
                 className="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="bg-black/60 p-4 rounded-full">
@@ -382,7 +394,6 @@ const Work = () => {
               </button>
 
               {/* Popup Modal */}
-             
             </div>
             <div className="w-full h-fit flex flex-col pt-4 pl-14">
               <span className="text-[30px] text-white font-thin uppercase fonk">
@@ -402,8 +413,11 @@ const Work = () => {
               />
             </div>
             <div className="w-full h-fit flex flex-col pt-4 pl-14">
+              <span className="text-[16px] text-white font-thin uppercase">
+                PHOTOSHOOT
+              </span>
               <span className="text-[30px] text-white font-thin uppercase fonk">
-                CAMPARI
+                Monkey Shoulders
               </span>
             </div>
           </div>
@@ -416,8 +430,11 @@ const Work = () => {
               />
             </div>
             <div className="w-full h-fit flex flex-col pt-4 pl-14">
+              <span className="text-[16px] text-white font-thin uppercase">
+                PHOTOSHOOT
+              </span>
               <span className="text-[30px] text-white font-thin uppercase fonk">
-                MONKEY SHOULDER
+                Monkey Shoulders
               </span>
             </div>
           </div>
@@ -430,8 +447,11 @@ const Work = () => {
               />
             </div>
             <div className="w-full h-fit flex flex-col pt-4 pl-14">
+              <span className="text-[16px] text-white font-thin uppercase">
+                PHOTOSHOOT
+              </span>
               <span className="text-[30px] text-white font-thin uppercase fonk">
-                ZERO02
+                Monkey Shoulders
               </span>
             </div>
           </div>
@@ -551,8 +571,11 @@ const Work = () => {
 
               {/* Play button */}
               <button
-                onClick={() => {setIsOpen(true)
-                  setActiveVideoUrl("https://drive.google.com/file/d/1W1p_D9fdlaaW-uMjKM-Esj5utZvBhEZf/preview");
+                onClick={() => {
+                  setIsOpen(true);
+                  setActiveVideoUrl(
+                    "https://drive.google.com/file/d/1W1p_D9fdlaaW-uMjKM-Esj5utZvBhEZf/preview"
+                  );
                 }}
                 className="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="bg-black/60 p-4 rounded-full">
@@ -567,7 +590,6 @@ const Work = () => {
               </button>
 
               {/* Popup Modal */}
-             
             </div>
             <div className="w-full h-fit flex flex-col pt-4 pl-14">
               <span className="text-[16px] text-white font-thin uppercase">
@@ -592,8 +614,11 @@ const Work = () => {
 
               {/* Play button */}
               <button
-                onClick={() => {setIsOpen(true)
-                  setActiveVideoUrl("https://drive.google.com/file/d/1chvcKYeXW_8cuxjQ2gN_Wuvj8XR3HStS/view?usp=drive_link");
+                onClick={() => {
+                  setIsOpen(true);
+                  setActiveVideoUrl(
+                    "https://drive.google.com/file/d/1chvcKYeXW_8cuxjQ2gN_Wuvj8XR3HStS/view?usp=drive_link"
+                  );
                 }}
                 className="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="bg-black/60 p-4 rounded-full">
@@ -608,7 +633,6 @@ const Work = () => {
               </button>
 
               {/* Popup Modal */}
-             
             </div>
             <div className="w-full h-fit flex flex-col pt-4 pl-14">
               <span className="text-[16px] text-white font-thin uppercase">
@@ -636,8 +660,11 @@ const Work = () => {
 
               {/* Play button */}
               <button
-                onClick={() => {setIsOpen(true)
-                  setActiveVideoUrl("https://www.youtube.com/embed/R7mwvbgNK0M?si=VowCmHwbXFQ6loWo");
+                onClick={() => {
+                  setIsOpen(true);
+                  setActiveVideoUrl(
+                    "https://www.youtube.com/embed/R7mwvbgNK0M?si=VowCmHwbXFQ6loWo"
+                  );
                 }}
                 className="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="bg-black/60 p-4 rounded-full">
@@ -652,7 +679,6 @@ const Work = () => {
               </button>
 
               {/* Popup Modal */}
-             
             </div>
             <div className="w-full h-fit flex flex-col pt-4 pl-14">
               <span className="text-[30px] text-white font-thin uppercase fonk">
@@ -674,8 +700,11 @@ const Work = () => {
 
               {/* Play button */}
               <button
-                onClick={() => {setIsOpen(true)
-                  setActiveVideoUrl("https://www.youtube.com/embed/RPgKoynw4FE?si=VowCmHwbXFQ6loWo");
+                onClick={() => {
+                  setIsOpen(true);
+                  setActiveVideoUrl(
+                    "https://www.youtube.com/embed/RPgKoynw4FE?si=VowCmHwbXFQ6loWo"
+                  );
                 }}
                 className="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="bg-black/60 p-4 rounded-full">
@@ -690,7 +719,6 @@ const Work = () => {
               </button>
 
               {/* Popup Modal */}
-             
             </div>
             <div className="w-full h-fit flex flex-col pt-4 pl-14">
               <span className="text-[30px] text-white font-thin uppercase fonk">
@@ -712,8 +740,11 @@ const Work = () => {
 
               {/* Play button */}
               <button
-                onClick={() => {setIsOpen(true)
-                  setActiveVideoUrl("https://www.youtube.com/embed/hIZnUnAzcxQ?si=VowCmHwbXFQ6loWo");
+                onClick={() => {
+                  setIsOpen(true);
+                  setActiveVideoUrl(
+                    "https://www.youtube.com/embed/hIZnUnAzcxQ?si=VowCmHwbXFQ6loWo"
+                  );
                 }}
                 className="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="bg-black/60 p-4 rounded-full">
@@ -728,7 +759,6 @@ const Work = () => {
               </button>
 
               {/* Popup Modal */}
-             
             </div>
             <div className="w-full h-fit flex flex-col pt-4 pl-14">
               <span className="text-[30px] text-white font-thin uppercase fonk">
@@ -753,8 +783,11 @@ const Work = () => {
 
               {/* Play button */}
               <button
-                onClick={() => {setIsOpen(true)
-                  setActiveVideoUrl("https://www.youtube.com/embed/xcOhp7SVBAo?si=VowCmHwbXFQ6loWo");
+                onClick={() => {
+                  setIsOpen(true);
+                  setActiveVideoUrl(
+                    "https://www.youtube.com/embed/xcOhp7SVBAo?si=VowCmHwbXFQ6loWo"
+                  );
                 }}
                 className="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="bg-black/60 p-4 rounded-full">
@@ -769,7 +802,6 @@ const Work = () => {
               </button>
 
               {/* Popup Modal */}
-             
             </div>
             <div className="w-full h-fit flex flex-col pt-4 pl-14">
               <span className="text-[30px] text-white font-thin uppercase fonk">
@@ -791,8 +823,11 @@ const Work = () => {
 
               {/* Play button */}
               <button
-                onClick={() => {setIsOpen(true)
-                  setActiveVideoUrl("https://www.youtube.com/embed/wH9gtOAWPIk?si=VowCmHwbXFQ6loWo");
+                onClick={() => {
+                  setIsOpen(true);
+                  setActiveVideoUrl(
+                    "https://www.youtube.com/embed/wH9gtOAWPIk?si=VowCmHwbXFQ6loWo"
+                  );
                 }}
                 className="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="bg-black/60 p-4 rounded-full">
@@ -807,11 +842,10 @@ const Work = () => {
               </button>
 
               {/* Popup Modal */}
-             
             </div>
             <div className="w-full h-fit flex flex-col pt-4 pl-14">
               <span className="text-[30px] text-white font-thin uppercase fonk">
-                Glenfiddich WWD
+                Glenfiddich World Whiskey Day
               </span>
             </div>
           </div>
@@ -829,8 +863,11 @@ const Work = () => {
 
               {/* Play button */}
               <button
-                onClick={() => {setIsOpen(true)
-                  setActiveVideoUrl("https://www.youtube.com/embed/HK6I_MH9Y1Q?si=VowCmHwbXFQ6loWo");
+                onClick={() => {
+                  setIsOpen(true);
+                  setActiveVideoUrl(
+                    "https://www.youtube.com/embed/HK6I_MH9Y1Q?si=VowCmHwbXFQ6loWo"
+                  );
                 }}
                 className="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="bg-black/60 p-4 rounded-full">
@@ -845,7 +882,6 @@ const Work = () => {
               </button>
 
               {/* Popup Modal */}
-             
             </div>
             <div className="w-full h-fit flex flex-col pt-4 pl-14">
               <span className="text-[30px] text-white font-thin uppercase fonk">
@@ -857,7 +893,7 @@ const Work = () => {
         {/* ========================================================================= ITEM 9 VIDEO GRID 2 =========================================================================*/}
         <div className="w-[90%] md:w-3/4 h-fit flex md:flex-row flex-col items-center gap-[20px] ">
           <div className="w-full md:w-1/2 flex flex-col">
-           <div className="relative w-full rounded-[30px] md:rounded-[60px] overflow-hidden group  ">
+            <div className="relative w-full rounded-[30px] md:rounded-[60px] overflow-hidden group  ">
               <video
                 autoPlay
                 loop
@@ -870,8 +906,11 @@ const Work = () => {
 
               {/* Play button */}
               <button
-                onClick={() => {setIsOpen(true)
-                  setActiveVideoUrl("ttps://www.youtube.com/embed/7Dn0BAiXvKc?si=LgEgq_tZzkxrtZfV");
+                onClick={() => {
+                  setIsOpen(true);
+                  setActiveVideoUrl(
+                    "ttps://www.youtube.com/embed/7Dn0BAiXvKc?si=LgEgq_tZzkxrtZfV"
+                  );
                 }}
                 className="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="bg-black/60 p-4 rounded-full">
@@ -886,7 +925,6 @@ const Work = () => {
               </button>
 
               {/* Popup Modal */}
-             
             </div>
             <div className="w-full h-fit flex flex-col pt-4 pl-14">
               <span className="text-[16px] text-white font-thin uppercase">
@@ -898,7 +936,7 @@ const Work = () => {
             </div>
           </div>
           <div className="w-full md:w-1/2 flex flex-col">
-              <div className="relative w-full rounded-[30px] md:rounded-[60px] overflow-hidden group  ">
+            <div className="relative w-full rounded-[30px] md:rounded-[60px] overflow-hidden group  ">
               <video
                 autoPlay
                 loop
@@ -911,8 +949,11 @@ const Work = () => {
 
               {/* Play button */}
               <button
-                onClick={() => {setIsOpen(true)
-                  setActiveVideoUrl("https://www.youtube.com/embed/a8_fTBq-cTE?si=yRMf4KX-rdgTh1lk");
+                onClick={() => {
+                  setIsOpen(true);
+                  setActiveVideoUrl(
+                    "https://www.youtube.com/embed/a8_fTBq-cTE?si=yRMf4KX-rdgTh1lk"
+                  );
                 }}
                 className="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="bg-black/60 p-4 rounded-full">
@@ -927,7 +968,6 @@ const Work = () => {
               </button>
 
               {/* Popup Modal */}
-             
             </div>
             <div className="w-full h-fit flex flex-col pt-4 pl-14">
               <span className="text-[16px] text-white font-thin uppercase">
@@ -1121,7 +1161,9 @@ const Work = () => {
         </div>
         <button
           className=" block buttonb self-center mt-20 w-[80%] md:px-20   h-[150px] text-[14px] md:text-[30px] leading-normal opacity-80 uppercase font-light text-white border border-white"
-          onClick={() => navigate("https://instagram.com/anevmedia")}>
+          onClick={() =>
+            window.open("https://instagram.com/anevmedia", "_blank")
+          }>
           <span className="fonk">CLICK HERE TO SEE MORE OF OUR WORK</span>
         </button>
       </div>
@@ -1155,35 +1197,33 @@ const Work = () => {
       {/* <div className="w-full min-h-screen bg-black flex flex-col justify-center items-center gap-[4px]">
 
             </div> */}
-     <Dialog
-  open={isOpen}
-  onClose={() => {
-    setActiveVideoUrl(null);
-    setIsOpen(false);
-  }}
-  className="fixed z-50 inset-0 flex items-center justify-center bg-black/70 px-4">
-  <div className="relative bg-white rounded-2xl w-full max-w-[500px] md:max-w-[1280px] aspect-video shadow-lg">
-    <button
-      onClick={() => setIsOpen(false)}
-      className="absolute top-2 right-2 text-white bg-black p-2 rounded-full z-50">
-      ✕
-    </button>
-    {activeVideoUrl && (
-      <div className="w-full h-full">
-        <iframe
-          src={activeVideoUrl}
-          title="YouTube video player"
-          className="w-full h-full rounded-b-2xl"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerPolicy="strict-origin-when-cross-origin"
-          allowFullScreen
-        ></iframe>
-      </div>
-    )}
-  </div>
-</Dialog>
-
+      <Dialog
+        open={isOpen}
+        onClose={() => {
+          setActiveVideoUrl(null);
+          setIsOpen(false);
+        }}
+        className="fixed z-50 inset-0 flex items-center justify-center bg-black/70 px-4">
+        <div className="relative bg-white rounded-2xl w-full max-w-[500px] md:max-w-[1280px] aspect-video shadow-lg">
+          <button
+            onClick={() => setIsOpen(false)}
+            className="absolute top-2 right-2 text-white bg-black p-2 rounded-full z-50">
+            ✕
+          </button>
+          {activeVideoUrl && (
+            <div className="w-full h-full">
+              <iframe
+                src={activeVideoUrl}
+                title="YouTube video player"
+                className="w-full h-full rounded-b-2xl"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen></iframe>
+            </div>
+          )}
+        </div>
+      </Dialog>
     </>
   );
 };
