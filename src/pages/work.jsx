@@ -6,6 +6,7 @@ import video004 from "../assets/videos/IndiaBartenderWeek.mp4";
 import video005 from "../assets/videos/MenBohmer.mp4";
 import video006 from "../assets/videos/aperol.mp4";
 import video007 from "../assets/videos/icwLandscape.mp4";
+import video0007 from "../assets/videos/Glenddificih.mp4";
 import video008 from "../assets/videos/pahadiTakeover1.mp4";
 import video009 from "../assets/videos/grants.mp4";
 import video010 from "../assets/videos/houseOfGlenfiddich.mp4";
@@ -817,7 +818,7 @@ const Work = () => {
                 muted
                 playsInline
                 className="rounded-[30px] md:rounded-[60px] w-full h-full object-cover opacity-90 transition-transform duration-700 ease-in-out transform group-hover:scale-150">
-                <source src={video007} type="video/mp4" />
+                <source src={video0007} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
 
