@@ -165,7 +165,7 @@ const Work = () => {
             <button
               onClick={() => {
                 setActiveVideoUrl(
-                  "https://drive.google.com/file/d/1chvcKYeXW_8cuxjQ2gN_Wuvj8XR3HStS/preview"
+                  "https://www.youtube.com/embed/Q5GEcahhgEI?si=sg0k7336GNgeH-3o"
                 );
                 setIsOpen(true);
               }}
@@ -575,7 +575,7 @@ const Work = () => {
                 onClick={() => {
                   setIsOpen(true);
                   setActiveVideoUrl(
-                    "https://drive.google.com/file/d/1W1p_D9fdlaaW-uMjKM-Esj5utZvBhEZf/preview"
+                    "https://drive.google.com/file/d/1UEerSD3NPdZyZznEQSAhnd3FgkdfH6Nl/preview"
                   );
                 }}
                 className="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -618,7 +618,7 @@ const Work = () => {
                 onClick={() => {
                   setIsOpen(true);
                   setActiveVideoUrl(
-                    "https://drive.google.com/file/d/1chvcKYeXW_8cuxjQ2gN_Wuvj8XR3HStS/view?usp=drive_link"
+                    "https://drive.google.com/file/d/1chvcKYeXW_8cuxjQ2gN_Wuvj8XR3HStS/preview"
                   );
                 }}
                 className="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -910,7 +910,7 @@ const Work = () => {
                 onClick={() => {
                   setIsOpen(true);
                   setActiveVideoUrl(
-                    "ttps://www.youtube.com/embed/7Dn0BAiXvKc?si=LgEgq_tZzkxrtZfV"
+                    "https://www.youtube.com/embed/7Dn0BAiXvKc?si=DeEpWtxIkz-lSefM"
                   );
                 }}
                 className="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
