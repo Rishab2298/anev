@@ -271,7 +271,7 @@ const Work = () => {
                 Indian Cocktail Week
               </span>
               <span className="text-[30px] text-white font-thin uppercase fonk">
-                Sky Vodka
+                Skyy Vodka
               </span>
             </div>
           </div>
