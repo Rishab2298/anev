@@ -27,7 +27,7 @@ import image007 from "../assets/images/as7.png";
 import image008 from "../assets/images/gtw3.png";
 import image009 from "../assets/images/gtw4.png";
 import image010 from "../assets/images/zero210.png";
-
+import hendricks02 from "../assets/videos/hendricks02.mp4";
 import video18 from "../assets/videos/video18.mp4";
 
 import image1 from "../assets/images/1.png";
@@ -609,7 +609,7 @@ const Work = () => {
                 muted
                 playsInline
                 className="rounded-[30px] md:rounded-[60px] w-full h-full object-cover opacity-90 transition-transform duration-700 ease-in-out transform group-hover:scale-150">
-                <source src={video002} type="video/mp4" />
+                <source src={hendricks02} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
 
