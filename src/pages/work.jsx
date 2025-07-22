@@ -1126,6 +1126,9 @@ const Work = () => {
               />
             </div>
             <div className="w-full h-fit flex flex-col pt-4 pl-14">
+               <span className="text-[16px] text-white font-thin uppercase">
+Photoshoot
+              </span>
               <span className="text-[30px] text-white font-thin uppercase fonk">
                 Monkey Shoulder
               </span>
@@ -1140,6 +1143,9 @@ const Work = () => {
               />
             </div>
             <div className="w-full h-fit flex flex-col pt-4 pl-14">
+               <span className="text-[16px] text-white font-thin uppercase">
+Photoshoot
+              </span>
               <span className="text-[30px] text-white font-thin uppercase fonk">
                 Bablouie AND Co
               </span>
@@ -1154,6 +1160,9 @@ const Work = () => {
               />
             </div>
             <div className="w-full h-fit flex flex-col pt-4 pl-14">
+            <span className="text-[16px] text-white font-thin uppercase">
+Photoshoot
+              </span>
               <span className="text-[30px] text-white font-thin uppercase fonk">
                 Pistola Agavepura
               </span>
